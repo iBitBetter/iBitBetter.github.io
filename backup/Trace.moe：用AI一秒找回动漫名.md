@@ -19,7 +19,7 @@
 
 ### **💡 技术亮点**
 • AI算法：基于深度学习（CNN模型），提取画面色彩、构图、角色特征。  
-• 开源透明：代码托管在[[GitHub](https://github.com/soruly/trace.moe)](https://github.com/soruly/trace.moe)，开发者可参与优化。  
+• 开源透明：代码托管在[GitHub](https://github.com/soruly/trace.moe)，开发者可参与优化。  
 • 隐私保护：不上传图片至服务器，本地处理优先（部分功能需API调用）。  
 
 ### **🚀 使用场景**
@@ -27,7 +27,7 @@
 2. 同人创作：确认素材出处，避免版权纠纷。  
 3. 动漫考古：识别老番截图，找回童年回忆。  
 
-> 在线体验：[[trace.moe](https://trace.moe/)](https://trace.moe/)  
+> 在线体验：[trace.moe](https://trace.moe/)  
 
 ### **📌 注意事项**
 • 截图需包含标志性画面（如角色正脸、独特场景），纯文字或模糊图可能识别失败。  

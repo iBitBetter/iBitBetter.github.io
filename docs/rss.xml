@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Sun, 03 Aug 2025 00:37:11 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>Work/常用API/抖音</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--dou-yin.html</link><description>## 订单服务使用到的API
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Sun, 03 Aug 2025 00:43:00 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>Work/常用API/抖音</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--dou-yin.html</link><description>## 订单服务使用到的API
 
 /order/logisticsAdd 订单发货接口 https://op.jinritemai.com/docs/api-docs/16/718﻿
 
@@ -204,7 +204,9 @@ ScreenToGif 是一款免费开源的屏幕录制与 GIF 编辑工具，支持录
 
 ![PaperMe](https://github.com/user-attachments/assets/6699e12c-3196-4288-b00e-e05510b33fb8)
 
-[PaperMe](https://paperme.toolooz.com/)是一款创新的在线工具，专为需要个性化纸张的用户打造。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/PaperMe-da-yin-zhi-she-ji-zhuan-jia.html</guid><pubDate>Tue, 27 May 2025 00:36:05 +0000</pubDate></item><item><title>关于</title><link>https://xBitBetter.github.io/about.html</link><description>👋 Hi，我叫 xBitBetter🤣，是一名后端工程师 👨🏻‍💻（.NET ☕️）
+[PaperMe](https://paperme.toolooz.com/)是一款创新的在线工具，专为需要个性化纸张的用户打造。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/PaperMe-da-yin-zhi-she-ji-zhuan-jia.html</guid><pubDate>Tue, 27 May 2025 00:36:05 +0000</pubDate></item><item><title>关于</title><link>https://xBitBetter.github.io/about.html</link><description>`Gmeek-html &lt;iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=298 height=52 src='//music.163.com/outchain/player?type=0&amp;id=14065145156&amp;auto=0&amp;height=32'&gt;&lt;/iframe&gt;
+
+👋 Hi，我叫 xBitBetter🤣，是一名后端工程师 👨🏻‍💻（.NET ☕️）
 
 ❤️ 我喜欢：编程🐵、阅读📖、炉石传说🎮、美剧📺、打羽毛球🏸、乒乓球🏓
 

@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Sun, 03 Aug 2025 01:21:14 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>Work/常用API/抖音</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--dou-yin.html</link><description>## 订单服务使用到的API
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Sun, 03 Aug 2025 01:36:53 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>Work/常用API/淘宝</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--tao-bao.html</link><description>订单服务使用到的API
+
+taobao.trades.sold.get( 查询卖家已卖出的交易数据（根据创建时间） )﻿https://open.taobao.com/api.htm?docId=46&amp;docType=2 
+
+taobao.top.oaid.merge( OAID订单合并 )﻿https://open.taobao.com/api.htm?docId=55032&amp;docType=2 
+
+taobao.trade.fullinfo.get( 获取单笔交易的详细信息 )﻿https://open.taobao.com/api.htm?docId=54&amp;docType=2 
+
+alibaba.ascp.logistics.offline.send( 自己联系物流发货 )﻿https://open.taobao.com/api.htm?spm=a219a.7386797.0.0.68b6669ayrGuvJ&amp;source=search&amp;docId=54934&amp;docType=2 
+
+菜鸟云打印
+
+菜鸟云打印模板编辑器﻿
+
+taobao.wlb.waybill.i.get( 获取物流服务商电子面单号v1.0 )﻿https://open.taobao.com/api.htm?docId=23869&amp;docType=2 
+
+电子面单 ﻿
+
+淘宝开放平台： https://open.taobao.com/﻿
+
+阿里聚石塔： https://console.cloud.tmall.com/home#/﻿
+
+菜鸟打印组件下载 https://page.cainiao.com/waybill/cloud_printing/home.html。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/Work--chang-yong-API--tao-bao.html</guid><pubDate>Sun, 03 Aug 2025 01:36:27 +0000</pubDate></item><item><title>Work/常用API/抖音</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--dou-yin.html</link><description>## 订单服务使用到的API
 
 /order/logisticsAdd 订单发货接口 https://op.jinritemai.com/docs/api-docs/16/718﻿
 

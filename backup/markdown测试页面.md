@@ -63,18 +63,14 @@ print("Hello World")
 
 ## 链接
 ```markdown
-[我的博客](https://meekdai.github.io)
+[我的博客](https://xBitBetter.github.io)
 ```
-[我的博客](https://meekdai.github.io)
+[我的博客](https://xBitBetter.github.io)
 
 ## 图片
 ```markdown
-![这是我的头像PNG](https://github.com/Meekdai/meekdai.github.io/assets/11755104/e4da3470-d4b1-4cc7-9d84-f7da69f90a76)
-![这是我的头像SVG](https://blog.meekdai.com/avatar.svg)
+![这是我的头像SVG](https://xBitBetter.github.io/assets/x.svg)
 ```
-![这是我的头像PNG](https://github.com/Meekdai/meekdai.github.io/assets/11755104/e4da3470-d4b1-4cc7-9d84-f7da69f90a76)
-
-![这是我的头像SVG](https://blog.meekdai.com/avatar.svg)
 
 ## 表格
 ```markdown

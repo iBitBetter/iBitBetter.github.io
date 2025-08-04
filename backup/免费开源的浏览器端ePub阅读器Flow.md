@@ -1,7 +1,7 @@
 > [!NOTE]
 >Flow是一款免费开源的浏览器端ePub阅读器，以跨平台、离线优先、云端集成为核心优势，重新定义了数字阅读体验。🌐 它无需安装本地应用，通过浏览器即可流畅运行，同时支持渐进式网页应用（PWA）安装，实现“一次配置，全设备同步”的便捷性。
   
-![image](https://github.com/user-attachments/assets/961553f4-d7c9-4293-92b7-79608026f62c)
+[![e-Pub-Flow](https://i.postimg.cc/FKQxPwrc/e-Pub-Flow.jpg)](https://postimg.cc/bZ3brC2N)
 
 ### ✨ **核心特性**  
 1. 极致自由的设计  

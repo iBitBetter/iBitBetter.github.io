@@ -1,7 +1,7 @@
 > [!NOTE]
 >在数字化办公时代，[免费在线Office文档查看器](https://officeviewer.org/)（Open Word, Excel & PPT Online）以革命性的隐私保护技术和即时渲染能力，成为跨平台文档处理的标杆工具 💻。这款纯浏览器工具支持7大类文件格式的即时预览，通过WebAssembly技术实现媲美本地软件的渲染效果，同时确保文件数据100%不离开用户设备 🔒。  
 
-[![officeviewer.png](https://s21.ax1x.com/2025/08/04/pVUS1aV.png)](https://imgse.com/i/pVUS1aV)
+[![Office.png](https://i.postimg.cc/pTwp2MmX/Office.png)](https://postimg.cc/TLcR9SjZ)
 
 🚀 **核心功能矩阵**  
 1. 全格式支持  

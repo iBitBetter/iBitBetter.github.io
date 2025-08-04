@@ -1,6 +1,6 @@
 在安卓开发和调试中，ADB（Android Debug Bridge） 是必备工具，但复杂的命令行操作让很多用户望而却步。AYA 应运而生——一款开箱即用的桌面应用，通过全图形化界面将 ADB 功能“一键化”，让普通用户也能轻松管理安卓设备！  
 
-![AYA](https://github.com/user-attachments/assets/71876818-6b9a-49f5-bbaa-fb2514b19fd2)
+[![AYAADB.png](https://i.postimg.cc/8cH5SJMN/AYAADB.png)](https://postimg.cc/YLvkNSds)
 
 **🌟 核心亮点**  
 1. 零配置开箱即用 📦  

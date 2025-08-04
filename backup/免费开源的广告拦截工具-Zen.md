@@ -1,6 +1,6 @@
 在当今数字时代，广告追踪和隐私泄露问题日益严重。Zen 是一款免费、开源的广告拦截工具，专为 Windows、macOS 和 Linux 用户设计，提供高效、无干扰的浏览体验。它不仅能在浏览器中屏蔽广告，还能保护整个系统的隐私安全！  
 
-![Zen](https://github.com/user-attachments/assets/a52abf93-17ee-47d4-bde1-2fb26817382c)
+[![Zen.png](https://i.postimg.cc/wTrzsQ6n/Zen.png)](https://postimg.cc/568ThvQm)
 
 **🌟 核心功能**  
 1. 全系统广告拦截  

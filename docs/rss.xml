@@ -1,5 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Tue, 05 Aug 2025 00:37:46 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>书籍推荐/林达近距离看美国</title><link>https://xBitBetter.github.io/post/shu-ji-tui-jian---lin-da-jin-ju-li-kan-mei-guo.html</link><description>&gt; [!TIP] 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Tue, 05 Aug 2025 01:04:37 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>Work/常用API/京东</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--jing-dong.html</link><description>### 常用工具地址
+
+京东商家开放平台：https://open-console.jd.com/v2/#/home﻿
+
+自研商家授权工具：https://open.jd.com/v2/#/doc/guide?listId=auth﻿
+
+SSL证书管理：https://certificate-console.jdcloud.com/jsecssl/list﻿
+
+ssl iis 安装教程： https://docs.jdcloud.com/cn/ssl-certificate/ssl-iis 
+
+云鼎虎符控制台：https://hufu-yd-console.jdcloud.com/#/hufu/list﻿
+
+京东云打印模板： https://template-design.jd.com/custom?status=1﻿
+
+云鼎控制台：https://yd-common-console.jdcloud.com/overview﻿
+
+无界电子面单系统接入说明： https://jos.jd.com/commondoc?listId=335﻿
+
+电子面单接单接口入参说明： https://jos.jd.com/commondoc?listId=657
+
+### 订单服务使用到的API
+
+jingdong.pop.order.search（根据条件检索订单信息）https://jos.jd.com/apilist?apiGroupId=55&amp;apiId=15660&amp;apiName=jingdong.pop.order.search﻿
+
+jingdong.pop.order.get（检索单个SOP订单信息）https://jos.jd.com/apilist?apiGroupId=55&amp;apiId=15661&amp;apiName=jingdong.pop.order.get﻿
+
+jingdong.pop.afs.refundapply.querylist（商家通过查询条件查询退款审核单列表）https://jos.jd.com/apilist?apiGroupId=71&amp;apiId=12705&amp;apiName=jingdong.pop.afs.refundapply.querylist﻿
+
+jingdong.pop.order.shipment（sop出库发货接口） https://jos.jd.com/apilistnewdetail?apiGroupId=55&amp;apiId=13880&amp;apiName=null﻿
+
+。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/Work--chang-yong-API--jing-dong.html</guid><pubDate>Tue, 05 Aug 2025 01:04:07 +0000</pubDate></item><item><title>书籍推荐/林达近距离看美国</title><link>https://xBitBetter.github.io/post/shu-ji-tui-jian---lin-da-jin-ju-li-kan-mei-guo.html</link><description>&gt; [!TIP] 
 &gt;《林达近距离看美国四部曲系列》内容涉及美国的方方面面——三权分立、言论自由、种族冲突、保守派与自由派等等。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/shu-ji-tui-jian---lin-da-jin-ju-li-kan-mei-guo.html</guid><pubDate>Tue, 05 Aug 2025 00:37:20 +0000</pubDate></item><item><title>Work/常用API/拼多多</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--pin-duo-duo.html</link><description>### 订单服务使用到的API
 
 [pdd.order.list.get](https://open.pinduoduo.com/application/document/api?id=pdd.order.list.get) 订单列表查询接口（根据成交时间）﻿

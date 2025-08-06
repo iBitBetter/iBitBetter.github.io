@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Wed, 06 Aug 2025 03:04:26 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>书籍推荐/失控</title><link>https://xBitBetter.github.io/post/shu-ji-tui-jian---shi-kong.html</link><description>&gt; [!TIP]
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Wed, 06 Aug 2025 03:07:08 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>Work/常用API/快手</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--kuai-shou.html</link><description>### 订单服务使用到的API
+
+获取订单列表 https://open.kwaixiaodian.com/zone/new/docs/api?name=open.order.cursor.list&amp;version=1﻿
+
+获取订单详情 https://open.kwaixiaodian.com/zone/new/docs/api?name=open.order.detail&amp;version=1﻿
+
+订单发货 https://open.kwaixiaodian.com/zone/new/docs/api?categoryId=43&amp;apiName=open.seller.order.goods.deliver&amp;version=1﻿
+
+获取售后单列表 https://open.kwaixiaodian.com/zone/new/docs/api?categoryId=42&amp;apiName=open.seller.order.refund.pcursor.list&amp;version=1﻿
+
+快手开放平台：https://open.kwaixiaodian.com/login﻿
+
+电子面单技术对接文档：https://open.kwaixiaodian.com/zone/new/solution/detail?pageSign=be565dfc5ca82ebb4683bc208f7929051642596657058。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/Work--chang-yong-API--kuai-shou.html</guid><pubDate>Wed, 06 Aug 2025 03:06:41 +0000</pubDate></item><item><title>书籍推荐/失控</title><link>https://xBitBetter.github.io/post/shu-ji-tui-jian---shi-kong.html</link><description>&gt; [!TIP]
 &gt; 绝对奇书，有一种“看完就能理解一切事物”的感觉 无法想象这本书是在90年代写的，书中谈到的很多方面如今都已实现或正在一步一步的成为&gt;现实，只能说作者太牛逼了。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/shu-ji-tui-jian---shi-kong.html</guid><pubDate>Wed, 06 Aug 2025 03:03:58 +0000</pubDate></item><item><title>UPCV.TECH</title><link>https://xBitBetter.github.io/post/UPCV.TECH.html</link><description># UPCV.TECH：用 AI 赋能你的职业未来 🚀
 &gt;[!TIP]
 &gt;在当今竞争激烈的就业市场中，一份出色的简历往往是求职成功的第一步。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/UPCV.TECH.html</guid><pubDate>Wed, 06 Aug 2025 01:06:21 +0000</pubDate></item><item><title>Work/常用API/京东</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--jing-dong.html</link><description>### 常用工具地址

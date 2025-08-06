@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Wed, 06 Aug 2025 08:56:25 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>互联网找电子书指南</title><link>https://xBitBetter.github.io/post/hu-lian-wang-zhao-dian-zi-shu-zhi-nan.html</link><description>以xBitBetter最喜欢的科幻小说《三体》为例子，演示查找电子书的过程。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/hu-lian-wang-zhao-dian-zi-shu-zhi-nan.html</guid><pubDate>Wed, 06 Aug 2025 08:55:52 +0000</pubDate></item><item><title>Work/常用API/快手</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--kuai-shou.html</link><description>### 订单服务使用到的API
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>BitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 灵魂相似的人，总会为你而来。</description><copyright>BitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://xBitBetter.github.io/assets/x.svg</url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Wed, 06 Aug 2025 09:55:49 +0000</lastBuildDate><managingEditor>BitBetter</managingEditor><ttl>60</ttl><webMaster>BitBetter</webMaster><item><title>互联网找电子书指南</title><link>https://xBitBetter.github.io/post/hu-lian-wang-zhao-dian-zi-shu-zhi-nan.html</link><description>以xBitBetter最喜欢的科幻小说《三体》为例子，演示查找电子书的过程。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/hu-lian-wang-zhao-dian-zi-shu-zhi-nan.html</guid><pubDate>Wed, 06 Aug 2025 08:55:52 +0000</pubDate></item><item><title>Work/常用API/快手</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--kuai-shou.html</link><description>### 订单服务使用到的API
 
 获取订单列表 https://open.kwaixiaodian.com/zone/new/docs/api?name=open.order.cursor.list&amp;version=1﻿
 
@@ -330,12 +330,7 @@ ScreenToGif 是一款免费开源的屏幕录制与 GIF 编辑工具，支持录
 
 🏠 我的博客：[xBitBetter.blog](https://xBitBetter.github.io/)
 
-⚡ 如果你有什么想和我交流的，直接留言吧💬
-
-
- 📚 微信扫码找书
-[![微信扫码找书.jpg](https://i.postimg.cc/kgqd1r5z/image.jpg)](https://postimg.cc/bsCMrBk9)
-。</description><guid isPermaLink="true">https://xBitBetter.github.io/about.html</guid><pubDate>Thu, 05 Jun 2025 03:07:50 +0000</pubDate></item><item><title>奇趣网站收藏家</title><link>https://xBitBetter.github.io/link.html</link><description>&gt; [!IMPORTANT]
+⚡ 如果你有什么想和我交流的，直接留言吧💬。</description><guid isPermaLink="true">https://xBitBetter.github.io/about.html</guid><pubDate>Thu, 05 Jun 2025 03:07:50 +0000</pubDate></item><item><title>奇趣网站收藏家</title><link>https://xBitBetter.github.io/link.html</link><description>&gt; [!IMPORTANT]
 &gt;这里记录了一些有趣的网站链接
  
 - [TinyPng](https://tinypng.com/) Smart AVIF, WebP, PNG and JPEG Compression for Faster Websites

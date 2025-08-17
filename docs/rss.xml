@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>xBitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 life is too bug,please take care of yourself</description><copyright>xBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://fav.farm/⛅ </url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Sun, 17 Aug 2025 08:37:36 +0000</lastBuildDate><managingEditor>xBitBetter</managingEditor><ttl>60</ttl><webMaster>xBitBetter</webMaster><item><title>马克一下</title><link>https://xBitBetter.github.io/post/ma-ke-yi-xia.html</link><description>## 学习/数学/三角函数双手速记
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>xBitBetter</title><link>https://xBitBetter.github.io</link><description>🅙 life is too bug,please take care of yourself</description><copyright>xBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://fav.farm/⛅ </url><title>avatar</title><link>https://xBitBetter.github.io</link></image><lastBuildDate>Sun, 17 Aug 2025 08:39:20 +0000</lastBuildDate><managingEditor>xBitBetter</managingEditor><ttl>60</ttl><webMaster>xBitBetter</webMaster><item><title>马克一下</title><link>https://xBitBetter.github.io/post/ma-ke-yi-xia.html</link><description>## 学习/数学/三角函数双手速记
 [![三角函数双手速记.jpg](https://i.postimg.cc/pLstHNrN/image.jpg)](https://postimg.cc/MnfL7F1t)
 
 ## 学习/驾驶/汽车空调怎么开? 超级实用了
@@ -176,9 +176,33 @@ jingdong.pop.order.shipment（sop出库发货接口） https://jos.jd.com/apilis
 
 电子面单技术对接文档：https://open.kwaixiaodian.com/zone/new/solution/detail?pageSign=be565dfc5ca82ebb4683bc208f7929051642596657058
 
+### 抖音订单服务使用到的API
 
+/order/logisticsAdd 订单发货接口 https://op.jinritemai.com/docs/api-docs/16/718﻿
 
-。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/Work--dian-shang-ye-wu-chang-yong-API.html</guid><pubDate>Sun, 03 Aug 2025 01:36:27 +0000</pubDate></item><item><title>Work/常用API/抖音</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--dou-yin.html</link><description>## 订单服务使用到的API
+/order/logisticsAddSinglePack 支持多个订单发同一个物流包裹 https://op.jinritemai.com/docs/api-docs/16/563﻿
+
+/token/refresh https://op.jinritemai.com/docs/api-docs/162/1601﻿
+
+/order/searchList 订单列表查询 https://op.jinritemai.com/docs/api-docs/15/1342﻿
+
+/order/orderDetail 订单详情查询 https://op.jinritemai.com/docs/api-docs/15/1343﻿
+
+订单退款接口，是调用 /order/searchList 使用上面的参数 after_sale_status_desc 获取指定日期的退款订单
+
+### 抖音电子面单API
+
+/logistics/newCreateOrder https://op.jinritemai.com/docs/api-docs/1262/1339﻿
+
+/logistics/waybillApply https://op.jinritemai.com/docs/api-docs/1262/490﻿
+
+/logistics/listShopNetsite https://op.jinritemai.com/docs/api-docs/1262/1843﻿
+
+电子面单常见对接场景 https://op.jinritemai.com/docs/guide-docs/1320/3307﻿
+
+### 如何实现多店铺共享面单取号
+
+/logistics/newCreateOrder﻿ token字段传开通电子面单店铺的token，user_id字段传订单所在店铺的shopid或者传-1。</description><guid isPermaLink="true">https://xBitBetter.github.io/post/Work--dian-shang-ye-wu-chang-yong-API.html</guid><pubDate>Sun, 03 Aug 2025 01:36:27 +0000</pubDate></item><item><title>Work/常用API/抖音</title><link>https://xBitBetter.github.io/post/Work--chang-yong-API--dou-yin.html</link><description>## 订单服务使用到的API
 
 /order/logisticsAdd 订单发货接口 https://op.jinritemai.com/docs/api-docs/16/718﻿
 

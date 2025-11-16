@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅙 life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://fav.farm/⛅ </url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Sun, 16 Nov 2025 08:45:08 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>AI百科全书Grokipedia</title><link>https://iBitBetter.github.io/post/AI-bai-ke-quan-shu-Grokipedia.html</link><description>### 互联网新贵还是争议焦点？AI百科全书Grokipedia深度解析 📖✨
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅙 life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://fav.farm/⛅ </url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Sun, 16 Nov 2025 08:52:38 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>AI百科全书Grokipedia</title><link>https://iBitBetter.github.io/post/AI-bai-ke-quan-shu-Grokipedia.html</link><description>### 互联网新贵还是争议焦点？AI百科全书Grokipedia深度解析 📖✨
 
 在2025年的金秋十月，一个名为 Grokipedia.com 的网站悄然上线，在科技界和互联网信息领域投下了一颗重磅炸弹 💣。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/AI-bai-ke-quan-shu-Grokipedia.html</guid><pubDate>Sun, 16 Nov 2025 08:44:43 +0000</pubDate></item><item><title>Scoop windows下的包管理器</title><link>https://iBitBetter.github.io/post/Scoop%20windows-xia-de-bao-guan-li-qi.html</link><description># Scoop 安装
 ## 环境需求
@@ -110,7 +110,40 @@ set  A.C=B.C
 UPDATE A_TEST as atest
 set atest.ORG_CODE=(select ctest.code from C_TEST ctest where atest.id = ctest.id)
 where atest.id in  (select ctest.id FROM TEST ctest);
-```。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/shu-ju-ku-geng-xin-biao-shu-ju-%EF%BC%8C-cong-ling-yi-ge-biao-zhong-qu-zhi.html</guid><pubDate>Sun, 16 Nov 2025 00:38:45 +0000</pubDate></item><item><title>手机博物馆</title><link>https://iBitBetter.github.io/post/shou-ji-bo-wu-guan.html</link><description>&gt; [!NOTE]
+```。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/shu-ju-ku-geng-xin-biao-shu-ju-%EF%BC%8C-cong-ling-yi-ge-biao-zhong-qu-zhi.html</guid><pubDate>Sun, 16 Nov 2025 00:38:45 +0000</pubDate></item><item><title>Mirror 中文教程</title><link>https://iBitBetter.github.io/post/Mirror%20-zhong-wen-jiao-cheng.html</link><description>
+1. 下载 `Mirror` 的最新版本 [地址](https://github.com/LoeiFy/Mirror/raw/master/release/mirror.zip)
+2. 获取你的 `hash` [地址](https://github.com/haoz0x139/myblog/issues/28)
+
+    Mirror 内部做了一层 GitHub API token 的字符转换，解决不小心把 token 上传到 GitHub 后被删的问题
+    下面是获取 `hash` 的步骤
+
+   - 获取 [token](https://github.com/LoeiFy/Mirror/wiki/Token-%E8%AE%BE%E7%BD%AE)
+   -  获取你的主域名 `hostname`，例如 `https://blog.1016913.xyz` 的主域名为 `blog.1016913.xyz`
+   - 打开 [Mirror](https://blog.1016913.xyz/) 网站，并打开 `开发者工具` 界面
+   -  在开发者工具的 `console` tab 页面，输入 js 代码 `window.encrypt('你的token', '你的主域名')`
+![example](https://user-images.githubusercontent.com/2193211/54478294-7689cc00-484b-11e9-9f45-8157cf92d180.png)
+      得到的字符就是 `hash` 串
+
+3. 修改 `index.html`
+
+```html
+&lt;script&gt;
+window.config = {
+  organization: false, // 默认是 false，如果你的项目是属于 GitHub 组织 的，请设置为 true
+  order: 'UPDATED_AT', // 文章排序，以 创建时间 或者 更新时间，可选值 'UPDATED_AT'，'CREATED_AT'
+  title: 'Mirror', // 博客标题
+  user: 'LoeiFy', // GitHub 用户名，必须
+  repository: 'Recordum', // GitHub 项目名，指定文章内容来源 issues，必须
+  authors: 'LoeiFy,author1', // 博客作者，以 ',' 分割，GitHub 用户名默认包含在内
+  ignores: '17,13', // 文章忽略的 issues ID
+  host: '', // 博客的主域名，不填自动获取，请注意这个值会影响 hash 的值
+  hash: '', // 必须
+  perpage: 5, // 分页
+}
+&lt;/script&gt;
+```
+
+&lt;!-- ##{'timestamp':1755783310}## --&gt;。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/Mirror%20-zhong-wen-jiao-cheng.html</guid><pubDate>Thu, 21 Aug 2025 13:35:10 +0000</pubDate></item><item><title>手机博物馆</title><link>https://iBitBetter.github.io/post/shou-ji-bo-wu-guan.html</link><description>&gt; [!NOTE]
 &gt; 手机博物馆是一个专注于展示经典手机设备的数字平台，致力于保存和分享移动通信技术的发展历程。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/shou-ji-bo-wu-guan.html</guid><pubDate>Tue, 12 Aug 2025 12:30:25 +0000</pubDate></item><item><title>EverydayNews</title><link>https://iBitBetter.github.io/post/EverydayNews.html</link><description>`Gmeek-html&lt;iframe src='https://ravelloh.github.io/EverydayNews?style=clean&amp;footer=none' style='font-size: 14px;' width='600' height='800' frameborder='0'&gt;&lt;/iframe&gt;`。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/EverydayNews.html</guid><pubDate>Sun, 10 Aug 2025 09:48:42 +0000</pubDate></item><item><title>电商业务常用API</title><link>https://iBitBetter.github.io/post/dian-shang-ye-wu-chang-yong-API.html</link><description>### 淘宝订单服务使用到的API
 
 taobao.trades.sold.get( 查询卖家已卖出的交易数据（根据创建时间） )﻿https://open.taobao.com/api.htm?docId=46&amp;docType=2 

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅙 life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://fav.farm/⛅ </url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Mon, 17 Nov 2025 08:27:25 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>比特币：一种点对点的电子现金系统</title><link>https://iBitBetter.github.io/post/bi-te-bi-%EF%BC%9A-yi-zhong-dian-dui-dian-de-dian-zi-xian-jin-xi-tong.html</link><description># 比特币：一种点对点的电子现金系统
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅙 life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://fav.farm/⛅ </url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Mon, 17 Nov 2025 08:29:11 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>比特币：一种点对点的电子现金系统</title><link>https://iBitBetter.github.io/post/bi-te-bi-%EF%BC%9A-yi-zhong-dian-dui-dian-de-dian-zi-xian-jin-xi-tong.html</link><description># 比特币：一种点对点的电子现金系统
 
 ​                                作者：中本聪
 ​                                satoshin@gmx.com
@@ -138,7 +138,42 @@ where atest.id in  (select ctest.id FROM TEST ctest);
 。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/zi-yuan-%20-%20-jiao-cheng-%20-%20%20-leng-men-sheng-yi-zhuan-qian-mi-ji-da-quan.html</guid><pubDate>Sun, 16 Nov 2025 00:15:34 +0000</pubDate></item><item><title>资源-书籍推荐-为什么你攒不下钱</title><link>https://iBitBetter.github.io/post/zi-yuan---shu-ji-tui-jian---wei-shen-me-ni-zan-bu-xia-qian.html</link><description>
 日本人写的理财神作，值的一看！
 
-现象级理财神作《为什么你攒不下钱》豆瓣8.9，被《财经周刊》评为'当代年轻人财务自救指南'。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/zi-yuan---shu-ji-tui-jian---wei-shen-me-ni-zan-bu-xia-qian.html</guid><pubDate>Tue, 04 Nov 2025 13:00:34 +0000</pubDate></item><item><title>免费在线Office文档查看器</title><link>https://iBitBetter.github.io/post/mian-fei-zai-xian-Office-wen-dang-cha-kan-qi.html</link><description>&gt;在数字化办公时代，[免费在线Office文档查看器](https://officeviewer.org/ '免费在线Office文档查看器')（Open Word, Excel &amp; PPT Online）以革命性的隐私保护技术和即时渲染能力，成为跨平台文档处理的标杆工具 💻。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/mian-fei-zai-xian-Office-wen-dang-cha-kan-qi.html</guid><pubDate>Wed, 08 Oct 2025 13:22:45 +0000</pubDate></item><item><title>Github访问速度慢的解决方案</title><link>https://iBitBetter.github.io/post/Github-fang-wen-su-du-man-de-jie-jue-fang-an.html</link><description>作为国内的用户，我相信绝大多数的家人们都遇到过一个问题，那就是访问github的时候非常非常慢。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/Github-fang-wen-su-du-man-de-jie-jue-fang-an.html</guid><pubDate>Sat, 27 Sep 2025 12:22:45 +0000</pubDate></item><item><title>资源 - 书籍推荐 - 原子习惯</title><link>https://iBitBetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-yuan-zi-xi-guan.html</link><description>说真的，这本书让我脱胎换骨  
+现象级理财神作《为什么你攒不下钱》豆瓣8.9，被《财经周刊》评为'当代年轻人财务自救指南'。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/zi-yuan---shu-ji-tui-jian---wei-shen-me-ni-zan-bu-xia-qian.html</guid><pubDate>Tue, 04 Nov 2025 13:00:34 +0000</pubDate></item><item><title>.NET Framework 版本下载(4.8, 4.7, 4.6, 4.5, 4.0, 3.5, 3.0, 2.0)</title><link>https://iBitBetter.github.io/post/.NET%20Framework%20-ban-ben-xia-zai-%284.8%2C%204.7%2C%204.6%2C%204.5%2C%204.0%2C%203.5%2C%203.0%2C%202.0%29.html</link><description>.NET Framework 版本下载(4.8, 4.7, 4.6, 4.5, 4.0, 3.5, 3.0, 2.0)
+
+[Microsoft .NET Framework 4.8](https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe)
+
+[Microsoft .NET Framework 4.7.2](https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9704-06DD46E5F81D/NDP472-KB4054530-x86-x64-AllOS-ENU.exe)
+
+[Microsoft .NET Framework 4.7.1](https://download.microsoft.com/download/9/E/6/9E63300C-0941-4B45-A0EC-0008F96DD480/NDP471-KB4033342-x86-x64-AllOS-ENU.exe)
+
+[Microsoft .NET Framework 4.7](https://download.microsoft.com/download/D/D/3/DD35CC25-6E9C-484B-A746-C5BE0C923290/NDP47-KB3186497-x86-x64-AllOS-ENU.exe)
+
+[Microsoft .NET Framework 4.6.2](https://download.microsoft.com/download/F/9/4/F942F07D-F26F-4F30-B4E3-EBD54FABA377/NDP462-KB3151800-x86-x64-AllOS-ENU.exe)
+
+[Microsoft .NET Framework 4.6.1](https://download.microsoft.com/download/E/4/1/E4173890-A24A-4936-9FC9-AF930FE3FA40/NDP461-KB3102436-x86-x64-AllOS-ENU.exe)
+
+[Microsoft .NET Framework 4.6](https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe)
+
+[Microsoft .NET Framework 4.5.2](https://download.microsoft.com/download/E/2/1/E21644B5-2DF2-47C2-91BD-63C560427900/NDP452-KB2901907-x86-x64-AllOS-ENU.exe)
+
+[Microsoft .NET Framework 4.5.1](https://download.microsoft.com/download/1/6/7/167F0D79-9317-48AE-AEDB-17120579F8E2/NDP451-KB2858728-x86-x64-AllOS-ENU.exe)
+
+[Microsoft .NET Framework 4.5](http://download.microsoft.com/download/b/a/4/ba4a7e71-2906-4b2d-a0e1-80cf16844f5f/dotnetfx45_full_x86_x64.exe)
+
+[Microsoft .NET Framework 4 (Standalone Installer)](https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe)
+
+[Microsoft .NET Framework 4 Client Profile (Standalone Installer)](https://download.microsoft.com/download/5/6/2/562A10F9-C9F4-4313-A044-9C94E0A8FAC8/dotNetFx40_Client_x86_x64.exe)
+
+[Microsoft .NET Framework 3.5 Service Pack 1](https://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe)
+
+[Microsoft .NET Framework 3.5](http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe)
+
+[Microsoft .NET Framework 2.0 Service Pack 2 x86](https://download.microsoft.com/download/c/6/e/c6e88215-0178-4c6c-b5f3-158ff77b1f38/NetFx20SP2_x86.exe) [x64](https://download.microsoft.com/download/c/6/e/c6e88215-0178-4c6c-b5f3-158ff77b1f38/NetFx20SP2_x64.exe) [ia64](https://download.microsoft.com/download/c/6/e/c6e88215-0178-4c6c-b5f3-158ff77b1f38/NetFx20SP2_ia64.exe)
+
+[Microsoft .NET Framework 2.0 Service Pack 1 x86](https://download.microsoft.com/download/0/8/c/08c19fa4-4c4f-4ffb-9d6c-150906578c9e/NetFx20SP1_x86.exe) [x64](https://download.microsoft.com/download/9/8/6/98610406-c2b7-45a4-bdc3-9db1b1c5f7e2/NetFx20SP1_x64.exe)
+
+&lt;!-- ##{'timestamp':1760703585}## --&gt;
+。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/.NET%20Framework%20-ban-ben-xia-zai-%284.8%2C%204.7%2C%204.6%2C%204.5%2C%204.0%2C%203.5%2C%203.0%2C%202.0%29.html</guid><pubDate>Fri, 17 Oct 2025 12:19:45 +0000</pubDate></item><item><title>免费在线Office文档查看器</title><link>https://iBitBetter.github.io/post/mian-fei-zai-xian-Office-wen-dang-cha-kan-qi.html</link><description>&gt;在数字化办公时代，[免费在线Office文档查看器](https://officeviewer.org/ '免费在线Office文档查看器')（Open Word, Excel &amp; PPT Online）以革命性的隐私保护技术和即时渲染能力，成为跨平台文档处理的标杆工具 💻。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/mian-fei-zai-xian-Office-wen-dang-cha-kan-qi.html</guid><pubDate>Wed, 08 Oct 2025 13:22:45 +0000</pubDate></item><item><title>Github访问速度慢的解决方案</title><link>https://iBitBetter.github.io/post/Github-fang-wen-su-du-man-de-jie-jue-fang-an.html</link><description>作为国内的用户，我相信绝大多数的家人们都遇到过一个问题，那就是访问github的时候非常非常慢。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/Github-fang-wen-su-du-man-de-jie-jue-fang-an.html</guid><pubDate>Sat, 27 Sep 2025 12:22:45 +0000</pubDate></item><item><title>资源 - 书籍推荐 - 原子习惯</title><link>https://iBitBetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-yuan-zi-xi-guan.html</link><description>说真的，这本书让我脱胎换骨  
 
 豆瓣评分9.0，100万人亲测有效的《原子习惯》，一定要去做！去做！去做！  
 

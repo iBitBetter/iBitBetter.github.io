@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://iBitBetter.github.io/post/shi-yong-cun-chu-guo-cheng-fei-chang-man-%EF%BC%8C-dan-shi-zhi-xing-SQL-hen-kuai-de-jie-jue-fang-an.html">
 <meta property="og:image" content="https://fav.farm/⛅ ">
 <title>使用存储过程非常慢，但是执行SQL很快的解决方案</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -154,14 +154,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>实际案例</p>
 </li>
 </ol>
-<pre lang="sql" class="notranslate"><code class="notranslate">-- 当订单表数据分布发生重大变化后：
--- (1) 更新统计信息
-UPDATE STATISTICS Orders WITH FULLSCAN;
+<div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-c"><span class="pl-c">--</span> 当订单表数据分布发生重大变化后：</span>
+<span class="pl-c"><span class="pl-c">--</span> (1) 更新统计信息</span>
+<span class="pl-k">UPDATE</span> STATISTICS Orders WITH FULLSCAN;
 
--- (2) 标记相关对象重编译
-EXEC sp_recompile 'Orders';
-EXEC sp_recompile 'usp_GetRecentOrders';
-</code></pre>
+<span class="pl-c"><span class="pl-c">--</span> (2) 标记相关对象重编译</span>
+EXEC sp_recompile <span class="pl-s"><span class="pl-pds">'</span>Orders<span class="pl-pds">'</span></span>;
+EXEC sp_recompile <span class="pl-s"><span class="pl-pds">'</span>usp_GetRecentOrders<span class="pl-pds">'</span></span>;</pre></div>
 <p><strong>问题2 产生原因</strong></p>
 <p>在执行存储过程中出现了参数嗅探</p>
 <p><strong>问题2 解决方法</strong></p>

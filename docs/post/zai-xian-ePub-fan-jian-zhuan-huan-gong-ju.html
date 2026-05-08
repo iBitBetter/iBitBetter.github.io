@@ -75,7 +75,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>「神奇海螺试验场」推出的在线ePub繁简转换工具，是一款专为解决电子书字体兼容性问题而设计的实用工具📚。用户只需拖拽或粘贴ePub文件，即可一键完成繁体与简体中文的互转，尤其适合阅读港台版电子书或日文轻小说时遇到汉字差异的场景。工具特色包括：<br>
+<div class="markdown-body" id="postBody"><div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>「神奇海螺试验场」推出的在线ePub繁简转换工具，是一款专为解决电子书字体兼容性问题而设计的实用工具📚。用户只需拖拽或粘贴ePub文件，即可一键完成繁体与简体中文的互转，尤其适合阅读港台版电子书或日文轻小说时遇到汉字差异的场景。工具特色包括：<br>
 <a href="https://postimg.cc/5Q8KHvRZ" rel="nofollow"><img src="https://camo.githubusercontent.com/fc66efe1480d55079b1c5bceceb801c95d8b546c03593249b425d76d5679ad2b/68747470733a2f2f692e706f7374696d672e63632f4d484643466d624b2f657075627472616e73666f726d2e706e67" alt="epubtransform.png" data-canonical-src="https://i.postimg.cc/MHFCFmbK/epubtransform.png" style="max-width: 100%;"></a></p>
 </div>
 <p><strong>1. 高效转换核心 🔄</strong><br>
@@ -108,7 +108,7 @@ if("06/05/2025"!=""){
     var startSite=new Date("06/05/2025");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
 }
 </script></div>
 </body>
@@ -153,6 +153,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

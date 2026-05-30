@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 首页 -->
+  <url>
+    <loc>https://ibitbetter.github.io/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 分页列表页 -->
+  <url>
+    <loc>https://ibitbetter.github.io/page2.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/page3.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/page4.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 文章页：日常 -->
+  <url><loc>https://ibitbetter.github.io/post/EverydayNews.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/du-shu-bi-ji-zhi-na-wa-er-bao-dian.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/du-shu-bi-ji-zhi-chang-an-de-li-zhi.html</loc></url>
+
+  <!-- 文章页：技术 -->
+  <url><loc>https://ibitbetter.github.io/post/nano%20banana%20pro%20prompt%20%20-shou-hui-feng-ge-de-lv-xing-shou-zhang-cha-hua.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/nano%20banana%20pro%20prompt%20-wen-nuan-de-shou-hui-shi-pu-feng-ge-cha-tu.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/bi-te-bi-%EF%BC%9A-yi-zhong-dian-dui-dian-de-dian-zi-xian-jin-xi-tong.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/shu-ju-ku-geng-xin-biao-shu-ju-%EF%BC%8C-cong-ling-yi-ge-biao-zhong-qu-zhi.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/Scoop%20windows-xia-de-bao-guan-li-qi.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/.NET%20Framework%20-ban-ben-xia-zai-%284.8%2C%204.7%2C%204.6%2C%204.5%2C%204.0%2C%203.5%2C%203.0%2C%202.0%29.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/Github-fang-wen-su-du-man-de-jie-jue-fang-an.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/wei-ruan-chu-pin-de-nei-cun-fen-xi-gong-ju-%E2%80%94%E2%80%94RAMMap%20-shi-yong-zhi-nan.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/GitHub-lian-bu-shang-zen-me-ban-%EF%BC%9F.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/dian-shang-ye-wu-chang-yong-API.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/shi-yong-cun-chu-guo-cheng-fei-chang-man-%EF%BC%8C-dan-shi-zhi-xing-SQL-hen-kuai-de-jie-jue-fang-an.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/EF--cha-xun-huan-cun.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/ji-yu-github-de-ji-jian-bo-ke-kuang-jia--gmeek.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/mysql8-lv-se-ban-an-zhuang-jian-ming-jiao-cheng.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/yun-yong-.NET-kuang-jia-xia-de-SerialPort-lei-%EF%BC%8C-jie-jue-dian-shang-bao-guo-cheng-zhong-wen-ti.html</loc></url>
+
+  <!-- 文章页：资源 -->
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-re-men-wang-luo-zi-liao.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-%20-%20-qi-bu-du-dong-cai-wu-bao-biao.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-fan-PUA-zhi-nan.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-zhong-yi-gu-ji-zhen-xi-chao-ben-jing-xuan-39-ben.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-ruan-jian-%20-%20Microsoft%20Office%202024%20-quan-jia-tong.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-ji-ceng-zhong-guo-de-yun-xing-luo-ji.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-jiao-cheng-%20-%20%20-leng-men-sheng-yi-zhuan-qian-mi-ji-da-quan.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-wei-shen-me-ni-zan-bu-xia-qian.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-yuan-zi-xi-guan.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-wo-de-di-yi-ben-suan-fa-shu.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-ruan-jian-%20-%20WPS%20Office%2BAI-zhu-shou-cha-jian-%2BWPS%20PDF.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-quan-cai-man-hua-si-wei-dao-tu-ji-yi-dan-ci.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20Oxford%20Picture%20Dictionary%2C%203rd%20Edition.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-di-ceng-luo-ji-%20-kan-qing-zhe-ge-shi-jie-de-di-pai.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-ruan-jian-%20-%20TinyTools.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-ruan-jian-%20-%20-xun-lei-zui-xin-ban.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-da-qi-ju.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ji-tui-jian-%20-%20-luo-ji-yu-zhe-xue-%EF%BC%9A-xian-dai-luo-ji-dao-lun.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-shu-ju-tui-jian-%20-%20-tu-jie-HTTP.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zi-yuan-%20-%20-jiao-cheng-%20-%20%20-pu-tong-ren-ru-he-zhua-zhu-AI-feng-kou.html</loc></url>
+
+  <!-- 文章页：趣站/工具 -->
+  <url><loc>https://ibitbetter.github.io/post/AI-bai-ke-quan-shu-Grokipedia.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/fei-sou-xia-%EF%BC%9A-jie-suo-fei-shu-wen-dang-sou-suo-de-chao-ji-li-qi.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/mian-fei-zai-xian-Office-wen-dang-cha-kan-qi.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/hao-pin-%20-%20-mian-fei-zai-xian-pin-tu-gong-ju.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zhong-guo-da-mian-zhi-you-piao-tu-jian.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/Mirror%20-zhong-wen-jiao-cheng.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/shou-ji-bo-wu-guan.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/Flow-shi-yi-kuan-mian-fei-kai-yuan-de-liu-lan-qi-duan-ePub-yue-du-qi.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/zai-xian-ePub-fan-jian-zhuan-huan-gong-ju.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/xi-ti-da-yin-sheng-cheng-qi-%EF%BC%88DaYin.page%EF%BC%89.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/AYA%EF%BC%9AADB%20-tu-xing-hua-shen-qi-%EF%BC%8C-gao-bie-ming-ling-xing-shi-dai.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/TinyPNG%EF%BC%9A-rang-ni-de-wang-zhan-fei-su-jia-zai-de-zhi-neng-tu-pian-ya-suo-shen-qi.html</loc></url>
+  <url><loc>https://ibitbetter.github.io/post/gai-tu-bao-%EF%BC%9A-yi-zhan-shi-zai-xian-tu-pian-chu-li-shen-qi.html</loc></url>
+
+</urlset>

@@ -1,0 +1,120 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate sitemap.xml
+        run: |
+          python3 << 'EOF'
+          import os, re, subprocess, datetime
+
+          SITE_URL = "https://ibitbetter.github.io"
+          OUTPUT = "sitemap.xml"
+
+          def get_lastmod(filepath):
+              try:
+                  result = subprocess.run(
+                      ["git", "log", "-1", "--format=%ci", "--", filepath],
+                      capture_output=True, text=True
+                  )
+                  if result.stdout.strip():
+                      return result.stdout.strip()[:10]
+              except:
+                  pass
+              return datetime.date.today().isoformat()
+
+          def get_priority(url_path):
+              if url_path == "/":
+                  return "1.0"
+              if "/post/" in url_path:
+                  return "0.8"
+              return "0.5"
+
+          def get_changefreq(url_path):
+              if url_path == "/":
+                  return "daily"
+              if "/post/" in url_path:
+                  return "weekly"
+              return "monthly"
+
+          urls = []
+
+          # 首页
+          urls.append({
+              "loc": SITE_URL + "/",
+              "lastmod": get_lastmod("index.html") if os.path.exists("index.html") else "",
+              "changefreq": "daily",
+              "priority": "1.0"
+          })
+
+          # 扫描所有 HTML 文件（排除 node_modules、.git）
+          for root, dirs, files in os.walk("."):
+              # 跳过隐藏目录和 node_modules
+              dirs[:] = [d for d in dirs if not d.startswith(".") and d not in ("node_modules",)]
+              for fname in files:
+                  if not fname.endswith(".html"):
+                      continue
+                  fpath = os.path.join(root, fname)
+                  # 转为 URL 路径
+                  relpath = fpath[2:]  # 去掉开头的 ./
+                  # 跳过 sitemap 自己
+                  if "sitemap" in fname.lower():
+                      continue
+                  url_path = "/" + relpath
+                  full_url = SITE_URL + url_path
+                  lastmod = get_lastmod(fpath)
+                  urls.append({
+                      "loc": full_url,
+                      "lastmod": lastmod,
+                      "changefreq": get_changefreq(url_path),
+                      "priority": get_priority(url_path)
+                  })
+
+          # 写 sitemap.xml
+          with open(OUTPUT, "w", encoding="utf-8") as f:
+              f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+              f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n')
+              f.write('        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"\n')
+              f.write('        xmlns:xhtml="http://www.w3.org/1999/xhtml"\n')
+              f.write('        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"\n')
+              f.write('        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n')
+              for u in urls:
+                  f.write("  <url>\n")
+                  f.write(f"    <loc>{u['loc']}</loc>\n")
+                  if u['lastmod']:
+                      f.write(f"    <lastmod>{u['lastmod']}</lastmod>\n")
+                  f.write(f"    <changefreq>{u['changefreq']}</changefreq>\n")
+                  f.write(f"    <priority>{u['priority']}</priority>\n")
+                  f.write("  </url>\n")
+              f.write('</urlset>\n')
+
+          print(f"sitemap.xml 生成完成，共 {len(urls)} 个 URL")
+          EOF
+
+      - name: Commit and push sitemap.xml
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git diff --cached --quiet || git commit -m "chore: auto-generate sitemap.xml [skip ci]"
+          git push

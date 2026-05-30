@@ -126,5 +126,5 @@ jobs:
           git config user.name "ibitbetter"
           git config user.email "xbitbetter@gmail.com"
           git add static/assets/sitemap.xml # 修改点5：提交指定为 docs 目录下的文件
-          git diff --cached --quiet || git commit -m "chore: auto-generate sitemap.xml [skip ci]"
+          git diff --cached --quiet || git commit -m "🎉chore: auto-generate sitemap.xml [skip ci]"
           git push

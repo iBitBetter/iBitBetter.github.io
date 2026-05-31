@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅙 life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://ibitbetter.github.io/assets/ibitbetter.svg</url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Sun, 31 May 2026 09:12:17 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>药物说明书找不到，搜它就够了</title><link>https://iBitBetter.github.io/post/yao-wu-shuo-ming-shu-zhao-bu-dao-%EF%BC%8C-sou-ta-jiu-gou-le.html</link><description>&gt; [!TIP]
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅙 life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://ibitbetter.github.io/assets/ibitbetter.svg</url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Sun, 31 May 2026 09:14:05 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>药物说明书找不到，搜它就够了</title><link>https://iBitBetter.github.io/post/yao-wu-shuo-ming-shu-zhao-bu-dao-%EF%BC%8C-sou-ta-jiu-gou-le.html</link><description>&gt; [!TIP]
 &gt;买了盒药，说明书找不着了。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/yao-wu-shuo-ming-shu-zhao-bu-dao-%EF%BC%8C-sou-ta-jiu-gou-le.html</guid><pubDate>Sun, 31 May 2026 08:31:20 +0000</pubDate></item><item><title>.NET Framework 版本下载</title><link>https://iBitBetter.github.io/post/.NET%20Framework%20-ban-ben-xia-zai.html</link><description>.NET Framework 版本下载(4.8, 4.7, 4.6, 4.5, 4.0, 3.5, 3.0, 2.0)
 
 [Microsoft .NET Framework 4.8](https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe)
@@ -48,103 +48,7 @@
 1. 极速搭建 ⚡  
    • 通过 GitHub模板仓库 一键创建，支持自定义域名（如`xxx.github.io`）。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/ji-yu-github-de-ji-jian-bo-ke-kuang-jia--gmeek.html</guid><pubDate>Sat, 09 May 2026 12:25:50 +0000</pubDate></item><item><title>mysql8绿色版安装简明教程</title><link>https://iBitBetter.github.io/post/mysql8-lv-se-ban-an-zhuang-jian-ming-jiao-cheng.html</link><description># 背景
 
-- 开发安装MySQL8版本，但是直接使用安装包安装，无法设置安装路径，mysql会直接安装到系统盘。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/mysql8-lv-se-ban-an-zhuang-jian-ming-jiao-cheng.html</guid><pubDate>Fri, 08 May 2026 12:45:50 +0000</pubDate></item><item><title>比特币白皮书</title><link>https://iBitBetter.github.io/post/bi-te-bi-bai-pi-shu.html</link><description># 比特币：一种点对点的电子现金系统
-
-​                                作者：中本聪
-​                                satoshin@gmx.com
-​                                www.bitcoin.org 
-​                                2008.10.31
-
-​                                中文翻译：李笑来
-​                                lixiaolai@gmail.com
-​                                2018.10.31
-
-​                                [Checkout Github Repo for this translation](https://github.com/xiaolai/bitcoin-whitepaper-chinese-translation)
-
-&gt; **Abstract.** A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network. The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as a majority of CPU power is controlled by nodes that are not cooperating to attack the network, they'll generate the longest chain and outpace attackers. The network itself requires minimal structure. Messages are broadcast on a best effort basis, and nodes can leave and rejoin the network at will, accepting the longest proof-of-work chain as proof of what happened while they were gone. 
-&gt; 
-&gt; **概要**：一个纯粹的点对点版本的电子现金系统，将允许在线支付直接从一方发送到另一方，而无需通过金融机构。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/bi-te-bi-bai-pi-shu.html</guid><pubDate>Mon, 17 Nov 2025 08:08:44 +0000</pubDate></item><item><title>Scoop windows下的包管理器</title><link>https://iBitBetter.github.io/post/Scoop%20windows-xia-de-bao-guan-li-qi.html</link><description># Scoop 安装
-## 环境需求
-- PowerShell 5 +
-- .NET Framework 4.5 +
-![scoop-01](https://user-images.githubusercontent.com/124132611/216545926-1d034692-d7ae-491a-9237-04065711e7e6.jpg)
-# 安装
-## 指定安装位置（配置环境变量）
-以管理员身份打开PowerShell
-```yml
-$env:SCOOP='D:\Applications\Scoop'
- $env:SCOOP, 'User')
-$env:SCOOP_GLOBAL='F:\GlobalScoopApps'
- $env:SCOOP_GLOBAL, 'Machine')
-```
-# 安装Scoop
-首先确保你能访问 raw.githubusercontent.com
-```yml
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-# 或者
-iwr -useb get.scoop.sh | iex
-irm https://cdn.jsdelivr.net/gh/duzyn/scoop-cn/install.ps1 | iex
-irm https://ghproxy.com/raw.githubusercontent.com/duzyn/scoop-cn/master/install.ps1 | iex
-```
-
-# Scoop 使用
-## Scoop官方维护的仓库
-- main - 默认仓库
-- extras - 默认仓库的补充超级强大
-- games - 看名字就知道啦
-- nerd-fonts - Nerd Fonts
-- nirsoft - A subset of the 250 Nirsoft apps
-- java - Installers for Oracle Java, OpenJDK, Zulu, ojdkbuild, AdoptOpenJDK, Amazon Corretto, BellSoft Liberica &amp; SapMachine
-- jetbrains - Installers for all JetBrains utilities and IDEs
-- nonportable - Non-portable apps (may require UAC)
-- php - Installers for most versions of PHP
-- versions - Alternative versions of apps found in other buckets
-
-可以直接通过scoop bucket add &lt;repo_name&gt;安装
-
-由于某些原因，每次更新仓库的时间奇慢，所以还是换为国内镜像仓库来增加使用体验
-
-# 镜像仓库
-- [main](https://mirror.nju.edu.cn/git/scoop-main.git 'main')
-
-- [extras](https://mirror.nju.edu.cn/git/scoop-extras.git 'extras')
-
-- [dorado](https://gitee.com/scoop-bucket/dorado.git 'dorado')
-
-# 执行以下命令安装必装软件
-```yml
-scoop install aria2 git 7zip
-```
-反正你肯定要用到！
-或者
-```
-scoop install https://ghproxy.com/raw.githubusercontent.com/duzyn/scoop-cn/master/bucket/7zip.json
-scoop install https://ghproxy.com/raw.githubusercontent.com/duzyn/scoop-cn/master/bucket/git.json
-scoop install https://ghproxy.com/raw.githubusercontent.com/duzyn/scoop-cn/master/bucket/aria2.json
-```
-或者
-```
-scoop install https://cdn.jsdelivr.net/gh/duzyn/scoop-cn/bucket/7zip.json
-scoop install https://cdn.jsdelivr.net/gh/duzyn/scoop-cn/bucket/git.json
-scoop install https://cdn.jsdelivr.net/gh/duzyn/scoop-cn/bucket/aria2.json
-```
-# 对aria2进行设置
-```
-scoop config aria2-split 3 
-scoop config aria2-max-connection-per-server 3 
-scoop config aria2-min-split-size 1M
-```
-# 对scoop_repo进行更改
-```
-scoop config SCOOP_REPO https://gitee.com/scoop-bucket/scoop
-```
-# 执行以下命令订阅软件仓库
-```
-scoop bucket rm main
-scoop bucket add main https://mirror.nju.edu.cn/git/scoop-main.git
-scoop bucket add extras https://mirror.nju.edu.cn/git/scoop-extras.git
-```
-以上两个是官方bucket的国内镜像，所有软件建议优先从这里下载。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/Scoop%20windows-xia-de-bao-guan-li-qi.html</guid><pubDate>Sun, 16 Nov 2025 01:38:46 +0000</pubDate></item><item><title>电商业务常用API</title><link>https://iBitBetter.github.io/post/dian-shang-ye-wu-chang-yong-API.html</link><description>## 淘宝订单服务使用到的API
+- 开发安装MySQL8版本，但是直接使用安装包安装，无法设置安装路径，mysql会直接安装到系统盘。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/mysql8-lv-se-ban-an-zhuang-jian-ming-jiao-cheng.html</guid><pubDate>Fri, 08 May 2026 12:45:50 +0000</pubDate></item><item><title>电商业务常用API</title><link>https://iBitBetter.github.io/post/dian-shang-ye-wu-chang-yong-API.html</link><description>## 淘宝订单服务使用到的API
 
 taobao.trades.sold.get( 查询卖家已卖出的交易数据（根据创建时间） )﻿https://open.taobao.com/api.htm?docId=46&amp;docType=2 
 

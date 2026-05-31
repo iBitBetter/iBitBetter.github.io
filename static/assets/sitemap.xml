@@ -53,12 +53,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.github.io/post/bi-te-bi-：-yi-zhong-dian-dui-dian-de-dian-zi-xian-jin-xi-tong.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ibitbetter.github.io/post/shou-ji-bo-wu-guan.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -107,12 +101,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.github.io/post/du-shu-bi-ji-zhi-chang-an-de-li-zhi.html</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ibitbetter.github.io/post/mian-fei-zai-xian-Office-wen-dang-cha-kan-qi.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -133,6 +121,12 @@
   <url>
     <loc>https://ibitbetter.github.io/post/GitHub-lian-bu-shang-zen-me-ban-？.html</loc>
     <lastmod>2026-05-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/post/bi-te-bi-bai-pi-shu-zhong-yi-ban-ben.html</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -207,11 +201,5 @@
     <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/assets/googled8fb9a5540e52cdf.html</loc>
-    <lastmod>2025-06-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>

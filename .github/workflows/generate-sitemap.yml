@@ -30,7 +30,7 @@ jobs:
           import os, re, subprocess, datetime
 
           SITE_URL = "https://ibitbetter.github.io"
-          OUTPUT = "static/assets/sitemap.xml"  # 修改点1：输出到 docs 目录
+          OUTPUT = "static/sitemap.xml"  # 修改点1：输出到 docs 目录
 
           def get_lastmod(filepath):
               try:

@@ -6,7 +6,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ibitbetter.github.io/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -37,6 +37,12 @@
   <url>
     <loc>https://ibitbetter.github.io/post/yao-wu-shuo-ming-shu-zhao-bu-dao-，-sou-ta-jiu-gou-le.html</loc>
     <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/post/guo-he-kan-tu.html</loc>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -85,6 +91,24 @@
   <url>
     <loc>https://ibitbetter.github.io/post/Github-fang-wen-su-du-man-de-jie-jue-fang-an.html</loc>
     <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/post/you-ju---guo-ji-xin-wen-shi-shi-he-cha.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/post/DotNETFramework-ban-ben-xia-zai-di-zhi.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/post/hua-kuai-tu---mian-fei-hua-wen-hua-xing-she-ji-gong-ju.html</loc>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

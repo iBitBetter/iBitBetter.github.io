@@ -6,7 +6,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ibitbetter.github.io/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -24,7 +24,7 @@
   </url>
   <url>
     <loc>https://ibitbetter.github.io/page2.html</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -53,6 +53,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ibitbetter.github.io/post/ni-chu-sheng-na-tian-duo-shao-du-？-zhe-ge-bao-cang-wang-zhan-ji-de.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ibitbetter.github.io/post/hao-pin- - -mian-fei-zai-xian-pin-tu-gong-ju.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -67,6 +73,12 @@
   <url>
     <loc>https://ibitbetter.github.io/post/EverydayNews.html</loc>
     <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/post/Snipaste：-jie-tu-tie-tu-yi-ba-suo-，-yong-guo-jiu-hui-bu-qu-de-gong-ju.html</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

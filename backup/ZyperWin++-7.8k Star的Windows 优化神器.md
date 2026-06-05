@@ -35,6 +35,5 @@
 
 ZyperWin++ 不是最强的系统工具箱，但可能是最让人放心的那个。每项可选、配置可导出、代码可审计——在优化工具这个"信任成本极高"的品类里，透明本身就是最大的竞争力。
 
-GitHub 搜 ZyperWinOptimize，Releases 页面下载。
+GitHub 搜 ZyperWinOptimize，[Releases 页面下载](https://github.com/ZyperWave/ZyperWinOptimize/releases)。
 
-#Windows优化# #系统工具# #开源软件#

@@ -6,21 +6,9 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ibitbetter.github.io/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/about.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/page3.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ibitbetter.github.io/tag.html</loc>
@@ -29,67 +17,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.github.io/page2.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://ibitbetter.github.io/post/mysql8-lv-se-ban-an-zhuang-jian-ming-jiao-cheng.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/yao-wu-shuo-ming-shu-zhao-bu-dao-，-sou-ta-jiu-gou-le.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/guo-he-kan-tu.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/ZyperWin++-7.8k Star-de-Windows -you-hua-shen-qi.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/yi-nian-tian-tang-，-yi-nian-di-yu.html</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/shen-qi-hai-luo-shi-yan-chang--ePub -fan-jian-zai-xian-zhuan-huan.html</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/Flow-shi-yi-kuan-mian-fei-kai-yuan-de-liu-lan-qi-duan-ePub-yue-du-qi.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/SearchEmoji-Emoji -sou-suo-yin-qing.html</loc>
-    <lastmod>2026-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/ni-chu-sheng-na-tian-duo-shao-du-？-zhe-ge-bao-cang-wang-zhan-ji-de.html</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/hao-pin- - -mian-fei-zai-xian-pin-tu-gong-ju.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -103,12 +31,6 @@
   <url>
     <loc>https://ibitbetter.github.io/post/EverydayNews.html</loc>
     <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/Snipaste：-jie-tu-tie-tu-yi-ba-suo-，-yong-guo-jiu-hui-bu-qu-de-gong-ju.html</loc>
-    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -137,25 +59,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.github.io/post/30-wan-shou-gu-shi-ci-，-huan-neng-rang-AI-bang-ni-xie-shi.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/you-ju---guo-ji-xin-wen-shi-shi-he-cha.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ibitbetter.github.io/post/DotNETFramework-ban-ben-xia-zai-di-zhi.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/hua-kuai-tu---mian-fei-hua-wen-hua-xing-she-ji-gong-ju.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

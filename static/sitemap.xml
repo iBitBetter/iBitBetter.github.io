@@ -17,13 +17,19 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.github.io/post/bi-te-bi-bai-pi-shu.html</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://ibitbetter.github.io/post/ru-he-cong-hu-lian-wang-zhao-dao-ni-xu-yao-de-dian-zi-shu.html</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ibitbetter.github.io/post/mysql8-lv-se-ban-an-zhuang-jian-ming-jiao-cheng.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.github.io/post/DotNETFramework-ban-ben-xia-zai-di-zhi.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -41,19 +47,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.github.io/post/ru-he-cong-hu-lian-wang-zhao-dao-ni-xu-yao-de-dian-zi-shu.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://ibitbetter.github.io/post/bi-te-bi-bai-pi-shu.html</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ibitbetter.github.io/post/ji-yu-github-de-ji-jian-bo-ke-kuang-jia--gmeek.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/DotNETFramework-ban-ben-xia-zai-di-zhi.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

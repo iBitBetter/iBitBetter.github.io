@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark_colorblind" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://iBitBetter.github.io/assets/primer.css' rel='stylesheet' />
+    <script src='https://iBitBetter.github.io/assets/GmeekVercount.js'></script><meta name='google-site-verification' content='V4oJLTpRvCvtscGwQ1ijpXd5oC8gvThYrfMHBGWgacs' />
+    <link rel="icon" href="https://fav.farm/🅱"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="> 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
+
+**iBitBetter**  
+**V0.1** · 2026.06.15 
+
+---
+
+# 目录
+
+- **01** — 项目起源与设计理念
+- **02** — 技术架构
+- **03** — 功能演进：核心引擎
+- **04** — 功能演进：用户界面
+- **05** — 功能演进：系统工具
+- **06** — 工程实践
+- **07** — 回顾与展望
+- **附录** — 项目文件结构 & 命令速查
+
+### 01 · Origin
+
+# 项目起源与设计理念
+
+WinMole 诞生于一次跨平台的设计对话。">
+<meta property="og:title" content="WinMole开发日志">
+<meta property="og:description" content="> 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
+
+**iBitBetter**  
+**V0.1** · 2026.06.15 
+
+---
+
+# 目录
+
+- **01** — 项目起源与设计理念
+- **02** — 技术架构
+- **03** — 功能演进：核心引擎
+- **04** — 功能演进：用户界面
+- **05** — 功能演进：系统工具
+- **06** — 工程实践
+- **07** — 回顾与展望
+- **附录** — 项目文件结构 & 命令速查
+
+### 01 · Origin
+
+# 项目起源与设计理念
+
+WinMole 诞生于一次跨平台的设计对话。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html">
+<meta property="og:image" content="https://ibitbetter.github.io/assets/ibitbetter.svg">
+<title>WinMole开发日志</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">WinMole开发日志</h1>
+<div class="title-right">
+    <a href="https://iBitBetter.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/iBitBetter/iBitBetter.github.io/issues/149" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><blockquote>
+<p>从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话</p>
+</blockquote>
+<p><strong>iBitBetter</strong><br>
+<strong>V0.1</strong> · 2026.06.15</p>
+<hr>
+<h1>目录</h1>
+<ul>
+<li><strong>01</strong> — 项目起源与设计理念</li>
+<li><strong>02</strong> — 技术架构</li>
+<li><strong>03</strong> — 功能演进：核心引擎</li>
+<li><strong>04</strong> — 功能演进：用户界面</li>
+<li><strong>05</strong> — 功能演进：系统工具</li>
+<li><strong>06</strong> — 工程实践</li>
+<li><strong>07</strong> — 回顾与展望</li>
+<li><strong>附录</strong> — 项目文件结构 &amp; 命令速查</li>
+</ul>
+<h3>01 · Origin</h3>
+<h1>项目起源与设计理念</h1>
+<p>WinMole 诞生于一次跨平台的设计对话。macOS 上有 Mole——一款五合一原生清理工具，<br>
+以「一次买断、无遥测、本机扫描」为核心理念。Windows 生态缺少这样一款<strong>轻量、克制、无侵入</strong>的系统工具。<br>
+WinMole 的目标不是取代 CCleaner，而是提供一款开发者视角的日常维护伴侣。</p>
+<h2>为什么叫 WinMole</h2>
+<p>Mole（鼹鼠）在 macOS 上做了五件事：系统清理、软件管理、磁盘分析、状态监控、大文件扫描。<br>
+它的设计哲学是「五颗星球」——每一项功能独立运转，互不依赖，用户可以只用一个。<br>
+WinMole 继承了这套理念，同时针对 Windows 平台的独特问题（注册表、回收站 API、GBK 编码）<br>
+做了大量平台适配。</p>
+<h2>设计约束</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>约束项</th>
+<th>选择</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>语言</td>
+<td>Python 3.13</td>
+<td>零编译成本，快速迭代</td>
+</tr>
+<tr>
+<td>GUI 框架</td>
+<td>Tkinter（内置）</td>
+<td>零额外依赖，开箱即用</td>
+</tr>
+<tr>
+<td>终端框架</td>
+<td>Rich</td>
+<td>彩色终端 + 进度条 + 表格</td>
+</tr>
+<tr>
+<td>系统调用</td>
+<td>ctypes + psutil + winreg</td>
+<td>直接调用 Windows API</td>
+</tr>
+<tr>
+<td>打包</td>
+<td>PyInstaller (onedir)</td>
+<td>独立 exe，无需安装 Python</td>
+</tr>
+<tr>
+<td>国际化</td>
+<td>自建 locales.py</td>
+<td>中英双语，一键切换</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<blockquote>
+<p>核心原则：<strong>独立 exe，不写注册表，不驻留后台，本机扫描不上传</strong>。这是对 Mole 设计哲学的直接延续，也是 WinMole 与市面上大多数 Windows 清理工具的根本区别。</p>
+</blockquote>
+<h3>02 · Architecture</h3>
+<h1>技术架构</h1>
+<p>WinMole 采用<strong>引擎与界面分离</strong>的架构：一个核心引擎（<code class="notranslate">winmole_engine.py</code>）<br>
+同时服务于命令行版（<code class="notranslate">winmole_simple.py</code>）和图形界面版（<code class="notranslate">winmole_gui.py</code>）。<br>
+清理规则从 YAML 配置文件加载，支持用户自定义扩展。</p>
+<h2>模块总览</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>模块</th>
+<th>职责</th>
+<th>关键技术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>winmole_engine.py</td>
+<td>核心引擎：六大类，处理所有底层逻辑</td>
+<td>ctypes · psutil · winreg · yaml</td>
+</tr>
+<tr>
+<td>winmole_simple.py</td>
+<td>命令行界面：7 个功能菜单</td>
+<td>Rich (Console, Table, Panel, Progress)</td>
+</tr>
+<tr>
+<td>winmole_gui.py</td>
+<td>图形界面：5 个标签页</td>
+<td>Tkinter (ttk.Notebook, Thread)</td>
+</tr>
+<tr>
+<td>locales.py</td>
+<td>国际化：中英双语</td>
+<td>80+ key 的字典映射</td>
+</tr>
+<tr>
+<td>cleanup_rules.yaml</td>
+<td>清理规则配置</td>
+<td>9 条系统规则 + 浏览器 + 构建产物</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>引擎六大类</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>类</th>
+<th>功能</th>
+<th>关键方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Config</td>
+<td>加载 YAML 规则，路径展开，PyInstaller 兼容</td>
+<td>_load() · _get_app_dir()</td>
+</tr>
+<tr>
+<td>SystemCleaner</td>
+<td>扫描和清理系统垃圾，含回收站特殊处理</td>
+<td>scan() · clean() · _empty_recycle_bin()</td>
+</tr>
+<tr>
+<td>AppUninstaller</td>
+<td>读取已安装应用、静默卸载、残留扫描</td>
+<td>get_installed_apps() · uninstall() · scan_residuals()</td>
+</tr>
+<tr>
+<td>RegistryCleaner</td>
+<td>扫描无效注册表项，支持分类选择和批量清理</td>
+<td>scan() · clean()</td>
+</tr>
+<tr>
+<td>BuildArtifactCleaner</td>
+<td>扫描 node_modules / target / build 等构建产物</td>
+<td>scan() · clean()</td>
+</tr>
+<tr>
+<td>SizeUtils</td>
+<td>格式化文件大小（B / KB / MB / GB）</td>
+<td>format_size()</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<blockquote>
+<p><strong>架构决策</strong><br>
+引擎与界面分离带来了两个好处：第一，命令行和 GUI 共享同一套清理逻辑，不会出现行为不一致；<br>
+第二，打包时可以独立编译 CLI 和 GUI 两个 exe，用户按需选择，不强制安装图形界面。</p>
+</blockquote>
+<h3>03 · Core Engine</h3>
+<h1>功能演进：核心引擎</h1>
+<p>核心引擎的开发贯穿了整个项目周期。其中最复杂的两个子系统是<strong>回收站清理</strong><br>
+和<strong>应用卸载</strong>——两者都需要直接调用 Windows API，而非简单的文件系统操作。</p>
+<h2>回收站清理：绕过文件系统陷阱</h2>
+<p>初版直接用 <code class="notranslate">shutil.rmtree("C:/$Recycle.Bin")</code>。这在 Windows 上静默失败——<br>
+<code class="notranslate">$Recycle.Bin</code> 是系统保护文件夹，Python 的文件 API 无权访问。表现是「清理成功」但磁盘空间一点没变。</p>
+<p>修复方案是通过 ctypes 直接调用 Shell32 API：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 获取回收站大小</span>
+<span class="pl-s1">ctypes</span>.<span class="pl-c1">windll</span>.<span class="pl-c1">shell32</span>.<span class="pl-c1">SHQueryRecycleBinW</span>(<span class="pl-s">"C:<span class="pl-cce">\\</span>"</span>)
+
+<span class="pl-c"># 清空回收站（0x0001 = NOPROGRESSUI + flag）</span>
+<span class="pl-s1">ctypes</span>.<span class="pl-c1">windll</span>.<span class="pl-c1">shell32</span>.<span class="pl-c1">SHEmptyRecycleBinW</span>(<span class="pl-c1">0</span>, <span class="pl-c1">None</span>, <span class="pl-c1">0x0001</span>)</pre></div>
+<p>同时增加了 <strong>&lt; 1KB 保护</strong>：当 API 返回的大小不足 1KB 时视为已空，<br>
+避免对元数据残留反复调用 API。这条保护规则挽回了约 1.88MB 的误判空间。</p>
+<h2>清理反馈：从静默到透明</h2>
+<p><code class="notranslate">shutil.rmtree</code> 的另一个问题是 <code class="notranslate">ignore_errors=True</code><br>
+吞掉了所有错误信息——缩略图被 Explorer 锁定、临时文件被其他进程占用，这些 PermissionError<br>
+全部静默消失。我们修改了清理流程：</p>
+<ol>
+<li><code class="notranslate">_clean_contents()</code> 改为返回 <code class="notranslate">(deleted, failed)</code> 元组，不再吞异常</li>
+<li><code class="notranslate">clean()</code> 对每条规则返回三态：<strong>cleaned</strong> / <strong>partial</strong> / <strong>failed</strong></li>
+<li>GUI 新增详细结果弹窗，逐项显示 [OK] / [*] / [FAIL] + 原因</li>
+<li>关闭弹窗后自动重扫，确认实际清理效果</li>
+</ol>
+<h2>应用卸载与残留扫描</h2>
+<p><code class="notranslate">AppUninstaller</code> 从注册表 <code class="notranslate">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</code><br>
+读取已安装应用列表（实际加载了 137 个条目）。卸载流程分为三步：</p>
+<ol>
+<li>静默卸载：调用应用的 QuietUninstallString 或 UninstallString</li>
+<li>残留扫描：检查 AppData、ProgramData、Program Files 下的对应目录</li>
+<li>可选清理：用户确认后批量删除残留文件和注册表项</li>
+</ol>
+<h2>注册表清理</h2>
+<p><code class="notranslate">RegistryCleaner</code> 扫描四类问题：无效软件条目、启动项残留、文件关联孤项、<br>
+最近文件历史。支持按类别选择和批量清理，每次操作前生成预览清单。</p>
+<h3>04 · User Interface</h3>
+<h1>功能演进：用户界面</h1>
+<p>WinMole 提供<strong>双模式界面</strong>：基于 Rich 的终端交互界面（CLI）和基于 Tkinter<br>
+的图形界面（GUI）。二者共享同一引擎，但面向不同的使用场景——CLI 适合快速操作和远程维护，<br>
+GUI 适合新手和一次性批量任务。</p>
+<h2>GUI：五大标签页</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>标签页</th>
+<th>功能</th>
+<th>关键交互</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>系统清理</td>
+<td>扫描 + 批量清理临时文件、缓存、回收站</td>
+<td>16 项规则，进度条，结果弹窗</td>
+</tr>
+<tr>
+<td>应用卸载</td>
+<td>已安装应用列表 + 单个卸载 + 残留扫描</td>
+<td>搜索过滤，确认对话框</td>
+</tr>
+<tr>
+<td>注册表</td>
+<td>扫描无效注册表项 + 分类清理</td>
+<td>按类别勾选，批量操作</td>
+</tr>
+<tr>
+<td>构建产物</td>
+<td>扫描 node_modules / target 等</td>
+<td>浏览选择目录，预览后清理</td>
+</tr>
+<tr>
+<td>关于</td>
+<td>版本信息 + 技术栈</td>
+<td>项目链接</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p>清理操作在后台线程执行（<code class="notranslate">threading.Thread</code>），不阻塞 UI。进度通过<br>
+<code class="notranslate">root.after()</code> 回传主线程更新。清理完成后弹出详细结果对话框，用户<br>
+能看到每一项规则的实际清理结果，而不仅仅是一个「完成」提示。</p>
+<h2>中英文一键切换</h2>
+<p><code class="notranslate">locales.py</code> 维护了约 80 个 key 的中英双语文案。GUI 右上角的语言切换<br>
+按钮触发 <code class="notranslate">_toggle_lang()</code> 方法，遍历所有已注册的控件字典 <code class="notranslate">_w</code>，<br>
+动态更新文字而不重建 UI：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">_toggle_lang</span>(<span class="pl-s1">self</span>):
+    <span class="pl-s1">self</span>.<span class="pl-c1">_lang</span> <span class="pl-c1">=</span> <span class="pl-s">"zh"</span> <span class="pl-k">if</span> <span class="pl-s1">self</span>.<span class="pl-c1">_lang</span> <span class="pl-c1">==</span> <span class="pl-s">"en"</span> <span class="pl-k">else</span> <span class="pl-s">"en"</span>
+    <span class="pl-k">for</span> <span class="pl-s1">widget</span>, <span class="pl-s1">key</span>, <span class="pl-s1">fmt</span> <span class="pl-c1">in</span> <span class="pl-s1">self</span>.<span class="pl-c1">_w</span>:
+        <span class="pl-s1">widget</span>.<span class="pl-c1">config</span>(<span class="pl-s1">text</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-c1">t</span>(<span class="pl-s1">key</span>).<span class="pl-c1">format</span>(<span class="pl-c1">**</span><span class="pl-s1">fmt</span>))</pre></div>
+<blockquote>
+<p>所有按钮使用 Emoji 文字图标（🔍 扫描、🧹 清理、🔄 刷新、❌ 卸载等），而非外部图片文件。<br>
+这保证了打包后的 exe 零外部资源依赖。之前尝试过 base64 内嵌 PNG 方案（18 种 16x16 彩色图标），<br>
+最终因为终端兼容性原因回退到更简洁的 Emoji 文字方案。</p>
+</blockquote>
+<h2>CLI：从简单到丰富的演进</h2>
+<p>命令行版的迭代是整个项目中最活跃的部分。初版只有基础的清理和状态显示，后续根据<br>
+Mole 的界面设计逐个重写了三个核心模块：磁盘分析、系统监控、软件卸载。每一次重写<br>
+都遵循同一个原则：<strong>交互密度要够、键盘操作要快、视觉效果要有区分度</strong>。</p>
+<h3>05 · System Tools</h3>
+<h1>功能演进：系统工具</h1>
+<p>CLI 的三个系统工具模块——磁盘分析、系统监控、软件卸载——都经历了从「能用」到<br>
+「用起来爽」的完整重设计。每一次重写的参照物都是 Mole 的 macOS 界面，但目标不是照搬，<br>
+而是理解其<strong>交互逻辑</strong>，再在 Windows 终端环境下重新实现。</p>
+<h2>磁盘分析器</h2>
+<p>初版只是一个分区列表：<code class="notranslate">C: 总 500G / 已用 320G (64%)</code>。<br>
+重写后的版本是<strong>交互式目录级分析器</strong>：</p>
+<ul>
+<li>
+<p>默认从用户目录开始扫描，而非分区根目录——更贴近实际使用场景</p>
+</li>
+<li>
+<p>水平条形图排名，按大小降序，色阶动态（&gt;50% 红 / 25-50% 黄 / 10-25% 青 / &lt;10% 灰）</p>
+</li>
+<li>
+<p><code class="notranslate">N</code> + 数字：钻入子目录；<code class="notranslate">B</code>：返回上级；<code class="notranslate">L</code>：大文件模式</p>
+</li>
+<li>
+<p><code class="notranslate">D</code>：驱动器切换器（含使用率条形图）；<code class="notranslate">P</code>：自定义路径</p>
+</li>
+</ul>
+<p>最大的技术难点是性能——扫描包含数百个子目录的用户文件夹时，Python 递归<br>
+遍历可能耗时数秒。我们加入了实时扫描计数显示和按文件数截断（单目录最多显示前 50<br>
+个子项），保证界面在 1 秒内渲染完成。</p>
+<h2>系统监控器</h2>
+<p>按照 Mole 的 <code class="notranslate">mo status</code> 设计，重写为双列三行的信息面板布局，<br>
+六大数据面板覆盖了系统运行的全部关键指标：</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>面板</th>
+<th>指标</th>
+<th>技术实现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>总使用率 + 8 核独立进度条 + 实时频率</td>
+<td>psutil.cpu_percent + cpu_freq</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Used / Free / Available 三条进度条</td>
+<td>psutil.virtual_memory</td>
+</tr>
+<tr>
+<td>Disk</td>
+<td>C: 使用率 + I/O 读写速度条</td>
+<td>psutil.disk_usage + disk_io_counters</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>电池电量 + 充电状态（桌面机显示 N/A）</td>
+<td>psutil.sensors_battery</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>上下行速度 + IP 地址</td>
+<td>psutil.net_io_counters + net_if_addrs</td>
+</tr>
+<tr>
+<td>Processes</td>
+<td>Top5 内存占用进程</td>
+<td>psutil.process_iter</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<blockquote>
+<p><strong>CPU 数据 0.0% Bug</strong>：这是一个隐蔽的 psutil API 陷阱。两次<br>
+<code class="notranslate">cpu_percent()</code> 调用（先 interval=0.5，再 percpu=True）导致第二次<br>
+percpu 追踪器从第一次的终点启动，基线丢失，所有核心显示 0.0%。修复仅需一行：<br>
+<code class="notranslate">cpu_percent(interval=0.5, percpu=True)</code> 单次调用 + sum/len 算总使用率。</p>
+</blockquote>
+<h2>一键释放内存</h2>
+<p>通过 ctypes 调用 <code class="notranslate">EmptyWorkingSet</code> Windows API，遍历所有进程，<br>
+强制修剪工作集（working set），将被进程占用但未活跃使用的物理内存归还系统。</p>
+<ul>
+<li>
+<p>实测效果：88.7% → 62.8%，释放 2.02 GB，无需重启</p>
+</li>
+<li>
+<p>遍历 147 个进程，成功修剪 139 个，系统保护进程自动跳过 8 个</p>
+</li>
+<li>
+<p>不需要管理员权限——EmptyWorkingSet 是非特权 API</p>
+</li>
+</ul>
+<h2>软件卸载器</h2>
+<p>从分页 Rich Table 重写为 Mole 风格的紧凑交互列表。核心变化：</p>
+<ul>
+<li>
+<p>直接打字即搜索，实时筛选，不再需要先输关键字再等翻页</p>
+</li>
+<li>
+<p>应用按大小降序排列，&gt;1GB 红色、&gt;100MB 黄色，一眼识别大型应用</p>
+</li>
+<li>
+<p>选中后展开详情卡片：Publisher / Version / Size / Location / Uninstaller</p>
+</li>
+<li>
+<p>卸载后可选残留扫描，遍历 AppData / ProgramData / Program Files</p>
+</li>
+<li>
+<p>键盘快捷键：<code class="notranslate">#</code> 选中 / <code class="notranslate">/</code> 搜索 / <code class="notranslate">X</code> 清搜索 / <code class="notranslate">S</code> 切换排序 / <code class="notranslate">Q</code> 退出</p>
+</li>
+</ul>
+<h2>乱码全 ASCII 化</h2>
+<p>Windows 终端的一个持续痛点：中文终端默认字体（Consolas / 新宋体）不支持<br>
+Unicode 方块字符 <code class="notranslate">█</code> <code class="notranslate">░</code> 和 Emoji <code class="notranslate">📁</code> <code class="notranslate">📄</code>。<br>
+即使开了 <code class="notranslate">chcp 65001</code>，也只是解决了编码问题，字体缺字仍然显示方框或菱形乱码。<br>
+最终方案：所有视觉元素（条形图、图标、省略号）全部使用纯 ASCII 可打印字符，<br>
+<code class="notranslate">#</code> 填充 + <code class="notranslate">-</code> 空白 + <code class="notranslate">[D]</code> 目录 + <code class="notranslate">[F]</code> 文件，<br>
+在任何 Windows 终端字体下都不会出现乱码。</p>
+<h3>06 · Engineering</h3>
+<h1>工程实践</h1>
+<p>从项目清理到一键打包，WinMole 的工程化过程涉及<strong>文件管理、路径兼容、<br>
+PyInstaller 编译、双重构建</strong>等多个环节。每一步都有实际踩坑和对应的解决方案。</p>
+<h2>项目清理</h2>
+<p>开发过程中积累了 12 个冗余文件——4 个旧版本 Python 文件、2 个废弃的 bat 启动器、<br>
+一套 Go 原型空壳（main.go + cmd/ + internal/ + lib/ + tests/）。清理后核心文件精炼为<br>
+11 个：</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>类别</th>
+<th>文件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心</td>
+<td>winmole_engine.py · winmole_simple.py · winmole_gui.py</td>
+<td>引擎 + CLI + GUI</td>
+</tr>
+<tr>
+<td>配置</td>
+<td>locales.py · cleanup_rules.yaml · requirements.txt</td>
+<td>国际化 + 规则 + 依赖</td>
+</tr>
+<tr>
+<td>脚本</td>
+<td>run.bat · setup.bat · package.bat</td>
+<td>运行 + 环境 + 打包</td>
+</tr>
+<tr>
+<td>文档</td>
+<td>README.md · .gitignore</td>
+<td>说明 + Git</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>一键打包</h2>
+<p><code class="notranslate">package.bat</code> 是项目交付的核心。它自动完成：</p>
+<ol>
+<li>检查 venv 和依赖 → 自动安装 PyInstaller</li>
+<li>清理旧构建产物（build / dist / *.spec）</li>
+<li>双模式编译：
+<ul>
+<li><code class="notranslate">WinMole_GUI.exe</code>：--windowed --onedir，无控制台窗口</li>
+<li><code class="notranslate">WinMole_CLI.exe</code>：--console --onedir，终端程序</li>
+</ul>
+</li>
+<li>assembling 发布包到 <code class="notranslate">dist/WinMole_v1.0/</code>，含主菜单启动器</li>
+</ol>
+<p>编译参数经过精心调教：<code class="notranslate">--hidden-import</code> 显式声明 yaml / psutil / Rich / Tkinter<br>
+避免遗漏；<code class="notranslate">--exclude-module</code> 排除 matplotlib / numpy / pandas 减小编译体积<br>
+（从 ~120MB 降至 66MB）；<code class="notranslate">--add-data</code> 包含 cleanup_rules.yaml 配置文件。</p>
+<h2>PyInstaller 路径兼容</h2>
+<p>PyInstaller 打包后 <code class="notranslate">__file__</code> 不可用，导致 <code class="notranslate">cleanup_rules.yaml</code><br>
+加载失败。修复方案是通过 <code class="notranslate">sys.frozen</code> 判断运行环境：</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">_get_app_dir</span>():
+    <span class="pl-k">if</span> <span class="pl-en">getattr</span>(<span class="pl-s1">sys</span>, <span class="pl-s">"frozen"</span>, <span class="pl-c1">False</span>):
+        <span class="pl-k">return</span> <span class="pl-en">Path</span>(<span class="pl-s1">sys</span>.<span class="pl-c1">executable</span>).<span class="pl-c1">parent</span>  <span class="pl-c"># PyInstaller</span>
+    <span class="pl-k">return</span> <span class="pl-en">Path</span>(<span class="pl-s1">__file__</span>).<span class="pl-c1">parent</span>           <span class="pl-c"># 源码运行</span></pre></div>
+<p>这个兼容层放在 <code class="notranslate">Config.__init__()</code> 中，引擎所有需要读取外部文件的地方<br>
+都统一走 <code class="notranslate">_get_app_dir()</code> 路径。</p>
+<blockquote>
+<p><strong>打包验证结果</strong><br>
+CLI 构建成功：WinMole_CLI.exe (5MB + 28MB _internal)<br>
+GUI 构建成功：WinMole_GUI.exe (5MB + 28MB _internal)<br>
+发布包总大小 66MB，CLI exe 端到端验证通过，交互菜单正常运行</p>
+</blockquote>
+<h3>07 · Retrospect</h3>
+<h1>回顾与展望</h1>
+<p>WinMole 是一次完整的**「从灵感 → 原型 → 迭代 → 打包交付」**<br>
+的桌面工具工程实践。从看到 Mole 的那一刻到最终生成独立的 exe 发布包，<br>
+总共经历了约 6 小时的密集开发和 20 余次功能迭代。</p>
+<h2>关键决策回顾</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>决策点</th>
+<th>选择</th>
+<th>正确性复盘</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>语言选型</td>
+<td>Python 而非 Go</td>
+<td>正确。Python 的 ctypes + winreg + psutil 生态让 Windows API 调用成本极低。Go 原型只写了 main.go 就放弃了</td>
+</tr>
+<tr>
+<td>GUI 框架</td>
+<td>Tkinter 而非 PyQt</td>
+<td>正确。Tkinter 内置零依赖，打包后体积减少约 40MB。功能足够覆盖 5 标签页的简单 GUI</td>
+</tr>
+<tr>
+<td>双界面</td>
+<td>CLI + GUI 各自独立</td>
+<td>正确。共享引擎、独立编译，用户按需选择。CLI 的迭代速度远快于 GUI</td>
+</tr>
+<tr>
+<td>打包方式</td>
+<td>PyInstaller onedir</td>
+<td>正确。onefile 虽更便携但启动慢 3-5 秒，onedir 启动 &lt;1 秒，体验更好</td>
+</tr>
+<tr>
+<td>全 ASCII</td>
+<td>放弃 Unicode 和 Emoji</td>
+<td>正确但意外。本以为 chcp 65001 就够了，实际上终端字体缺字是无解的，纯 ASCII 是最安全的方案</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>踩过的坑</h2>
+<ol>
+<li><strong>回收站操作</strong>：shutil.rmtree 对系统保护文件夹无效，必须用 Shell32 API</li>
+<li><strong>CPU 数据归零</strong>：psutil.cpu_percent 的多次调用会冲突，内部状态管理比文档暗示的复杂</li>
+<li><strong>Unicode 渲染</strong>：chcp 65001 只解决编码层，字体缺 glyph 是无解的。放弃 Unicode 比换字体更可靠</li>
+<li><strong>PyInstaller 路径</strong>：<strong>file</strong> 在 frozen 环境不可用，所有文件读写在打包前就要考虑 sys.frozen 分支</li>
+<li><strong>清理反馈缺失</strong>：静默失败（ignore_errors=True）是最差的设计——用户不知道哪些失败了，也不知道为什么</li>
+</ol>
+<h2>数据一览</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总开发耗时</td>
+<td>~6 小时</td>
+</tr>
+<tr>
+<td>功能迭代</td>
+<td>20+ 次</td>
+</tr>
+<tr>
+<td>核心代码行</td>
+<td>~1,800 行（5 个 .py 文件）</td>
+</tr>
+<tr>
+<td>清理规则</td>
+<td>9 条系统规则 + 10 种构建产物</td>
+</tr>
+<tr>
+<td>发布包大小</td>
+<td>66 MB（含两个独立 exe）</td>
+</tr>
+<tr>
+<td>支持语言</td>
+<td>中 / 英，80+ key 双语覆盖</td>
+</tr>
+<tr>
+<td>实测内存释放</td>
+<td>2.02 GB（88.7% → 62.8%）</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>未来方向</h2>
+<ul>
+<li>
+<p><strong>增量清理引擎</strong>：而非全量扫描，只扫变更项，提升重扫速度</p>
+</li>
+<li>
+<p><strong>清理历史日志</strong>：记录每次清理的文件清单，支持回滚和审计</p>
+</li>
+<li>
+<p><strong>系统托盘模式</strong>：驻留后台，支持定时清理和内存自动释放</p>
+</li>
+<li>
+<p><strong>国际化扩展</strong>：日语、韩语支持，适配东亚字体渲染</p>
+</li>
+<li>
+<p><strong>自动更新</strong>：检测 GitHub Release 新版本，一键升级</p>
+</li>
+</ul>
+<blockquote>
+<p>WinMole 的核心价值不在于功能数量，而在于设计选择：独立 exe、不写注册表、不驻留后台、本机扫描不上传。<br>
+这些约束来自对 Mole 设计哲学的深入理解，也来自对 Windows 工具市场现状的清醒判断。<br>
+好的工具不需要「什么都能做」——它只需要把自己承诺的几件事做到极致。</p>
+</blockquote>
+<h3>APPENDIX</h3>
+<h1>附录：项目文件结构 &amp; 命令速查</h1>
+<h2>A. 文件结构</h2>
+<pre class="notranslate"><code class="notranslate">WinMole/
+├── winmole_engine.py      # 核心引擎（六大类）
+├── winmole_simple.py      # CLI 命令行界面
+├── winmole_gui.py         # GUI 图形界面
+├── locales.py             # 中英双语
+├── cleanup_rules.yaml     # 清理规则配置
+├── requirements.txt       # Python 依赖
+├── README.md              # 项目说明
+├── run.bat                # 本地运行（TUI/GUI 双模式）
+├── setup.bat              # 一键初始化环境
+├── package.bat            # 一键打包脚本
+├── .gitignore             # Git 忽略规则
+├── venv/                  # Python 虚拟环境
+└── dist/
+    └── WinMole_v1.0/      # 发布包
+        ├── 启动.bat        # 主菜单启动器
+        ├── cleanup_rules.yaml
+        ├── README.md
+        ├── GUI/
+        │   ├── WinMole_GUI.exe
+        │   └── _internal/
+        └── CLI/
+            ├── WinMole_CLI.exe
+            └── _internal/
+</code></pre>
+<h2>B. CLI 菜单</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>#</th>
+<th>功能</th>
+<th>关键操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>系统清理</td>
+<td>扫描 → 确认 → 清理</td>
+</tr>
+<tr>
+<td>2</td>
+<td>软件卸载</td>
+<td>实时搜索 → 选中 → 卸载 → 残留扫描</td>
+</tr>
+<tr>
+<td>3</td>
+<td>磁盘分析</td>
+<td>N 进入子目录 · B 返回 · L 大文件 · D 切换驱动器</td>
+</tr>
+<tr>
+<td>4</td>
+<td>系统监控</td>
+<td>R 刷新 · Q 退出 · 双列六面板</td>
+</tr>
+<tr>
+<td>5</td>
+<td>构建产物</td>
+<td>浏览目录 → 扫描 → 清理</td>
+</tr>
+<tr>
+<td>6</td>
+<td>安装包清理</td>
+<td>扫描 Downloads → 清理</td>
+</tr>
+<tr>
+<td>7</td>
+<td>释放内存</td>
+<td>一键清空工作集</td>
+</tr>
+<tr>
+<td>0</td>
+<td>退出</td>
+<td></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>C. 常用命令</h2>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 本地运行（TUI）</span>
+venv<span class="pl-cce">\S</span>cripts<span class="pl-cce">\p</span>ython winmole_simple.py
+
+<span class="pl-c"><span class="pl-c">#</span> 本地运行（GUI）</span>
+venv<span class="pl-cce">\S</span>cripts<span class="pl-cce">\p</span>ython winmole_gui.py
+
+<span class="pl-c"><span class="pl-c">#</span> 一键打包</span>
+package.bat
+
+<span class="pl-c"><span class="pl-c">#</span> 发布包位置</span>
+dist<span class="pl-cce">\W</span>inMole_v1.0<span class="pl-cce">\启</span>动.bat</pre></div>
+<h2>D. 技术参考</h2>
+<ul>
+<li>
+<p>Mole (macOS)：五合一清理工具，WinMole 的设计参照。作者 tw93，开源 MIT 协议</p>
+</li>
+<li>
+<p>psutil 文档：系统信息获取标准库，支持 Windows / macOS / Linux</p>
+</li>
+<li>
+<p>Rich 文档：Python 终端 UI 框架，Table / Panel / Progress / Prompt</p>
+</li>
+<li>
+<p>PyInstaller 文档：Python → 独立 exe 打包工具，支持 windowed / console 双模式</p>
+</li>
+<li>
+<p>Shell32 API：EmptyWorkingSet / SHEmptyRecycleBinW / SHQueryRecycleBinW</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>速览</strong><br>
+WinMole 是一个完整的 Windows 桌面工具工程实践案例。从灵感捕捉、技术选型、架构设计、功能迭代、到打包交付，每一步都有清晰的决策依据和技术细节记录。本文档可作为未来桌面工具开发项目的参考模板。</p>
+</blockquote></div>
+<div style="font-size:small;margin-top:8px;float:right;">❤️ 微信搜一搜 iBitBetter ❤️</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://iBitBetter.github.io">iBitBetter</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("05/05/2026"!=""){
+    var startSite=new Date("05/05/2026");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","iBitBetter/iBitBetter.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+
+
+</html>

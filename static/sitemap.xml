@@ -11,6 +11,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ibitbetter.github.io/douban-book-plus-dev-report.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ibitbetter.github.io/tag.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -60,7 +66,7 @@
   </url>
   <url>
     <loc>https://ibitbetter.github.io/post/bi-te-bi-bai-pi-shu.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

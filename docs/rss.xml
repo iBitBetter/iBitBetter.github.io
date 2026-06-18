@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅱life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://ibitbetter.github.io/assets/ibitbetter.svg</url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Mon, 15 Jun 2026 09:02:18 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>WinMole开发日志</title><link>https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html</link><description>&gt; 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅱life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://ibitbetter.github.io/assets/ibitbetter.svg</url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Thu, 18 Jun 2026 01:00:22 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>WinMole开发日志</title><link>https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html</link><description>&gt; 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
 
 **iBitBetter**  
 **V0.1** · 2026.06.15 
@@ -241,4 +241,7 @@ window.config = {
 &lt;/script&gt;
 ```
 
-&lt;!-- ##{'timestamp':1755783310}## --&gt;。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/Mirror%20-zhong-wen-jiao-cheng.html</guid><pubDate>Thu, 21 Aug 2025 13:35:10 +0000</pubDate></item></channel></rss>
+&lt;!-- ##{'timestamp':1755783310}## --&gt;。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/Mirror%20-zhong-wen-jiao-cheng.html</guid><pubDate>Thu, 21 Aug 2025 13:35:10 +0000</pubDate></item><item><title>关于</title><link>https://iBitBetter.github.io/about.html</link><description>`Gmeek-html&lt;iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=298 height=52 src='//music.163.com/outchain/player?type=0&amp;id=14065145156&amp;auto=0&amp;height=32'&gt;&lt;/iframe&gt;`
+
+
+似乎每个博客都应该有个 About  那么 5年后就来介绍一下我自己。</description><guid isPermaLink="true">https://iBitBetter.github.io/about.html</guid><pubDate>Thu, 05 Jun 2025 03:07:50 +0000</pubDate></item></channel></rss>

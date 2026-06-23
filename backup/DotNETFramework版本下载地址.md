@@ -32,4 +32,7 @@
 
 [Microsoft .NET Framework 2.0 Service Pack 1 x86](https://download.microsoft.com/download/0/8/c/08c19fa4-4c4f-4ffb-9d6c-150906578c9e/NetFx20SP1_x86.exe) [x64](https://download.microsoft.com/download/9/8/6/98610406-c2b7-45a4-bdc3-9db1b1c5f7e2/NetFx20SP1_x64.exe)
 
-<!-- ##{"timestamp":1779712461}## -->
+<!-- ##{
+    "timestamp":1779712461,
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/121.html'>"
+}## -->

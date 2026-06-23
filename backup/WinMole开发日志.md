@@ -430,3 +430,6 @@ dist\WinMole_v1.0\启动.bat
 
 - Shell32 API：EmptyWorkingSet / SHEmptyRecycleBinW / SHQueryRecycleBinW
 
+<!-- ##{
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/149.html'>"
+}## -->

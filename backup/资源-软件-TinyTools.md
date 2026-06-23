@@ -9,4 +9,6 @@
 https://github.com/user-attachments/assets/00513a04-752d-4d88-b5e4-35b0ea67698f
 
 
-<!-- ##{"timestamp":1756124725}## -->
+<!-- ##{
+     "timestamp": 1756124725, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/112.html'>"
+}## -->

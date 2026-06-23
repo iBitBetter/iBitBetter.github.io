@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href='https://iBitBetter.github.io/assets/primer.css' rel='stylesheet'/>
-    <script src='https://iBitBetter.github.io/assets/GmeekVercount.js'></script>
+    <script src='https://iBitBetter.github.io/assets/GmeekVercount.js'></script><link rel='canonical' href='{{ post_url }}'>
     <link rel="icon" href="https://fav.farm/🅱"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="> [!NOTE]
->在安卓开发和调试中，ADB（Android Debug Bridge） 是必备工具，但复杂的命令行操作让很多用户望而却步。">
-<meta property="og:title" content="AYA：ADB 图形化神器，告别命令行时代">
-<meta property="og:description" content="> [!NOTE]
->在安卓开发和调试中，ADB（Android Debug Bridge） 是必备工具，但复杂的命令行操作让很多用户望而却步。">
+<meta name="description" content="> [!TIP]
+神奇海螺试验场的这个 ePub 繁简在线转换，就是冲着这个痛点来的。">
+<meta property="og:title" content="神奇海螺试验场|ePub繁简在线转换">
+<meta property="og:description" content="> [!TIP]
+神奇海螺试验场的这个 ePub 繁简在线转换，就是冲着这个痛点来的。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://iBitBetter.github.io/post/AYA%EF%BC%9AADB%20-tu-xing-hua-shen-qi-%EF%BC%8C-gao-bie-ming-ling-xing-shi-dai.html">
+<meta property="og:url" content="https://iBitBetter.github.io/post/shen-qi-hai-luo-shi-yan-chang--ePub-fan-jian-zai-xian-zhuan-huan.html">
 <meta property="og:image" content="https://ibitbetter.github.io/assets/ibitbetter.svg">
-<title>AYA：ADB 图形化神器，告别命令行时代</title>
+<title>神奇海螺试验场|ePub繁简在线转换</title>
 
 
 
@@ -45,13 +45,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 }
 
 </style>
-<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-note {border-left-color:var(--borderColor-accent-emphasis, var(--color-accent-emphasis));background-color:var(--color-accent-subtle);}.markdown-alert.markdown-alert-note .markdown-alert-title {color: var(--fgColor-accent,var(--color-accent-fg));}</style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style>
 
 
 
 <body>
     <div id="header">
-<h1 class="postTitle">AYA：ADB 图形化神器，告别命令行时代</h1>
+<h1 class="postTitle">神奇海螺试验场|ePub繁简在线转换</h1>
 <div class="title-right">
     <a href="https://iBitBetter.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -59,7 +59,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/iBitBetter/iBitBetter.github.io/issues/94" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/iBitBetter/iBitBetter.github.io/issues/144" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -75,69 +75,24 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p>在安卓开发和调试中，ADB（Android Debug Bridge） 是必备工具，但复杂的命令行操作让很多用户望而却步。AYA 应运而生——一款开箱即用的桌面应用，通过全图形化界面将 ADB 功能“一键化”，让普通用户也能轻松管理安卓设备！</p>
+<div class="markdown-body" id="postBody"><div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg data-component="Octicon" class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>神奇海螺试验场的这个 ePub 繁简在线转换，就是冲着这个痛点来的。</p>
 </div>
-<p><strong>🌟 核心亮点</strong></p>
-<ol>
-<li>
-<p>零配置开箱即用 📦<br>
-• 内置 ADB：无需手动安装 Android SDK 或配置环境变量，下载即用！<br>
-• 多平台支持：完美兼容 Windows、macOS（Intel/Apple Silicon）及 Linux。</p>
-</li>
-<li>
-<p>功能全覆盖 🔧<br>
-• 应用管理：批量安装/卸载 APK、冻结应用、清除数据。<br>
-• 性能监控：实时查看 CPU、内存、网络占用（媲美开发者选项）。<br>
-• 进程管理：一键结束异常进程，解决卡顿问题。<br>
-• 文件传输：拖拽即可上传/下载设备文件。<br>
-• 快捷操作：截图录屏、重启设备、修改分辨率等。</p>
-</li>
-<li>
-<p>极致用户体验 🖱️<br>
-• 分类面板设计（功能导航清晰），操作可视化，彻底告别命令行！<br>
-• 支持设备多开管理，同时调试多台手机/模拟器。</p>
-</li>
-</ol>
-<p><strong>💡 适用人群</strong><br>
-• 开发者/测试员：快速调试应用，提升效率。<br>
-• 极客用户：免 Root 管理设备（如卸载预装软件）。<br>
-• 普通用户：无需学习命令，轻松传输文件或备份数据。</p>
-<p><strong>🚀 对比传统 ADB 的优势</strong></p>
-<markdown-accessiblity-table><table role="table">
-<thead>
-<tr>
-<th>传统 ADB</th>
-<th>AYA</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>需输入命令（易出错）</td>
-<td>图形化按钮一键操作</td>
-</tr>
-<tr>
-<td>手动配置环境变量</td>
-<td>内置 ADB，开箱即用</td>
-</tr>
-<tr>
-<td>功能分散需记忆语法</td>
-<td>功能聚合，界面直观</td>
-</tr>
-</tbody>
-</table></markdown-accessiblity-table>
-<p><strong>📥 快速上手</strong></p>
-<ol>
-<li>下载安装：<a href="https://aya.liriliri.io/zh/" title="访问官网" rel="nofollow">访问官网</a> 选择对应系统版本。</li>
-<li>连接设备：用 USB 连接手机并开启开发者模式/USB调试。</li>
-<li>一键操作：打开 AYA，所有功能尽在点击之间！</li>
-</ol>
-<blockquote>
-<p>开源地址：<a href="https://github.com/liriliri/aya" title="GitHub 项目">GitHub 项目</a>（⭐️欢迎 Star 支持！）</p>
-</blockquote>
-<p><strong><g-emoji class="g-emoji" alias="warning">⚠️</g-emoji> 注意事项</strong><br>
-• 部分高阶操作（如刷机）仍需专业工具，但 90% 的日常需求 AYA 都能满足！<br>
-• 首次使用需信任设备 USB 调试授权提示。</p>
-</div>
+<h2>打开即用</h2>
+<p>网页打开，拖进 ePub 文件，选繁转简还是简转繁，点转换，下载。完事了。没有注册登录，没有广告弹窗，没有"开通会员解锁批量转换"。三步走完，比泡面还快。</p>
+<p><a href="https://v.magiconch.com/epub-transform" rel="nofollow"><img src="https://camo.githubusercontent.com/4100d7af0a6478965532c89735bccc0de5ae8045e4654ff704b828085e2f23cd/68747470733a2f2f692e706f7374696d672e63632f6a3277734b6b74622f657075622d7472616e73666f726d2e706e67" alt="epub-transform.png" data-canonical-src="https://i.postimg.cc/j2wsKktb/epub-transform.png" style="max-width: 100%;"></a></p>
+<p>转换后的 ePub 格式完整保留——封面、目录、排版、图片，原样不动。不像某些工具把排版炸成碎片，拿到手还得重新整理。</p>
+<h2>背后站着个有意思的人</h2>
+<p>开发者叫卜卜口，微博能找到。此人运营的"神奇海螺试验场"从 2019 年做到现在，堆了几十个奇奇怪怪的工具——能不能好好说话（拼音缩写释义）、电子包浆（图片蒸汽波风格化）、福音战士标题生成器、全球制霸生成器……</p>
+<p>大部分跟 ACG 深度绑定，风格极其鲜明。ePub 繁简转换混在里面乍看格格不入，细想又合理——一个追京阿尼、读日文轻小说的人，当然也需要读港台出版的书。</p>
+<h2>小工具大用处</h2>
+<p>看着简单，实际场景比你想象的多：读港台出版的文学社科电子书；繁体技术文档转简体方便检索；早年下载的繁体 ePub 想重新整理；给不太识繁体的朋友转一份简体版。</p>
+<p>还有个细节很贴心：附带了网页翻译高亮脚本（itorr-novel-tools.user.js），装上之后在线读小说能实时高亮转换结果，方便对照着看。</p>
+<h2>免费而且没废话</h2>
+<p>没有定价页面，没有付费入口，没有"专业版"。就是免费。开发者放了个支付宝打赏二维码，全凭自愿。这种"你用就行"的态度，在什么都要订阅的年头还挺让人感慨的。</p>
+<h2>适合谁？</h2>
+<p>读港台电子书但嫌繁体累眼的；需要 ePub 繁简互转又不想装软件的；喜欢轻量在线工具、不爱往电脑里堆东西的；对 ACG 文化有共鸣的（顺便逛逛试验场其他工具）。</p>
+<p>不是功能最丰富的格式转换工具，但可能是最省心的。做减法做到极致，三步搞定，格式不丢，用完即走。好工具的标准有时候就这么简单：它不给你添麻烦。</p>
+<p>地址 v.magiconch.com/epub-transform，浏览器打开就能用。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 微信搜一搜 iBitBetter ❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

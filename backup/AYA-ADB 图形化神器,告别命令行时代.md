@@ -46,4 +46,6 @@
 • 部分高阶操作（如刷机）仍需专业工具，但 90% 的日常需求 AYA 都能满足！  
 • 首次使用需信任设备 USB 调试授权提示。  
 
-<!-- ##{"timestamp":1751953418}## -->
+<!-- ##{
+     "timestamp": 1751953418, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/94.html'>"
+}## -->

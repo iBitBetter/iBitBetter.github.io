@@ -1,3 +1,4 @@
+> [!TIP]
 Gmeek 是一个超轻量级的开源博客框架，完全依托 GitHub Pages、GitHub Issues 和 GitHub Actions 构建，无需本地部署，从搭建到发布仅需 3步，让每个人都能轻松拥有一个技术博客！  
 
 

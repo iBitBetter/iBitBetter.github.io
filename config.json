@@ -15,6 +15,6 @@
     "nightTheme":"dark_colorblind",
     "bottomText":"❤️ 微信搜一搜 iBitBetter ❤️",
     "primerCSS":"<link href='https://iBitBetter.github.io/assets/primer.css' rel='stylesheet'/>",
-    "allHead":"<script src='https://iBitBetter.github.io/assets/GmeekVercount.js'></script><link rel="canonical" href="{{ post_url }}">",
+    "allHead":"<script src='https://iBitBetter.github.io/assets/GmeekVercount.js'></script><link rel='canonical' href='{{ post_url }}'>",
     "GMEEK_VERSION":"last"
 }

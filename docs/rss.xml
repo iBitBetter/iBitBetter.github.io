@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>🅱life is too bug,please take care of yourself</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://ibitbetter.github.io/assets/ibitbetter.svg</url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Tue, 23 Jun 2026 00:55:37 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>WinMole开发日志</title><link>https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html</link><description>&gt; 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>life is too bug</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://ibitbetter.github.io/assets/ibitbetter.svg</url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Tue, 23 Jun 2026 01:12:55 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>WinMole开发日志</title><link>https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html</link><description>&gt; 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
 
 **iBitBetter**  
 **V0.1** · 2026.06.15 
@@ -219,12 +219,7 @@ jingdong.pop.order.shipment（sop出库发货接口） https://jos.jd.com/apilis
 &lt;!-- ##{'timestamp':1778157718}## --&gt;
 
 
-。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/qi-qu-wang-zhan-shou-cang-jia.html</guid><pubDate>Thu, 07 May 2026 12:41:58 +0000</pubDate></item><item><title>nano banana pro prompt  手绘风格的旅行手账插画</title><link>https://iBitBetter.github.io/post/nano%20banana%20pro%20prompt%20%20-shou-hui-feng-ge-de-lv-xing-shou-zhang-cha-hua.html</link><description>🍌 nano banana pro prompt 
-提示词：
-
-请绘制一张色彩鲜艳、竖版（9:16）手绘风格的《{城市名}旅行手账插画》，画风仿佛由一位充满好奇心的孩子用蜡笔创作，整体使用柔和温暖的浅色背景（如浅黄色），搭配红色、蓝色、绿色等明亮色调，营造温馨、童趣、满满旅行气息的氛围。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/nano%20banana%20pro%20prompt%20%20-shou-hui-feng-ge-de-lv-xing-shou-zhang-cha-hua.html</guid><pubDate>Fri, 05 Dec 2025 13:41:09 +0000</pubDate></item><item><title>nano banana pro prompt 温暖的手绘食谱风格插图</title><link>https://iBitBetter.github.io/post/nano%20banana%20pro%20prompt%20-wen-nuan-de-shou-hui-shi-pu-feng-ge-cha-tu.html</link><description>🍌 nano banana pro prompt：
-
-请创建一个温暖的手绘食谱风格（16:9）插图，标题为'{菜名} 烹饪流程图'。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/nano%20banana%20pro%20prompt%20-wen-nuan-de-shou-hui-shi-pu-feng-ge-cha-tu.html</guid><pubDate>Fri, 05 Dec 2025 13:40:04 +0000</pubDate></item><item><title>资源 - 软件 - Microsoft Office 2024 全家桶</title><link>https://iBitBetter.github.io/post/zi-yuan-%20-%20-ruan-jian-%20-%20Microsoft%20Office%202024%20-quan-jia-tong.html</link><description>Microsoft Office 2024 全家桶
+。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/qi-qu-wang-zhan-shou-cang-jia.html</guid><pubDate>Thu, 07 May 2026 12:41:58 +0000</pubDate></item><item><title>资源 - 软件 - Microsoft Office 2024 全家桶</title><link>https://iBitBetter.github.io/post/zi-yuan-%20-%20-ruan-jian-%20-%20Microsoft%20Office%202024%20-quan-jia-tong.html</link><description>Microsoft Office 2024 全家桶
 
 （Word+Excel+PPT+Outlook+OneNote+Access+Project+Visio）
 

@@ -1,33 +1,3 @@
-<!-- ##{
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Snipaste截图贴图工具使用教程",
-  "description": "Snipaste截图贴图工具完整使用教程：F1截图、F3贴图、快捷键设置、免费与专业版对比。适合程序员和设计师的效率神器。",
-  "author": {
-    "@type": "Person",
-    "name": "iBitBetter",
-    "url": "https://ibitbetter.github.io/about.html"
-  },
-  "datePublished": "2026-06-03T08:00:00+08:00",
-  "dateModified": "2026-06-03T08:00:00+08:00",
-  "image": "https://ibitbetter.github.io/static/snipaste-cover.jpg",
-  "publisher": {
-    "@type": "Organization",
-    "name": "iBitBetter",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ibitbetter.github.io/static/logo.png"
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ibitbetter.github.io/post/snipaste-screenshot-guide.html"
-  }
-}
-</script>
-}## -->
 >[!TIP]
 >说截图工具，Windows 自带的 Win+Shift+S 够用了吧？够用是够用，但试过 Snipaste 之后你会发现，"够用"和"顺手"之间差着十万八千里。
 

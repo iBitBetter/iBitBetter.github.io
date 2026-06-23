@@ -49,6 +49,8 @@
 
 如需进一步操作演示或具体问题诊断，可提供更多系统上下文。  
 
-<!-- ##{"timestamp":1758802525}## -->
+<!-- ##{
+     "timestamp": 1758802525, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/88.html'>"
+}## -->
 
 

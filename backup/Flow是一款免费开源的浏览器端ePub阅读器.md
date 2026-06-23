@@ -27,4 +27,6 @@
 ⚠️ **注意事项**  
 当前仅支持Dropbox云端存储，未来或扩展至WebDAV等协议。清除数据需手动操作浏览器缓存或删除云端副本。
 
-<!-- ##{"timestamp":1778848251}## -->
+<!-- ##{
+     "timestamp": 1778848251, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/97.html'>"
+}## -->

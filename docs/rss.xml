@@ -1,24 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>  一起发现更多有趣的网站和软件</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://ibitbetter.github.io/assets/ibitbetter.svg</url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Tue, 23 Jun 2026 03:03:41 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>WinMole开发日志</title><link>https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html</link><description>&gt; 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
-
----
-
-# 目录
-
-- **01** — 项目起源与设计理念
-- **02** — 技术架构
-- **03** — 功能演进：核心引擎
-- **04** — 功能演进：用户界面
-- **05** — 功能演进：系统工具
-- **06** — 工程实践
-- **07** — 回顾与展望
-- **附录** — 项目文件结构 &amp; 命令速查
-
-### 01 · Origin
-
-# 项目起源与设计理念
-
-WinMole 诞生于一次跨平台的设计对话。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html</guid><pubDate>Mon, 15 Jun 2026 09:01:42 +0000</pubDate></item><item><title>ZyperWin++:7.8kStar的Windows 优化神器</title><link>https://iBitBetter.github.io/post/ZyperWin%2B%2B-7.8kStar-de-Windows%20-you-hua-shen-qi.html</link><description>&gt;[!TIP]
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>iBitBetter</title><link>https://iBitBetter.github.io</link><description>  一起发现更多有趣的网站和软件</description><copyright>iBitBetter</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://ibitbetter.github.io/assets/ibitbetter.svg</url><title>avatar</title><link>https://iBitBetter.github.io</link></image><lastBuildDate>Tue, 23 Jun 2026 03:06:27 +0000</lastBuildDate><managingEditor>iBitBetter</managingEditor><ttl>60</ttl><webMaster>iBitBetter</webMaster><item><title>WinMole开发日志</title><link>https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html</link><description>&gt; 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
+&gt; [WinMole](https://github.com/iBitBetter/winmole) 是一个完整的 Windows 桌面工具工程实践案例。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/WinMole-kai-fa-ri-zhi.html</guid><pubDate>Mon, 15 Jun 2026 09:01:42 +0000</pubDate></item><item><title>ZyperWin++:7.8kStar的Windows 优化神器</title><link>https://iBitBetter.github.io/post/ZyperWin%2B%2B-7.8kStar-de-Windows%20-you-hua-shen-qi.html</link><description>&gt;[!TIP]
 &gt;给 Windows 做优化这事，老玩家都不陌生。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/ZyperWin%2B%2B-7.8kStar-de-Windows%20-you-hua-shen-qi.html</guid><pubDate>Fri, 05 Jun 2026 08:17:40 +0000</pubDate></item><item><title>30万首古诗词，还能让AI帮你写诗</title><link>https://iBitBetter.github.io/post/30-wan-shou-gu-shi-ci-%EF%BC%8C-huan-neng-rang-AI-bang-ni-xie-shi.html</link><description>&gt;[!TIP]
 &gt;想背首唐诗，百度一搜全是广告。</description><guid isPermaLink="true">https://iBitBetter.github.io/post/30-wan-shou-gu-shi-ci-%EF%BC%8C-huan-neng-rang-AI-bang-ni-xie-shi.html</guid><pubDate>Fri, 05 Jun 2026 07:25:21 +0000</pubDate></item><item><title>如何从互联网找到你需要的电子书</title><link>https://iBitBetter.github.io/post/ru-he-cong-hu-lian-wang-zhao-dao-ni-xu-yao-de-dian-zi-shu.html</link><description>
 ## 1. 使用手机浏览器访问 Z-Library

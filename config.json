@@ -16,6 +16,6 @@
     "bottomText":"❤️ 微信搜一搜 iBitBetter ❤️",
     "primerCSS":"<link href='https://iBitBetter.github.io/assets/primer.css' rel='stylesheet'/>",
     "script": "<script>(function(){if(!document.querySelector('meta[property=\"og:type\"][content=\"article\"]'))return;var t=document.title;var d=document.querySelector('meta[name=\"description\"]')?.content||'';d=d.replace(/[#*_>`~\\-]/g,'').substring(0,150);var u=document.querySelector('meta[property=\"og:url\"]')?.content||window.location.href;var json={ '@context':'https://schema.org','@type':'Article',headline:t,description:d,datePublished:document.querySelector('time')?.dateTime||'2026-06-23',author:{'@type':'Person',name:'iBitBetter'},publisher:{'@type':'Organization',name:'iBitBetter',logo:{'@type':'ImageObject',url:'https://ibitbetter.github.io/assets/ibitbetter.png'}},mainEntityOfPage:{'@type':'WebPage','@id':u}};var s=document.createElement('script');s.type='application/ld+json';s.text=JSON.stringify(json);document.head.appendChild(s);})();</script>",
-    "allHead":"<script src='https://iBitBetter.github.io/assets/GmeekVercount.js'></script><link rel='canonical' href='{{ post_url }}>",
+    "allHead":"<script src='https://iBitBetter.github.io/assets/GmeekVercount.js'></script><link rel='canonical' href='{{ post_url }}'>",
     "GMEEK_VERSION":"last"
 }

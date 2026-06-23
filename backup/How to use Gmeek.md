@@ -43,4 +43,6 @@ Gmeek 是一个超轻量级的开源博客框架，完全依托 GitHub Pages、G
 
 People Die, but Long Live GitHub
 
-<!-- ##{"timestamp":1778329550}## -->
+<!-- ##{
+     "timestamp": 1778329550, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/26.html'>"
+}## -->

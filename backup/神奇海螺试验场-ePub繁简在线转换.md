@@ -1,4 +1,3 @@
-> [!TIP]
 神奇海螺试验场的这个 ePub 繁简在线转换，就是冲着这个痛点来的。
 
 **打开即用**
@@ -34,5 +33,5 @@
 地址 v.magiconch.com/epub-transform，浏览器打开就能用。
 
 <!-- ##{
-    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/144.html'>"
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/144.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"神奇海螺|ePub繁简在线转换\",\"datePublished\":\"2026-06-04\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/144.html\"}</script>"
 }## -->

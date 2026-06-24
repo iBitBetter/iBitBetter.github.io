@@ -31,6 +31,14 @@
  🌟 **用户价值**  
 实测显示，该工具可流畅打开200页的PPT（含嵌入式视频）和50万行的CSV数据集。其「三无原则」（无安装/无注册/无上传）重构了文档处理的安全标准，尤其适合法律、医疗等敏感行业使用 ⚖️。  
 
+---
+
+**更多趣站**
+
+[药物说明书找不到，搜它就够了](https://ibitbetter.github.io/post/136.html)
+[好拼-免费在线拼图工具](https://ibitbetter.github.io/post/116.html)
+[花快图-免费花纹花型设计工具](https://ibitbetter.github.io/post/137.html)
+
 <!-- ##{
      "timestamp": 1759929765, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/120.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"免费在线Office文档查看器OfficeViewer\",\"datePublished\":\"2025-10-08\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/120.html\"}</script>"
 }## -->

@@ -10,12 +10,10 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="
- 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
+<meta name="description" content=" 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
  [WinMole](https://github.com/iBitBetter/winmole) 是一个完整的 Windows 桌面工具工程实践案例。">
 <meta property="og:title" content="WinMole开发日志">
-<meta property="og:description" content="
- 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
+<meta property="og:description" content=" 从零到一的 Windows 轻量清理工具一次完整的桌面工具工程实践，及与 Mole (macOS) 的设计对话
  [WinMole](https://github.com/iBitBetter/winmole) 是一个完整的 Windows 桌面工具工程实践案例。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ibitbetter.github.io/post/149.html">
@@ -147,9 +145,7 @@ WinMole 继承了这套理念，同时针对 Windows 平台的独特问题（注
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
-<blockquote>
 <p>核心原则：<strong>独立 exe，不写注册表，不驻留后台，本机扫描不上传</strong>。这是对 Mole 设计哲学的直接延续，也是 WinMole 与市面上大多数 Windows 清理工具的根本区别。</p>
-</blockquote>
 <p>02 · Architecture</p>
 <p>技术架构</p>
 <p>WinMole 采用<strong>引擎与界面分离</strong>的架构：一个核心引擎（<code class="notranslate">winmole_engine.py</code>）<br>
@@ -450,7 +446,7 @@ percpu 追踪器从第一次的终点启动，基线丢失，所有核心显示 
 Unicode 方块字符 <code class="notranslate">█</code> <code class="notranslate">░</code> 和 Emoji <code class="notranslate">📁</code> <code class="notranslate">📄</code>。<br>
 即使开了 <code class="notranslate">chcp 65001</code>，也只是解决了编码问题，字体缺字仍然显示方框或菱形乱码。<br>
 最终方案：所有视觉元素（条形图、图标、省略号）全部使用纯 ASCII 可打印字符，<br>
-<code class="notranslate">#</code> 填充 + <code class="notranslate">-</code> 空白 + <code class="notranslate">[D]</code> 目录 + <code class="notranslate">[F]</code> 文件，<br>
+<code class="notranslate"> </code> 填充 + <code class="notranslate">-</code> 空白 + <code class="notranslate">[D]</code> 目录 + <code class="notranslate">[F]</code> 文件，<br>
 在任何 Windows 终端字体下都不会出现乱码。</p>
 <p>06 · Engineering</p>
 <p>工程实践</p>

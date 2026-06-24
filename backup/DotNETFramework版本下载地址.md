@@ -34,5 +34,5 @@
 
 <!-- ##{
     "timestamp":1779712461,
-    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/121.html'>"
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/121.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\".NET Framework 版本下载(4.8, 4.7, 4.6, 4.5, 4.0, 3.5, 3.0, 2.0)\",\"datePublished\":\"2026-05-25\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/121.html\"}</script>"
 }## -->

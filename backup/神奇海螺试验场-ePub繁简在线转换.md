@@ -32,6 +32,10 @@
 
 地址 v.magiconch.com/epub-transform，浏览器打开就能用。
 
+**更多趣站**
+[一念天堂一念地狱](https://ibitbetter.github.io/post/143.html)
+[你出生那天多少度?这个宝藏网站记得](https://ibitbetter.github.io/post/141.html)
+
 <!-- ##{
     "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/144.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"神奇海螺|ePub繁简在线转换\",\"datePublished\":\"2026-06-04\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/144.html\"}</script>"
 }## -->

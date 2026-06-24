@@ -6,8 +6,7 @@
 
 很多优化工具喜欢搞"一键加速"，点下去改了什么都不知道。ZyperWin++ 不搞这一套。批量勾选模式——每个优化项前面有独立框选控件，勾了才执行。而且每项都有介绍，告诉你优化后具体有什么用。改了什么、没改什么，一目了然。
 
-[![zyperwin.png](https://i.postimg.cc/Rh8KL2q8/zyperwin.png)](https://postimg.cc/ctRvs9RM)
-
+![zyperwin.png](https://i.postimg.cc/Rh8KL2q8/zyperwin.png)
 这种设计我认同：优化应该是用户自己选的，不是软件替你做的。
 
  **能优化些什么？**

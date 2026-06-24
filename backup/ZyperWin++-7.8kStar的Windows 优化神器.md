@@ -1,5 +1,6 @@
->[!TIP]
->给 Windows 做优化这事，老玩家都不陌生。但市面上的优化工具，要么本身就臃肿，要么夹带私货——装完优化工具，电脑反而更慢了。ZyperWin++ 走了条截然不同的路：轻量、透明、不捆绑。
+7.8kStar的Windows 优化神器：ZyperWin++
+
+给 Windows 做优化这事，老玩家都不陌生。但市面上的优化工具，要么本身就臃肿，要么夹带私货——装完优化工具，电脑反而更慢了。ZyperWin++ 走了条截然不同的路：轻量、透明、不捆绑。
 
 ## 不是一键优化，是批量勾选
 
@@ -37,3 +38,6 @@ ZyperWin++ 不是最强的系统工具箱，但可能是最让人放心的那个
 
 GitHub 搜 ZyperWinOptimize，[Releases 页面下载](https://github.com/ZyperWave/ZyperWinOptimize/releases)。
 
+<!-- ##{
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/148.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"ZyperWin++:7.8kStar的Windows 优化神器]",\"datePublished\":\"2026-06-05\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/148.html\"}</script>"
+}## -->

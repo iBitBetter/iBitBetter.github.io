@@ -1,5 +1,6 @@
->[!TIP]
->说截图工具，Windows 自带的 Win+Shift+S 够用了吧？够用是够用，但试过 Snipaste 之后你会发现，"够用"和"顺手"之间差着十万八千里。
+截图贴图神器Snipaste，用过就回不去了。
+
+说截图工具，Windows 自带的 Win+Shift+S 够用了吧？够用是够用，但试过 Snipaste 之后你会发现，"够用"和"顺手"之间差着十万八千里。
 
 **截图只是开胃菜**
 
@@ -39,10 +40,8 @@ Windows、Mac、Linux 都有，Windows 连 ARM64 和 XP 都支持。便携版解
 
 Snipaste 不是功能最多的截图工具，但可能是最懂你工作流的那个。截图、标注、贴图，三步搞定，不切换应用，不打断思路。一款好工具该有的样子，大概就是用的时候你根本不用想怎么用。
 
-官网 snipaste.com 下载，个人免费。
-
-#截图工具# #贴图神器# #效率工具#
+[官网](https://www.snipaste.com/) 下载，个人免费。
 
 <!-- ##{
-    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/142.html'>"
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/142.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"截图贴图神器Snipaste，用过就回不去了。\",\"datePublished\":\"2026-06-03\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/142.html\"}</script>"
 }## -->

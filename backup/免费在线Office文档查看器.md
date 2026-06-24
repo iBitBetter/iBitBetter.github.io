@@ -1,4 +1,4 @@
->在数字化办公时代，[免费在线Office文档查看器](https://officeviewer.org/ "免费在线Office文档查看器")（Open Word, Excel & PPT Online）以革命性的隐私保护技术和即时渲染能力，成为跨平台文档处理的标杆工具 💻。这款纯浏览器工具支持7大类文件格式的即时预览，通过WebAssembly技术实现媲美本地软件的渲染效果，同时确保文件数据100%不离开用户设备 🔒。  
+在数字化办公时代，[免费在线Office文档查看器](https://officeviewer.org/ "免费在线Office文档查看器")（Open Word, Excel & PPT Online）以革命性的隐私保护技术和即时渲染能力，成为跨平台文档处理的标杆工具 💻。这款纯浏览器工具支持7大类文件格式的即时预览，通过WebAssembly技术实现媲美本地软件的渲染效果，同时确保文件数据100%不离开用户设备 🔒。  
 
 [![Office.png](https://i.postimg.cc/pTwp2MmX/Office.png "![Office.png")](https://postimg.cc/TLcR9SjZ)
 
@@ -32,5 +32,5 @@
 实测显示，该工具可流畅打开200页的PPT（含嵌入式视频）和50万行的CSV数据集。其「三无原则」（无安装/无注册/无上传）重构了文档处理的安全标准，尤其适合法律、医疗等敏感行业使用 ⚖️。  
 
 <!-- ##{
-     "timestamp": 1759929765, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/120.html'>"
+     "timestamp": 1759929765, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/120.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"免费在线Office文档查看器OfficeViewer\",\"datePublished\":\"2025-10-08\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/120.html\"}</script>"
 }## -->

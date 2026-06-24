@@ -1,7 +1,5 @@
->[!TIP]
->想找个合适的Emoji表情，在手机键盘上翻来翻去找不到。电脑上更惨，连Emoji面板都未必打得开。
+想找个合适的Emoji表情，在手机键盘上翻来翻去找不到。电脑上更惨，连Emoji面板都未必打得开。
 好不容易找到了，复制粘贴还经常出错。
-
 
 **找Emoji还在翻键盘？这个站输一个词就能搜到，点一下就复制**
 
@@ -28,5 +26,5 @@
 访问地址：https://searchemoji.app/zh-hans
 
 <!-- ##{
-    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/145.html'>"
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/145.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"SearchEmoji，Emoji搜索引擎\",\"datePublished\":\"2026-06-04\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/145.html\"}</script>"
 }## -->

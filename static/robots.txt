@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /static/
-Disallow: /assets/
 Sitemap: https://ibitbetter.github.io/sitemap.xml

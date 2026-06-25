@@ -20,3 +20,7 @@
 [![安装PE到U盘，默认选择方案一:UEFI/Legacy全能三分区方式](https://i.postimg.cc/Bt9L9yQB/an-zhuang-PE-dao-U-pan.webp)](https://postimg.cc/jncdyMfD)
 **总结：** 
       现代系统安装应**优先选择UEFI**，仅在特殊兼容需求下使用Legacy，并确保与硬盘分区表格式匹配，以避免安装或启动失败。 这样既能获得更快的启动速度，也能为未来系统升级做好准备。
+
+<!-- ##{
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/150.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"UEFI与Legacy启动优先级设置\",\"datePublished\":\"2026-06-25\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/150.html\"}</script>"
+}## -->

@@ -10,9 +10,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="在BIOS/UEFI固件中，**UEFI** 与 **Legacy（传统BIOS）** 是两种不同的引导模式，它们直接影响系统安装方式、启动速度以及硬件兼容性。">
+<meta name="description" content="在BIOS/UEFI固件中，UEFI 与 Legacy(传统BIOS) 是两种不同的引导模式，它们直接影响系统安装方式、启动速度以及硬件兼容性。">
 <meta property="og:title" content="UEFI与Legacy启动优先级设置">
-<meta property="og:description" content="在BIOS/UEFI固件中，**UEFI** 与 **Legacy（传统BIOS）** 是两种不同的引导模式，它们直接影响系统安装方式、启动速度以及硬件兼容性。">
+<meta property="og:description" content="在BIOS/UEFI固件中，UEFI 与 Legacy(传统BIOS) 是两种不同的引导模式，它们直接影响系统安装方式、启动速度以及硬件兼容性。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ibitbetter.github.io/post/150.html">
 <meta property="og:image" content="https://ibitbetter.github.io/og-image.jpg">
@@ -67,8 +67,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>在BIOS/UEFI固件中，<strong>UEFI</strong> 与 <strong>Legacy（传统BIOS）</strong> 是两种不同的引导模式，它们直接影响系统安装方式、启动速度以及硬件兼容性。</p>
-<p><strong>UEFI模式</strong> 是现代主板的标准，支持 GPT分区表、大于2TB的硬盘、更快的启动速度以及 <strong>安全启动(Secure Boot)</strong> 功能，适合安装 Windows 8/10/11 等新系统。 <strong>Legacy模式</strong> 则基于传统BIOS，只支持 <strong>MBR分区</strong>表，兼容旧硬件和旧系统（如 Windows XP/7），但启动速度较慢。</p>
+<div class="markdown-body" id="postBody"><p>在BIOS/UEFI固件中，UEFI 与 Legacy(传统BIOS) 是两种不同的引导模式，它们直接影响系统安装方式、启动速度以及硬件兼容性。</p>
+<p><strong>UEFI模式</strong> 是现代主板的标准，支持 GPT分区表、大于2TB的硬盘、更快的启动速度以及 <strong>安全启动(Secure Boot)</strong> 功能，适合安装 Windows 8/10/11 等新系统。 <strong>Legacy模式</strong> 则基于传统BIOS，只支持 <strong>MBR分区</strong>表，兼容旧硬件和旧系统(如 Windows XP/7)，但启动速度较慢。</p>
 <p><strong>设置启动优先级的常见步骤（不同主板略有差异）：</strong></p>
 <ul>
 <li><strong>关闭安全启动</strong>：在 Security 菜单中将 Secure Boot 设为 Disable（部分主板仅UEFI模式可用）。</li>

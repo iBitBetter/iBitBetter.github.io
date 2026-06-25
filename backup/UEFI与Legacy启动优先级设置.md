@@ -17,7 +17,7 @@
   - 制作启动U盘时建议选择 UEFI/Legacy双启动，可自动适配不同硬件，避免因模式不匹配导致无法启动。
   - 在启动菜单中，带“UEFI”字样的启动项即为UEFI模式，未标注的通常是Legacy模式。
   - 使用4TB以上硬盘必须选择UEFI + GPT，否则无法完整识别容量。
-[![安装PE到U盘，默认选择方案一:UEFI/Legacy全能三分区方式](https://i.postimg.cc/Bt9L9yQB/an-zhuang-PE-dao-U-pan.webp)](https://postimg.cc/jncdyMfD)
+[![安装PE到U盘，默认选择方案一:UEFI/Legacy全能三分区方式](https://ibitbetter.github.io/assets/images/install-pe-to-u.webp)](https://postimg.cc/jncdyMfD)
 **总结：** 
       现代系统安装应**优先选择UEFI**，仅在特殊兼容需求下使用Legacy，并确保与硬盘分区表格式匹配，以避免安装或启动失败。 这样既能获得更快的启动速度，也能为未来系统升级做好准备。
 

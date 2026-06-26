@@ -7,7 +7,7 @@
 搜"笑"，出来笑脸、苦笑、偷笑、笑哭、捂脸笑，一排全是。搜"猫"，猫咪、猫脸、黑猫、猫叫，全齐了。中文直接搜，不用切英文。
 收录了1898个Emoji，覆盖Unicode全部标准，9大分类：表情、人物手势、动物植物、食品饮料、旅行地点、活动节日、物品工具、符号、旗帜。想浏览也行，点分类标签直接翻。
 
-<img src="https://ibitbetter.github.io/assets/images/SearchEmoji.webp" alt="SearchEmoji搜索引擎主页" width="70%;" loading="lazy" />
+<img src="https://ibitbetter.github.io/assets/images/SearchEmoji.webp" alt="SearchEmoji搜索引擎主页" width="600" height="300" loading="lazy" />
 
 
 

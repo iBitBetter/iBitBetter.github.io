@@ -1,0 +1,47 @@
+name: Update README
+
+on:
+  # 每天北京时间早上 6:00 更新
+  schedule:
+    - cron: "0 22 * * *"
+
+  # 手动触发
+  workflow_dispatch:
+
+  # Gmeek workflow 完成后自动触发 (覆盖框架默认 README)
+  workflow_run:
+    workflows: ["build Gmeek"]
+    types:
+      - completed
+
+concurrency:
+  group: readme-update
+  cancel-in-progress: true
+
+jobs:
+  update-readme:
+    name: Generate custom README
+    runs-on: ubuntu-24.04
+    # 仅 Gmeek 成功完成 或 定时/手动触发时运行
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Generate README
+        run: python scripts/update_readme.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || (git commit -m "📊 Update README with blog stats" && git push)

@@ -1,3 +1,5 @@
+.NET Framework 各版本官方下载地址汇总，从 2.0 到 4.8 全覆盖。
+
 .NET Framework 版本下载(4.8, 4.7, 4.6, 4.5, 4.0, 3.5, 3.0, 2.0)
 
 [Microsoft .NET Framework 4.8](https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe)

@@ -372,6 +372,4 @@ dist\WinMole_v1.0\启动.bat
 > **速览**：WinMole 是一个完整的 Windows 桌面工具工程实践案例。从灵感捕捉、技术选型、架构设计、功能迭代、到打包交付，每一步都有清晰的决策依据和技术细节记录。本文档可作为未来桌面工具开发项目的参考模板。
 
 <!-- ##{
-    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/149.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"WinMole开发日志\",\"datePublished\":\"2026-06-15\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/149.html\"}</script>"}## -->
-
-<!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"}## -->
+    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/149.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"WinMole开发日志\",\"datePublished\":\"2026-06-15\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/149.html\"}</script>","script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"}## -->

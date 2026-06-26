@@ -30,19 +30,6 @@
 
 ---
 
-## 📡 公众号 · iBitBetter
-
-| 指标 | 数据 |
-|------|------|
-| 👥 粉丝数 | — |
-| 📰 已发文章 | — |
-| 🔥 最新推文 | — |
-| 📈 最近阅读 | — |
-
-> 💡 公众号数据更新：编辑 `scripts/public-account-data.json` 提交即可自动刷新
-
----
-
 🕐 最后更新：2026-06-26 09:02:17 (UTC+8)
 
 Powered by [Gmeek](https://github.com/Meekdai/Gmeek) | README by [iBitBetter](https://github.com/iBitBetter)

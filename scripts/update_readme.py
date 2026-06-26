@@ -106,7 +106,7 @@ def build_readme():
     lines.append("")
     for i, post in enumerate(latest_posts, 1):
         post_title = post.get("postTitle", "无标题")
-        post_url = post.get("postUrl", "#")
+        post_url = f"{home_url}/{post.get('postUrl', '')}" 
         post_date = post.get("createdDate", "未知")
         labels = " ".join(f"`{l}`" for l in post.get("labels", []))
         lines.append(f"{i}. [{post_title}]({post_url}) {labels} — *{post_date}*")

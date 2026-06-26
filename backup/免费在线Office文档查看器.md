@@ -1,8 +1,9 @@
 在数字化办公时代，免费在线Office文档查看器（Open Word, Excel & PPT Online）以革命性的隐私保护技术和即时渲染能力，成为跨平台文档处理的标杆工具 。这款纯浏览器工具支持7大类文件格式的即时预览，通过WebAssembly技术实现媲美本地软件的渲染效果，同时确保文件数据100%不离开用户设备 。  
 
-<img src="https://ibitbetter.github.io/assets/images/officeviewer.webp" alt="免费在线Office文档查看器" width="600" height="400"  loading="lazy"/>
+<img src="https://ibitbetter.github.io/assets/images/officeviewer.webp" alt="免费在线Office文档查看器" width="600" height="400" />
 
-🚀 **核心功能矩阵**  
+## 核心功能矩阵
+
 1. 全格式支持  
    • 办公文档：精准解析.docx/.xlsx/.pptx格式，保留原文件所有排版元素（如Excel条件格式、PPT动画路径）
    • 专业文件：PDF阅读器支持文本复制/页面缩略图导航，ZIP/RAR压缩包内文件树状预览 📂  
@@ -17,23 +18,26 @@
    • 桌面端：Chrome/Firefox/Safari全兼容，支持拖拽上传与URL直链加载  
    • 移动端：响应式设计适配手机触控，双指缩放查看表格细节 📱  
 
- 💼 **高频应用场景**  
+## 高频应用场景
+
 • 紧急办公：在未安装Office的公共电脑上核查合同条款  
 • 学术研究：快速预览文献压缩包内的多篇PDF论文 📑  
 • 版本管理：对比API文档更新前后的技术参数差异  
 • 跨系统协作：Mac用户查看Windows生成的.ppt文件  
 
- ⚙️ **技术突破**  
+## 技术突破
+
 • WebAssembly渲染引擎：将Office文件解析速度提升300%，10MB文档加载时间<2秒  
 • 虚拟文件系统：对ZIP压缩包实现不解压直接浏览，内存占用降低70%  
 • 差分算法优化：文本对比采用Myers差分算法，百万字符处理耗时<500ms  
 
- 🌟 **用户价值**  
+## 用户价值
+
 实测显示，该工具可流畅打开200页的PPT（含嵌入式视频）和50万行的CSV数据集。其「三无原则」（无安装/无注册/无上传）重构了文档处理的安全标准，尤其适合法律、医疗等敏感行业使用 ⚖️。  
 
 ---
 
-**更多趣站**
+## 更多趣站
 
 [药物说明书找不到，搜它就够了](https://ibitbetter.github.io/post/136.html)
 [好拼-免费在线拼图工具](https://ibitbetter.github.io/post/116.html)

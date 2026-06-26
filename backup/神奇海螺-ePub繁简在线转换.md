@@ -4,7 +4,7 @@
 
 网页打开，拖进 ePub 文件，选繁转简还是简转繁，点转换，下载。完事了。没有注册登录，没有广告弹窗，没有"开通会员解锁批量转换"。三步走完，比泡面还快。
 
-<img src="https://ibitbetter.github.io/assets/images/ePub-to-zh.webp" alt="ePub繁简在线转换" width="70%;" loading="lazy" />
+<img src="https://ibitbetter.github.io/assets/images/ePub-to-zh.webp" alt="ePub繁简在线转换" width="600" height="300"  loading="lazy" />
 
 转换后的 ePub 格式完整保留——封面、目录、排版、图片，原样不动。不像某些工具把排版炸成碎片，拿到手还得重新整理。
 

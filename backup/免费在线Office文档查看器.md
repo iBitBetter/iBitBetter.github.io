@@ -1,6 +1,6 @@
 在数字化办公时代，免费在线Office文档查看器（Open Word, Excel & PPT Online）以革命性的隐私保护技术和即时渲染能力，成为跨平台文档处理的标杆工具 。这款纯浏览器工具支持7大类文件格式的即时预览，通过WebAssembly技术实现媲美本地软件的渲染效果，同时确保文件数据100%不离开用户设备 。  
 
-<img src="https://ibitbetter.github.io/assets/images/officeviewer.webp" alt="免费在线Office文档查看器" width="60%;" loading="lazy"/>
+<img src="https://ibitbetter.github.io/assets/images/officeviewer.webp" alt="免费在线Office文档查看器" width="600" height="400"  loading="lazy"/>
 
 🚀 **核心功能矩阵**  
 1. 全格式支持  

@@ -30,7 +30,3 @@
 [ePub繁简在线转换](https://ibitbetter.github.io/post/144.html)
 [一边劝你戒，一边劝你纵，这个站把古今语录对撞着给你看](https://ibitbetter.github.io/post/143.html)
 [Snipaste:截图贴图一把梭,用过就回不去的工具](https://ibitbetter.github.io/post/142.html)
-
-<!-- ##{
-    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/145.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"SearchEmoji，Emoji搜索引擎\",\"datePublished\":\"2026-06-04\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/145.html\"}</script>"
-}## -->

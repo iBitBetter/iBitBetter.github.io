@@ -42,7 +42,3 @@
 [药物说明书找不到，搜它就够了](https://ibitbetter.github.io/post/136.html)
 [好拼-免费在线拼图工具](https://ibitbetter.github.io/post/116.html)
 [花快图-免费花纹花型设计工具](https://ibitbetter.github.io/post/137.html)
-
-<!-- ##{
-     "timestamp": 1759929765, "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/120.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"免费在线Office文档查看器OfficeViewer\",\"datePublished\":\"2025-10-08\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/120.html\"}</script>"
-}## -->

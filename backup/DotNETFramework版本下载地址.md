@@ -33,8 +33,3 @@
 [Microsoft .NET Framework 2.0 Service Pack 2 x86](https://download.microsoft.com/download/c/6/e/c6e88215-0178-4c6c-b5f3-158ff77b1f38/NetFx20SP2_x86.exe) [x64](https://download.microsoft.com/download/c/6/e/c6e88215-0178-4c6c-b5f3-158ff77b1f38/NetFx20SP2_x64.exe) [ia64](https://download.microsoft.com/download/c/6/e/c6e88215-0178-4c6c-b5f3-158ff77b1f38/NetFx20SP2_ia64.exe)
 
 [Microsoft .NET Framework 2.0 Service Pack 1 x86](https://download.microsoft.com/download/0/8/c/08c19fa4-4c4f-4ffb-9d6c-150906578c9e/NetFx20SP1_x86.exe) [x64](https://download.microsoft.com/download/9/8/6/98610406-c2b7-45a4-bdc3-9db1b1c5f7e2/NetFx20SP1_x64.exe)
-
-<!-- ##{
-    "timestamp":1779712461,
-    "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/121.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\".NET Framework 版本下载(4.8, 4.7, 4.6, 4.5, 4.0, 3.5, 3.0, 2.0)\",\"datePublished\":\"2026-05-25\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/121.html\"}</script>"
-}## -->

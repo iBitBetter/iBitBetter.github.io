@@ -373,3 +373,5 @@ dist\WinMole_v1.0\启动.bat
 
 <!-- ##{
     "head": "<link rel='canonical' href='https://ibitbetter.github.io/post/149.html'><script type='application/ld+json'>{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"WinMole开发日志\",\"datePublished\":\"2026-06-15\",\"author\":{\"@type\":\"Person\",\"name\":\"iBitBetter\"},\"image\":\"https://ibitbetter.github.io/og-image.jpg\",\"url\":\"https://ibitbetter.github.io/post/149.html\"}</script>"}## -->
+
+<!-- ##{"script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"}## -->

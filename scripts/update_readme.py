@@ -112,23 +112,6 @@ def build_readme():
         lines.append(f"{i}. [{post_title}]({post_url}) {labels} — *{post_date}*")
     lines.append("")
 
-    # 公众号看板
-    lines.append("---")
-    lines.append("")
-    lines.append("## 📡 公众号 · iBitBetter")
-    lines.append("")
-    lines.append("| 指标 | 数据 |")
-    lines.append("|------|------|")
-    lines.append(f"| 👥 粉丝数 | {pa_followers if pa_followers is not None else '—'} |")
-    lines.append(f"| 📰 已发文章 | {pa_articles if pa_articles is not None else '—'} |")
-    lines.append(f"| 🔥 最新推文 | {pa_last_title or '—'} |")
-    lines.append(f"| 📈 最近阅读 | {pa_last_reads if pa_last_reads is not None else '—'} |")
-    if pa_last_updated:
-        lines.append(f"| 🕐 数据更新 | {pa_last_updated} |")
-    lines.append("")
-    lines.append("> 💡 公众号数据更新：编辑 `scripts/public-account-data.json` 提交即可自动刷新")
-    lines.append("")
-
     # 尾部
     lines.append("---")
     lines.append("")

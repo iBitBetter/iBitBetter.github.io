@@ -56,7 +56,7 @@ jobs:
           cp /opt/Gmeek/blogBase.json ${{ github.workspace }} 
 
       - name: Copy IndexNow key file to docs
-        run: cp ca5179f81066458b8cde89ccd225ce4e.txt docs/ca5179f81066458b8cde89ccd225ce4e.txt
+        run: cp 10fe9d2dddb840799a2370388d792e93.txt docs/10fe9d2dddb840799a2370388d792e93.txt
         
       - name: update html
         run: |

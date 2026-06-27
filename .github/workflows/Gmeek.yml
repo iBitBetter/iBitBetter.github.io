@@ -54,7 +54,10 @@ jobs:
           cp -a /opt/Gmeek/docs ${{ github.workspace }} 
           cp -a /opt/Gmeek/backup ${{ github.workspace }} 
           cp /opt/Gmeek/blogBase.json ${{ github.workspace }} 
-          
+
+      - name: Copy IndexNow key file to docs
+        run: cp ca5179f81066458b8cde89ccd225ce4e.txt docs/ca5179f81066458b8cde89ccd225ce4e.txt
+        
       - name: update html
         run: |
           git config --local user.email "$(jq -r ".email" config.json)"

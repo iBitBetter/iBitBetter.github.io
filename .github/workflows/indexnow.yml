@@ -1,0 +1,58 @@
+name: IndexNow
+
+# 独立 workflow，不修改原 Gmeek.yml
+# 监听同样的 issues 事件，sleep 3 分钟等 Gmeek 部署完成后提交 URL
+on:
+  issues:
+    types: [opened, edited]
+  schedule:
+    - cron: "10 16 * * *"  # 比 Gmeek 的 0 16 晚 10 分钟
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    name: Submit URLs to IndexNow
+    runs-on: ubuntu-24.04
+    if: ${{ github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.8
+
+      - name: Wait for Gmeek deployment
+        run: |
+          echo "Waiting 180s for Gmeek build & deploy to complete..."
+          sleep 180
+
+      - name: Submit URLs to IndexNow
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          echo "====== IndexNow URL Submission ======"
+          echo "Trigger event: $EVENT_NAME"
+
+          if [ "$EVENT_NAME" = "issues" ] && [ -n "$ISSUE_NUMBER" ]; then
+            echo ">> Submitting post URL for issue #$ISSUE_NUMBER + homepage"
+            python indexnow_submit.py --issue "$ISSUE_NUMBER" \
+              --key ca5179f81066458b8cde89ccd225ce4e \
+              --host ibitbetter.github.io
+          else
+            echo ">> Submitting homepage + tag page"
+            python indexnow_submit.py \
+              --urls https://ibitbetter.github.io/ https://ibitbetter.github.io/tag.html \
+              --key ca5179f81066458b8cde89ccd225ce4e \
+              --host ibitbetter.github.io
+          fi
+
+      - name: Submission result
+        run: |
+          echo "====== IndexNow submission completed ======"
+          echo "Verify at: https://www.bing.com/webmasters"
+          echo "Key file: https://ibitbetter.github.io/ca5179f81066458b8cde89ccd225ce4e.txt"

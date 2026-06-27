@@ -41,13 +41,13 @@ jobs:
           if [ "$EVENT_NAME" = "issues" ] && [ -n "$ISSUE_NUMBER" ]; then
             echo ">> Submitting post URL for issue #$ISSUE_NUMBER + homepage"
             python indexnow_submit.py --issue "$ISSUE_NUMBER" \
-              --key ca5179f81066458b8cde89ccd225ce4e \
+              --key 10fe9d2dddb840799a2370388d792e93 \
               --host ibitbetter.github.io
           else
             echo ">> Submitting homepage + tag page"
             python indexnow_submit.py \
               --urls https://ibitbetter.github.io/ https://ibitbetter.github.io/tag.html \
-              --key ca5179f81066458b8cde89ccd225ce4e \
+              --key 10fe9d2dddb840799a2370388d792e93 \
               --host ibitbetter.github.io
           fi
 
@@ -55,4 +55,4 @@ jobs:
         run: |
           echo "====== IndexNow submission completed ======"
           echo "Verify at: https://www.bing.com/webmasters"
-          echo "Key file: https://ibitbetter.github.io/ca5179f81066458b8cde89ccd225ce4e.txt"
+          echo "Key file: https://ibitbetter.github.io/10fe9d2dddb840799a2370388d792e93.txt"

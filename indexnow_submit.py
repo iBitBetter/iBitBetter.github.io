@@ -7,13 +7,13 @@ IndexNow URL Submission Script for Gmeek Blog
 
 Usage:
   # Submit all URLs from sitemap
-  python indexnow_submit.py --sitemap docs/sitemap.xml --key ca5179f81066458b8cde89ccd225ce4e --host ibitbetter.github.io
+  python indexnow_submit.py --sitemap docs/sitemap.xml --key 10fe9d2dddb840799a2370388d792e93 --host ibitbetter.github.io
 
   # Submit specific URLs (e.g. the post that triggered the build)
-  python indexnow_submit.py --urls https://ibitbetter.github.io/post/152.html https://ibitbetter.github.io/ --key ca5179f81066458b8cde89ccd225ce4e --host ibitbetter.github.io
+  python indexnow_submit.py --urls https://ibitbetter.github.io/post/152.html https://ibitbetter.github.io/ --key 10fe9d2dddb840799a2370388d792e93 --host ibitbetter.github.io
 
   # Submit a single post by issue number
-  python indexnow_submit.py --issue 152 --key ca5179f81066458b8cde89ccd225ce4e --host ibitbetter.github.io
+  python indexnow_submit.py --issue 152 --key 10fe9d2dddb840799a2370388d792e93 --host ibitbetter.github.io
 """
 
 import argparse
@@ -25,8 +25,8 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 INDEXNOW_API = "https://api.indexnow.org/IndexNow"
-INDEXNOW_KEY = "ca5179f81066458b8cde89ccd225ce4e"
-INDEXNOW_KEY_LOCATION = "https://ibitbetter.github.io/ca5179f81066458b8cde89ccd225ce4e.txt"
+INDEXNOW_KEY = "10fe9d2dddb840799a2370388d792e93"
+INDEXNOW_KEY_LOCATION = "https://ibitbetter.github.io/10fe9d2dddb840799a2370388d792e93.txt"
 
 
 def parse_sitemap(sitemap_path):

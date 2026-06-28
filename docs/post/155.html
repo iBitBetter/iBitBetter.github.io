@@ -10,9 +10,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="很多人对360浏览器的印象还停留在弹窗满天飞的年代。">
+<meta name="description" content="你有没有这种经历：装了360极速浏览器X，结果打开后首页是360导航（全是广告），下载文件会弹会员推荐，右键菜单莫名其妙多了好几项 —— 说好的'极速'呢？  很多人对360浏览器的印象还停留在弹窗满天飞的年代。">
 <meta property="og:title" content="360极速浏览器X「去广告、轻量化」设置指南">
-<meta property="og:description" content="很多人对360浏览器的印象还停留在弹窗满天飞的年代。">
+<meta property="og:description" content="你有没有这种经历：装了360极速浏览器X，结果打开后首页是360导航（全是广告），下载文件会弹会员推荐，右键菜单莫名其妙多了好几项 —— 说好的'极速'呢？  很多人对360浏览器的印象还停留在弹窗满天飞的年代。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ibitbetter.github.io/post/155.html">
 <meta property="og:image" content="https://ibitbetter.github.io/og-image.jpg">
@@ -41,17 +41,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     body {padding: 8px;}
     .postTitle{font-size:24px;}
 }
-.copy-feedback {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 50px;
-    color: var(--color-fg-on-emphasis);
-    background-color: var(--color-fg-muted);
-    border-radius: 3px;
-    padding: 5px 8px;
-    font-size: 12px;
-}
+
 </style>
 
 
@@ -77,21 +67,26 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>很多人对360浏览器的印象还停留在弹窗满天飞的年代。其实现在的360极速浏览器X（基于Chromium内核）关掉那些花里胡哨的东西后，体验并不比Edge差。</p>
-<p>这篇指南手把手带你从零配置一个干净好用的360极速浏览器。</p>
-<h2>一、基本设置:设置默认主页</h2>
+<div class="markdown-body" id="postBody"><p>你有没有这种经历：装了360极速浏览器X，结果打开后首页是360导航（全是广告），下载文件会弹会员推荐，右键菜单莫名其妙多了好几项 —— 说好的"极速"呢？</p>
+<p>很多人对360浏览器的印象还停留在弹窗满天飞的年代。其实现在的360极速浏览器X（基于Chromium内核）本身并不差，<strong>差的是出厂默认配置</strong>。</p>
+<p>我把设置里能关的都关了，跑了一遍所有设置项。下面是完整记录。</p>
+<p><strong>照着做，10分钟还你一个干净、快速、不弹窗的浏览器。</strong></p>
+<h2>第一步：把"广告首页"换掉</h2>
 <p>打开浏览器，地址栏输入 <code class="notranslate">chrome://settings/browser</code> 进入基本设置。</p>
-<p><strong>起始页改成必应</strong></p>
-<p>把默认起始页从360导航改成 <code class="notranslate">cn.bing.com</code>。理由很简单：360首页全是广告和推荐内容，而必应的首页就是一张图加一个搜索框，干干净净。每天打开浏览器第一眼看到的是风景而不是促销banner，心情都会好一点。</p>
-<p><strong>搜索引擎设为百度，但留个后手</strong></p>
-<p>默认搜索引擎选百度（国内搜索确实更准），同时勾选 <strong>「搜索引擎不稳定时，自动尝试其他搜索引擎」</strong>。这个选项的意思是当百度抽风或被劫持时，浏览器会自动切换到备用引擎继续搜索，不会影响正常搜索。</p>
-<p><strong>启动时检查默认浏览器</strong> 建议勾上。系统更新或装了其他浏览器后默认设置容易被改掉，这个选项相当于一个自动纠错机制。</p>
+<p><strong>先干一件事：把起始页改成必应</strong></p>
+<p>把默认起始页从360导航改成 <code class="notranslate">cn.bing.com</code>。</p>
+<p><strong>为什么？</strong> 你打开360导航看看——首页上半屏是资讯推送，中间是热门榜单，底部还有八卦新闻。每天早上打开浏览器第一眼看到的是这个，心情能好才怪。</p>
+<p>必应呢？一张高清风景图 + 一个搜索框，干干净净。</p>
+<p><strong>再设一下搜索引擎</strong></p>
+<p>默认搜索引擎选百度（国内搜索确实更准），同时<strong>务必勾选</strong>「搜索引擎不稳定时，自动尝试其他搜索引擎」。</p>
+<p>这个选项的意思是：百度抽风或被劫持时，浏览器会自动切换到备用引擎继续搜索，不会影响你正常搜索。属于"设了就忘掉它"的那种设置。</p>
+<p><strong>最后一个小设置</strong></p>
+<p>「启动时检查默认浏览器」建议勾上。系统更新或装了其他浏览器后，默认设置容易被改掉，这个选项相当于一个自动纠错机制。</p>
 <blockquote>
 <p><strong>路径</strong>：选项 → 基本设置 → 起始页面 / 搜索 / 默认浏览器</p>
 </blockquote>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.github.io/assets/images/360browser-baseinit.webp" alt="360极速浏览器X设置起始页和默认搜索引擎" width="500" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 500 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<h2>二、下载设置：该关的关掉</h2>
-<p><code class="notranslate">chrome://settings/downloadSetting</code></p>
+<h2>第二步：下载功能里的坑最多</h2>
+<p>地址栏输入：<code class="notranslate">chrome://settings/downloadSetting</code></p>
 <p>这是最需要动手的地方。默认下载工具选 <strong>「360极速浏览器X下载」</strong>，不要用外部下载器——那个会弹窗、会捆绑。</p>
 <p><strong>建议保留的选项：</strong></p>
 <ul>
@@ -104,27 +99,25 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><strong>建议关闭的选项：</strong></p>
 <ul>
 <li>❌ <strong>使用360浏览器安全解压</strong> — 装完压缩包会弹广告推荐会员</li>
-<li>❌ <strong>开启360A协办公工具推荐</strong> — 这个名字就写着"我要给你推东西"</li>
-<li>❌ 使用加载加速模块（如果有的话）</li>
+<li>❌ <strong>开启360AI办公工具推荐</strong> — 这个名字就写着"我要给你推东西"</li>
 <li>❌ 下载完成后自动打开下载窗口 — 没必要每次都弹出来打断你</li>
 </ul>
 <p><strong>下载目录</strong> 选「使用上次下载目录」，这样不用每次都重新选路径。文件多了再手动整理就行。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.github.io/assets/images/360browser-download.webp" alt="360极速浏览器X下载设置" width="500" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 500 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<h2>三、实验室：性能与隐私的平衡</h2>
-<p><code class="notranslate">chrome://settings/lab</code></p>
-<p>这里有几个关键开关：</p>
+<h2>第三步：这些开关决定它是快还是卡</h2>
+<p>地址栏输入：<code class="notranslate">chrome://settings/lab</code></p>
+<p>这里有几个关键开关，直接影响浏览器的性能表现。</p>
 <p><strong>AI大会员按钮 → 关掉</strong></p>
 <p>左上角那个「在浏览器工具栏显示360AI大会员按钮」，<strong>取消勾选</strong>。工具栏每多一个按钮就少一块空间，而且你大概率不会点它。</p>
 <p><strong>图片放大镜 → 开启</strong></p>
 <p>鼠标悬停图片就能放大查看，看设计稿、查商品细节的时候特别方便。不占资源，开着不亏。</p>
-<p><strong>后台加速：按需开启</strong></p>
+<p><strong>后台加速：按内存大小决定</strong></p>
 <p>这部分是内存管理策略，根据你的电脑配置来调：</p>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>选项</th>
 <th>8GB以下内存</th>
-<th>16GB及以上</th>
+<th>16GB及以上内存</th>
 </tr>
 </thead>
 <tbody>
@@ -150,12 +143,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
-<p>小内存机器<strong>不要开预读链接</strong>，每个标签都在偷偷预加载网页，内存分分钟爆。16GB以上的可以开，体感上网速度确实快一截。</p>
-<p><strong>迅雷云加速</strong>看个人需求。日常浏览用不到，下大文件的时候临时开一下就行，平时关着省得后台跑进程。</p>
+<p><strong>小内存机器千万不要开预读链接</strong>，每个标签都在偷偷预加载网页，内存分分钟爆。16GB以上的可以开，体感上网速度确实快一截。</p>
+<p><strong>迅雷云加速</strong> 看个人需求。日常浏览用不到，下大文件的时候临时开一下就行，平时关着省得后台跑进程。</p>
 <p><strong>智能开机启动加速</strong> 和 <strong>DirectWrite高清字体渲染</strong> 这两个都建议开着，前者让浏览器冷启动更快，后者让中文显示更清晰——尤其是看代码和文档的时候。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.github.io/assets/images/360browser-lab.webp" alt="360极速浏览器X实验室设置" width="500" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 500 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<h2>四、隐私安全设置：防追踪是底线</h2>
-<p><code class="notranslate">chrome://settings/privacySecurity</code></p>
+<h2>第四步：不开这个，你的数据在被偷看</h2>
+<p>地址栏输入：<code class="notranslate">chrome://settings/privacySecurity</code></p>
 <p>核心安全防护里的几项默认就好：</p>
 <ul>
 <li>✅ 网址云安全拦截恶意网站</li>
@@ -163,29 +155,30 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>✅ 一律使用安全连接（HTTPS）</li>
 </ul>
 <p><strong>重点来了：启用防追踪隐私保护模式 → 必须勾！</strong></p>
-<p>这个选项开启后，浏览器会自动阻止第三方网站的追踪脚本和Cookie。你在A网站搜了个东西，B网站不会马上给你推同类广告。这不是玄学，是实打实的隐私保护。</p>
-<p>开启后下面会有个统计面板，显示最近7天帮你拦截了多少次追踪。正常使用一周，数字通常在几十到几百之间——说明你的数据一直在被各种脚本觊觎，只是以前你不知道而已。</p>
+<p>这个选项开启后，浏览器会自动阻止第三方网站的追踪脚本和Cookie。你在A网站搜了个东西，B网站不会马上给你推同类广告。</p>
+<p>这不是玄学，是实打实的隐私保护。</p>
+<p>开启后下面会有个统计面板，显示最近7天帮你拦截了多少次追踪。正常使用一周，数字通常在几十到几百之间——<strong>说明你的数据一直在被各种脚本觊觎，只是以前你不知道而已</strong>。</p>
 <p>DNS安全解析建议使用「浏览器默认服务」，别自定义。自定义DNS看起来高级，但如果配错了反而会影响访问速度甚至安全性。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.github.io/assets/images/360browser-private-safe.webp" alt="360极速浏览器X隐私安全设置" width="500" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 500 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<h2>五、书签栏：让它默认显示出来</h2>
+<h2>第五步：书签栏是你最高频的工具</h2>
 <p>很多浏览器默认隐藏书签栏，这很不合理。书签栏是你最高频使用的快捷入口，藏起来等于把常用工具锁进柜子。</p>
 <p><strong>操作方法：</strong></p>
 <ul>
 <li>右键点击顶部工具栏空白处</li>
 <li>勾选 <strong>「显示书签栏」</strong></li>
 </ul>
-<p>然后把你常用的网站拖进去分类整理。我的习惯是按场景分文件夹：MyDev（开发相关）、Work（工作）、TOP（高频网站）、GitHub、Blog、Tools……找东西的时候扫一眼就能定位，比在收藏夹菜单里翻快10倍。</p>
+<p>然后把你常用的网站拖进去分类整理。我的习惯是按场景分文件夹：MyDev（开发相关）、Work（工作）、TOP（高频网站）、GitHub、Blog、Tools……</p>
+<p>找东西的时候扫一眼就能定位，比在收藏夹菜单里翻快10倍。</p>
 <p><strong>快捷键备忘：</strong></p>
 <ul>
 <li><code class="notranslate">Ctrl+D</code> — 快速添加当前页到书签</li>
 <li><code class="notranslate">Ctrl+Shift+B</code> — 显示/隐藏书签栏</li>
 <li><code class="notranslate">Ctrl+Shift+O</code> — 打开书签管理器</li>
 </ul>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.github.io/assets/images/360browser-bookRemark-jd.webp" alt="360极速浏览器X收藏夹设置" width="500" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 500 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<h2>六、新标签页：定制你的启动台</h2>
+<h2>第六步：把新标签页改成你的"控制台"</h2>
 <p>点击新标签页右上角的齿轮图标进入自定义设置。</p>
 <p><strong>搜索引擎换成Bing</strong></p>
-<p>新标签页的搜索框默认可能是360搜索或百度，建议改成 <strong>Bing</strong>。原因前面说过：干净、无广告、国际搜索质量高。如果你主要用中文搜索，百度也行，但千万别用360搜索——结果页的广告密度会让你怀疑人生。</p>
+<p>新标签页的搜索框默认可能是360搜索或百度，建议改成 <strong>Bing</strong>。</p>
+<p>原因前面说过：干净、无广告、国际搜索质量高。如果你主要用中文搜索，百度也行，但<strong>千万别用360搜索</strong>——结果页的广告密度会让你怀疑人生。</p>
 <p><strong>外观精简原则：</strong></p>
 <p>右侧的外观开关面板里，大部分都可以关掉：</p>
 <markdown-accessiblity-table><table role="table">
@@ -198,7 +191,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </thead>
 <tbody>
 <tr>
-<td>显示[整低配文]</td>
+<td>显示[资讯频道]</td>
 <td>关</td>
 <td>没用的资讯流入口</td>
 </tr>
@@ -231,20 +224,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </table></markdown-accessiblity-table>
 <p>只保留 <strong>「我的网站」</strong> 就够了。把最常用的6-9个站点以图标形式放在新标签页，打开浏览器后一步到位。</p>
 <p>搜索相关的「搜索框推荐词」「常搜词」「搜索库背板」全部关掉。你需要的是搜索框，不是搜索框带的一堆推荐内容。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.github.io/assets/images/360browser-tab-init.webp" alt="360极速浏览器X定制你的启动台" width="500" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 500 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
 <h2>总结：一份检查清单</h2>
 <p>照着这份清单过一遍，5分钟搞定：</p>
-<pre class="notranslate"><code class="notranslate">□ 起始页改为 cn.bing.com
-□ 默认搜索引擎 + 自动备用引擎
-□ 下载设置：关闭安全解压和办公工具推荐
-□ 实验室：关闭AI大会员按钮
-□ 实验室：开启图片放大镜
-□ 隐私安全：开启防追踪保护模式
-□ 显示书签栏并整理分类
-□ 新标签页：搜索引擎改Bing，关闭所有推荐流
-</code></pre>
-<p>做完这些设置，你会发现360极速浏览器变得出奇地安静——没有弹窗、没有推荐、没有多余的按钮和资讯流。它就是一个浏览器，老老实实地帮你上网。</p>
-<p>这才是它该有的样子。</p>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.github.io/assets/images/360browser-index.webp" alt="360极速浏览器X定制你的启动台" width="500" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 500 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
 <p><strong>更多技术推荐</strong></p>
 <p><a href="https://ibitbetter.github.io/post/153.html" rel="nofollow">360安全卫士极速版：关掉这些设置，它才真正「极速」</a><br>
@@ -274,7 +255,7 @@ if("06/10/2025"!=""){
 </script></div>
 </body>
 <script>
-var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
 var utterancesLoad=0;
 
 let themeSettings={
@@ -348,70 +329,7 @@ function iFrameLoading(){
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const createClipboardHTML = (codeContent, additionalClasses = '') => `
-        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
-        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
-            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
-                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
-                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
-            </clipboard-copy>
-            <div class="copy-feedback">Copied!</div>
-        </div>
-    `;
 
-    const handleCodeElements = (selector = '') => {
-        document.querySelectorAll(selector).forEach(codeElement => {
-            const codeContent = codeElement.innerHTML;
-            const newStructure = document.createElement('div');
-            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
-            newStructure.innerHTML = createClipboardHTML(codeContent);
-
-            const parentElement = codeElement.parentElement;
-            if (selector.includes('highlight')) {
-                parentElement.insertBefore(newStructure, codeElement.nextSibling);
-                parentElement.removeChild(codeElement);
-            } else {
-                parentElement.parentElement.replaceChild(newStructure, parentElement);
-            }
-        });
-    };
-
-    handleCodeElements('pre.notranslate > code.notranslate');
-    handleCodeElements('div.highlight > pre.notranslate');
-
-    let currentFeedback = null;
-    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
-        copyButton.addEventListener('click', () => {
-            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
-            const tempTextArea = document.createElement('textarea');
-            tempTextArea.value = codeContent;
-            document.body.appendChild(tempTextArea);
-            tempTextArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempTextArea);
-
-            const copyIcon = copyButton.querySelector('.octicon-copy');
-            const checkIcon = copyButton.querySelector('.octicon-check');
-            const copyFeedback = copyButton.nextElementSibling;
-
-            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
-            currentFeedback = copyFeedback;
-
-            copyIcon.classList.add('d-none');
-            checkIcon.classList.remove('d-none');
-            copyFeedback.style.display = 'block';
-            copyButton.style.borderColor = 'var(--color-success-fg)';
-
-            setTimeout(() => {
-                copyIcon.classList.remove('d-none');
-                checkIcon.classList.add('d-none');
-                copyFeedback.style.display = 'none';
-                copyButton.style.borderColor = '';
-            }, 2000);
-        });
-    });
-});
 
 </script>
 <script src='https://ibitbetter.github.io/assets/GmeekTOC.js'></script>

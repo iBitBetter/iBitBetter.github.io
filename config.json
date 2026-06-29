@@ -1,6 +1,6 @@
 {
-    "title":"效率工具、技术教程与互联网趣站",
-    "subTitle":"发现最实用的 Windows 效率工具、技术教程与互联网趣站。\r\n 从软件推荐到电子书资源，帮你每天节省2小时。",
+    "title":"iBitBetter —— 效率工具、技术教程与互联网趣站",
+    "subTitle":"发现最实用的Windows效率工具、技术教程与趣站。从软件推荐到电子书，帮你每天节省2小时。",
     "faviconUrl":"https://fav.farm/🅱",
     "avatarUrl":"https://ibitbetter.github.io/assets/ibitbetter.webp",
     "displayTitle": "iBitBetter",
@@ -11,7 +11,7 @@
     "exlink":{"music":"https://163cn.tv/HWIR87m"},
     "email":"xbitbetter@gmail.com",
     "startSite":"06/10/2025",
-    "onePageListNum":12,
+    "onePageListNum":15,
     "commentLabelColor":"#006b75",
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
     "i18n":"CN",

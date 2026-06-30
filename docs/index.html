@@ -52,7 +52,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     .LabelTime{display:none;}
 }
 </style>
-<style>@media (max-width:600px){.blogTitle{display:inline;font-size:16px;margin-left:4px}.title-right .circle{padding:6px 8px;margin:0}.title-right .btn{padding:6px 8px}}#header{align-items:center}[href*='terms.html'],[href*='privacy.html']{display:none}</style>
+<style>@media (max-width:600px){.blogTitle{display:inline;font-size:14px;margin-left:2px}.title-right .circle{padding:5px 7px;margin:0}.title-right .btn{padding:6px 8px}}#header{align-items:center}.title-right [href*='terms.html'],.title-right [href*='privacy.html']{display:none}</style>
 
 
 <body>
@@ -65,11 +65,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
             <path id="pathSearch" fill-rule="evenodd"></path>
         </svg>
     </a>
-    <a href="https://163cn.tv/HWIR87m" class="btn btn-invisible circle" title="music" target="_blank">
-        <svg class="octicon" width="16" height="16" >
-            <path id="music" fill-rule="evenodd"></path>
-        </svg>
-    </a>
+    
     <a href="https://ibitbetter.github.io/now.html" class="btn btn-invisible circle" title="我正在做/想些什么？">
         <svg class="octicon" width="16" height="16" >
             <path id="我正在做/想些什么？" fill-rule="evenodd"></path>
@@ -336,7 +332,6 @@ for(var i=0;i<iconPost.length;i++){
 }
 
 
-document.getElementById("music").setAttribute("d",value=IconList["music"]);
 
 document.getElementById("我正在做/想些什么？").setAttribute("d",value=IconList["now"]);document.getElementById("服务条款").setAttribute("d",value=IconList["terms"]);document.getElementById("隐私政策").setAttribute("d",value=IconList["privacy"]);document.getElementById("关于").setAttribute("d",value=IconList["about"]);
 </script>

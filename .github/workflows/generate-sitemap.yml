@@ -78,7 +78,7 @@ jobs:
                           continue
                       
                       # 去重：跳过根目录的 index.html，因为前面已经手动添加了首页
-                      if root == "docs" and fname == "index.html":
+                      if root == "docs" and (fname == "index.html" or fname == "privacy.html" or fname == "terms.html" and fname == "google475e77f4cf90814b.html"):
                           continue
                           
                       fpath = os.path.join(root, fname)

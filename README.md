@@ -10,13 +10,13 @@
 
 | 指标 | 数据 |
 |------|------|
-| 📄 文章总数 | **23** 篇 |
+| 📄 文章总数 | **21** 篇 |
 | 💬 评论总数 | **0** 条 |
-| 📝 总字数 | **45,799** 字 |
+| 📝 总字数 | **39,709** 字 |
 
 ### 🏷️ 标签分布
 
-`奇趣网站` ×13  `Windows` ×7  `软件` ×6  `技术` ×5
+`奇趣网站` ×13  `软件` ×5  `Windows` ×5  `技术` ×3
 
 ---
 
@@ -24,12 +24,12 @@
 
 1. [看完这个网站天空之城，我想买无人机了](https://ibitbetter.github.io/post/160.html) `奇趣网站` — *2026-07-01*
 2. [汉字源 Hanziyuan](https://ibitbetter.github.io/post/159.html) `奇趣网站` — *2026-06-30*
-3. [360极速浏览器X「去广告、轻量化」设置指南](https://ibitbetter.github.io/post/155.html) `软件` `技术` `Windows` — *2026-06-28*
-4. [360安全卫士极速版：关掉这些设置，它才真正「极速」](https://ibitbetter.github.io/post/153.html) `技术` `Windows` — *2026-06-27*
-5. [乡土游戏馆](https://ibitbetter.github.io/post/152.html) `奇趣网站` — *2026-06-26*
+3. [乡土游戏馆](https://ibitbetter.github.io/post/152.html) `奇趣网站` — *2026-06-26*
+4. [一封写给旧互联网的情书：Cameron's World](https://ibitbetter.github.io/post/151.html) `奇趣网站` — *2026-06-25*
+5. [UEFI与Legacy启动优先级设置](https://ibitbetter.github.io/post/150.html) `技术` `Windows` — *2026-06-25*
 
 ---
 
-🕐 最后更新：2026-07-01 19:18:38 (UTC+8)
+🕐 最后更新：2026-07-02 01:46:46 (UTC+8)
 
 Powered by [Gmeek](https://github.com/Meekdai/Gmeek) | README by [iBitBetter](https://github.com/iBitBetter)

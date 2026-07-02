@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   <url>
     <loc>https://ibitbetter.github.io/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://ibitbetter.github.io/page2.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,14 +37,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.github.io/post/155.html</loc>
+    <loc>https://ibitbetter.github.io/post/121.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.github.io/post/121.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <loc>https://ibitbetter.github.io/post/161.html</loc>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -122,12 +122,6 @@
   </url>
   <url>
     <loc>https://ibitbetter.github.io/post/144.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.github.io/post/153.html</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

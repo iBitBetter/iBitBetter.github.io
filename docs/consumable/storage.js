@@ -15,7 +15,8 @@ const DEFAULT_SETTINGS = {
   notifyFreq: 'daily',      // 'daily' | 'weekly'
   notifyTime: '20:00',      // HH:MM
   notifyWeekday: 1,         // weekly 时周几触发（0=周日...6=周六）
-  lastNotifyDate: ''        // YYYY-MM-DD，上次触发日期，防重复
+  lastNotifyDate: '',       // YYYY-MM-DD，上次触发日期，防重复
+  lastBannerDismissDate: '' // YYYY-MM-DD，用户今日已关闭横幅，当天不再弹
 };
 
 // localStorage 读写封装
@@ -233,11 +234,13 @@ function getReminders() {
     const ratio = item.totalQuantity > 0 ? item.remainingQuantity / item.totalQuantity : 0;
     const pred = predictPurchase(item);
     if (ratio <= settings.lowStockThreshold || pred.needBuy) {
+      // 紧急：剩余<=10% 或 预计3天内用完；否则普通
+      const urgent = ratio <= 0.1 || (pred.daysLeft !== null && pred.daysLeft <= 3);
       list.push({
         type: 'low_stock',
         item,
         daysLeft: pred.daysLeft,
-        priority: pred.daysLeft !== null && pred.daysLeft <= 3 ? 1 : 2
+        priority: urgent ? 1 : 2
       });
     }
     if (item.expireDate) {
@@ -397,7 +400,8 @@ function getNotifyConfig() {
     notifyFreq: s.notifyFreq,
     notifyTime: s.notifyTime,
     notifyWeekday: s.notifyWeekday,
-    lastNotifyDate: s.lastNotifyDate
+    lastNotifyDate: s.lastNotifyDate,
+    lastBannerDismissDate: s.lastBannerDismissDate
   };
 }
 
@@ -426,6 +430,43 @@ function markNotifiedToday() {
   setNotifyConfig({ lastNotifyDate: formatDate(Date.now()) });
 }
 
+// 用户关闭今日横幅
+function dismissBannerToday() {
+  setNotifyConfig({ lastBannerDismissDate: formatDate(Date.now()) });
+}
+
+// 是否应该显示横幅（综合判断：开启 + 到点 + 今日未关 + 今日未触发 或 有紧急待办）
+function shouldShowBanner() {
+  const cfg = getNotifyConfig();
+  const today = formatDate(Date.now());
+  // 今日已关闭，不显示
+  if (cfg.lastBannerDismissDate === today) return false;
+  // 情况1：到点提醒已触发条件
+  if (cfg.notifyEnabled && shouldNotifyToday()) return true;
+  // 情况2：有紧急待办（剩余<=3天用完 / 已过期）即使没开提醒也提示
+  const rems = getReminders();
+  return rems.some(r => r.priority === 1);
+}
+
+// 生成横幅内容
+function buildBannerContent() {
+  const rems = getReminders();
+  const today = formatDate(Date.now());
+  const ck = getCheckinByDate(today);
+  const hasCheckin = ck && ck.entries.length > 0;
+  const urgent = rems.filter(r => r.priority === 1);
+  const parts = [];
+  if (!hasCheckin) parts.push('今日消耗未记录');
+  if (urgent.length > 0) {
+    const names = urgent.slice(0, 2).map(r => r.item.name).join('、');
+    parts.push(urgent.length + ' 件物品待处理（' + names + '…）');
+  }
+  if (parts.length === 0) {
+    parts.push('别忘了记录今日消耗');
+  }
+  return parts.join(' · ');
+}
+
 // 生成提醒文案
 function buildNotifyMessage() {
   const items = getItems();
@@ -450,7 +491,8 @@ if (typeof module !== 'undefined' && module.exports) {
     analyze, predictPurchase, getReminders, getAnalysisSummary,
     formatDate, formatRelative, daysUntil, round,
     getCheckins, getCheckinByDate, saveCheckin, getCheckinStats,
-    getNotifyConfig, setNotifyConfig, shouldNotifyToday, markNotifiedToday, buildNotifyMessage
+    getNotifyConfig, setNotifyConfig, shouldNotifyToday, markNotifiedToday, buildNotifyMessage,
+    dismissBannerToday, shouldShowBanner, buildBannerContent
   };
 } else {
   window.HCT = {
@@ -459,6 +501,7 @@ if (typeof module !== 'undefined' && module.exports) {
     analyze, predictPurchase, getReminders, getAnalysisSummary,
     formatDate, formatRelative, daysUntil, round,
     getCheckins, getCheckinByDate, saveCheckin, getCheckinStats,
-    getNotifyConfig, setNotifyConfig, shouldNotifyToday, markNotifiedToday, buildNotifyMessage
+    getNotifyConfig, setNotifyConfig, shouldNotifyToday, markNotifiedToday, buildNotifyMessage,
+    dismissBannerToday, shouldShowBanner, buildBannerContent
   };
 }

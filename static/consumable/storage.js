@@ -4,11 +4,18 @@
 const KEY_ITEMS = 'hct_items';
 const KEY_HISTORY = 'hct_history';
 const KEY_SETTINGS = 'hct_settings';
+const KEY_CHECKINS = 'hct_checkins'; // 每日消耗打卡记录
 
 const DEFAULT_SETTINGS = {
   lowStockThreshold: 0.2,
   expireSoonDays: 7,
-  repurchaseDays: 7
+  repurchaseDays: 7,
+  // 定期提醒设置
+  notifyEnabled: false,
+  notifyFreq: 'daily',      // 'daily' | 'weekly'
+  notifyTime: '20:00',      // HH:MM
+  notifyWeekday: 1,         // weekly 时周几触发（0=周日...6=周六）
+  lastNotifyDate: ''        // YYYY-MM-DD，上次触发日期，防重复
 };
 
 // localStorage 读写封装
@@ -72,6 +79,7 @@ function init() {
   if (read(KEY_ITEMS) === '') write(KEY_ITEMS, []);
   if (read(KEY_HISTORY) === '') write(KEY_HISTORY, []);
   if (read(KEY_SETTINGS) === '') write(KEY_SETTINGS, DEFAULT_SETTINGS);
+  if (read(KEY_CHECKINS) === '') write(KEY_CHECKINS, []);
 }
 
 function getItems() { return read(KEY_ITEMS) || []; }
@@ -292,19 +300,165 @@ function getAnalysisSummary() {
   };
 }
 
+// ============ 每日消耗打卡 ============
+
+function getCheckins() { return read(KEY_CHECKINS) || []; }
+
+// 获取某天打卡（按 YYYY-MM-DD）
+function getCheckinByDate(dateStr) {
+  return getCheckins().find(c => c.date === dateStr) || null;
+}
+
+// 保存/更新某天打卡
+// entries: [{ itemId, name, unit, quantity }]
+function saveCheckin(dateStr, entries, note) {
+  const list = getCheckins();
+  const idx = list.findIndex(c => c.date === dateStr);
+  const oldRecord = idx !== -1 ? list[idx] : null;
+
+  // 覆盖时先回滚旧记录的扣减（直接调整 remainingQuantity，避免重复扣减）
+  if (oldRecord) {
+    const items = getItems();
+    oldRecord.entries.forEach(e => {
+      const i = items.findIndex(it => it.id === e.itemId);
+      if (i !== -1 && items[i].status === 'active') {
+        items[i].remainingQuantity = round(items[i].remainingQuantity + Number(e.quantity), 3);
+        if (items[i].remainingQuantity > items[i].totalQuantity) {
+          items[i].remainingQuantity = items[i].totalQuantity;
+        }
+      }
+    });
+    // 移除该天打卡产生的使用记录，保持日志干净
+    items.forEach(it => {
+      if (it.usageRecords) {
+        it.usageRecords = it.usageRecords.filter(r => r.note !== '每日打卡 ' + dateStr);
+      }
+    });
+    saveItems(items);
+  }
+
+  const record = {
+    date: dateStr,
+    entries: entries.filter(e => Number(e.quantity) > 0),
+    note: note || '',
+    updateTime: Date.now()
+  };
+  if (idx === -1) {
+    list.push(record);
+  } else {
+    list[idx] = record;
+  }
+  // 按日期倒序
+  list.sort((a, b) => (a.date < b.date ? 1 : -1));
+  write(KEY_CHECKINS, list);
+
+  // 同步把打卡数量写入对应在用物品的使用记录
+  record.entries.forEach(e => {
+    const item = getItem(e.itemId);
+    if (item && item.status === 'active' && Number(e.quantity) > 0) {
+      addUsage(e.itemId, Number(e.quantity), '每日打卡 ' + dateStr);
+    }
+  });
+  return record;
+}
+
+// 最近 N 天消耗统计
+function getCheckinStats(days) {
+  const list = getCheckins();
+  const n = days || 7;
+  const today = new Date();
+  const result = [];
+  for (let i = 0; i < n; i++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const ds = formatDate(d.getTime());
+    const c = list.find(x => x.date === ds);
+    const totalQty = c ? c.entries.reduce((s, e) => s + Number(e.quantity), 0) : 0;
+    const itemCount = c ? c.entries.length : 0;
+    result.push({
+      date: ds,
+      weekday: '日一二三四五六'[d.getDay()],
+      hasRecord: !!c,
+      totalQty: round(totalQty, 3),
+      itemCount,
+      entries: c ? c.entries : [],
+      note: c ? c.note : ''
+    });
+  }
+  return result;
+}
+
+// ============ 定期提醒（通知）============
+
+function getNotifyConfig() {
+  const s = getSettings();
+  return {
+    notifyEnabled: s.notifyEnabled,
+    notifyFreq: s.notifyFreq,
+    notifyTime: s.notifyTime,
+    notifyWeekday: s.notifyWeekday,
+    lastNotifyDate: s.lastNotifyDate
+  };
+}
+
+function setNotifyConfig(cfg) {
+  const s = getSettings();
+  Object.assign(s, cfg);
+  write(KEY_SETTINGS, s);
+  return s;
+}
+
+// 今天是否应该提醒（频率 + 当天是否已触发）
+function shouldNotifyToday() {
+  const cfg = getNotifyConfig();
+  if (!cfg.notifyEnabled) return false;
+  const now = new Date();
+  const today = formatDate(now.getTime());
+  if (cfg.lastNotifyDate === today) return false; // 今天已触发
+  if (cfg.notifyFreq === 'weekly' && now.getDay() !== cfg.notifyWeekday) return false;
+  // 时间是否已过设定时间
+  const [h, m] = (cfg.notifyTime || '20:00').split(':').map(Number);
+  return now.getHours() > h || (now.getHours() === h && now.getMinutes() >= m);
+}
+
+// 标记今天已触发
+function markNotifiedToday() {
+  setNotifyConfig({ lastNotifyDate: formatDate(Date.now()) });
+}
+
+// 生成提醒文案
+function buildNotifyMessage() {
+  const items = getItems();
+  const rems = getReminders();
+  if (items.length === 0) {
+    return '还没有在用物品，点击记录今日消耗';
+  }
+  const lowCount = rems.filter(r => r.type === 'low_stock').length;
+  const expCount = rems.filter(r => r.type !== 'low_stock').length;
+  let msg = '在用物品 ' + items.length + ' 件';
+  if (lowCount > 0) msg += '，' + lowCount + ' 件待补货';
+  if (expCount > 0) msg += '，' + expCount + ' 件临期/过期';
+  msg += '。别忘了记录今日消耗。';
+  return msg;
+}
+
 // 导出（兼容 CommonJS 和浏览器全局）
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     init, getItems, getHistory, getSettings,
     addItem, getItem, addUsage, deleteItem,
     analyze, predictPurchase, getReminders, getAnalysisSummary,
-    formatDate, formatRelative, daysUntil, round
+    formatDate, formatRelative, daysUntil, round,
+    getCheckins, getCheckinByDate, saveCheckin, getCheckinStats,
+    getNotifyConfig, setNotifyConfig, shouldNotifyToday, markNotifiedToday, buildNotifyMessage
   };
 } else {
   window.HCT = {
     init, getItems, getHistory, getSettings,
     addItem, getItem, addUsage, deleteItem,
     analyze, predictPurchase, getReminders, getAnalysisSummary,
-    formatDate, formatRelative, daysUntil, round
+    formatDate, formatRelative, daysUntil, round,
+    getCheckins, getCheckinByDate, saveCheckin, getCheckinStats,
+    getNotifyConfig, setNotifyConfig, shouldNotifyToday, markNotifiedToday, buildNotifyMessage
   };
 }

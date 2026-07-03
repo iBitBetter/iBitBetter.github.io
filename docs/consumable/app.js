@@ -20,6 +20,8 @@ function parseHash() {
     route.name = 'analysis'; route.params = {};
   } else if (parts[0] === 'reminder') {
     route.name = 'reminder'; route.params = {};
+  } else if (parts[0] === 'checkin') {
+    route.name = 'checkin'; route.params = {};
   } else {
     route.name = 'index'; route.params = {};
   }
@@ -114,6 +116,16 @@ const IndexPage = {
 
     <div class="add-btn" @click="goAdd"><span class="add-plus">+</span> 添加物品</div>
 
+    <div class="checkin-entry" @click="goCheckin">
+      <div class="ck-left">
+        <span class="ck-label">DAILY CHECK-IN</span>
+        <span class="ck-title">今日消耗记录</span>
+        <span class="ck-sub" v-if="todayChecked">今日已记录 {{ todayCheckedCount }} 项</span>
+        <span class="ck-sub" v-else>点击快速记录今日使用情况</span>
+      </div>
+      <span class="ck-arrow">›</span>
+    </div>
+
     <div v-if="items.length === 0" class="empty">
       <div class="empty-icon">□</div>
       <div class="empty-text">还没有在用物品</div>
@@ -145,6 +157,8 @@ const IndexPage = {
   `,
   setup() {
     const items = ref([]);
+    const todayChecked = ref(false);
+    const todayCheckedCount = ref(0);
     function load() {
       items.value = S.getItems().map(it => {
         const percent = it.totalQuantity > 0 ? Math.max(S.round(it.remainingQuantity / it.totalQuantity * 100, 0), 0) : 0;
@@ -158,13 +172,19 @@ const IndexPage = {
         }
         return Object.assign({}, it, { percent, expireDays, expireText });
       });
+      // 今日打卡状态
+      const today = S.formatDate(Date.now());
+      const ck = S.getCheckinByDate(today);
+      todayChecked.value = !!ck && ck.entries.length > 0;
+      todayCheckedCount.value = ck ? ck.entries.length : 0;
     }
     onMounted(load);
     window.addEventListener('hct-data-changed', load);
     function goAdd() { navigate('/add'); }
     function goDetail(id) { navigate('/detail/' + id); }
+    function goCheckin() { navigate('/checkin'); }
     function quickUse(it) { openUseModal(it); }
-    return { items, goAdd, goDetail, quickUse };
+    return { items, todayChecked, todayCheckedCount, goAdd, goDetail, goCheckin, quickUse };
   }
 };
 
@@ -481,6 +501,120 @@ const AnalysisPage = {
   }
 };
 
+// ============ 每日消耗打卡页 ============
+const CheckinPage = {
+  template: `
+  <div class="top-bar"></div>
+  <div class="page-wrap">
+    <div class="header">
+      <span class="label">DAILY CHECK-IN</span>
+      <h1 class="h1">今日消耗</h1>
+      <div class="subtitle num">{{ todayDate }} 星期{{ todayWeekday }}</div>
+    </div>
+
+    <div v-if="items.length === 0" class="empty">
+      <div class="empty-icon">□</div>
+      <div class="empty-text">还没有在用物品</div>
+      <div class="empty-sub">先添加物品，再回来记录每日消耗</div>
+    </div>
+
+    <div v-else>
+      <div class="card ck-form">
+        <div class="ck-form-label">记录今天使用的数量</div>
+        <div class="ck-item" v-for="it in items" :key="it.id">
+          <div class="ck-item-left">
+            <div class="ck-item-name">{{ it.name }}</div>
+            <div class="ck-item-meta num">剩余 {{ it.remainingQuantity }} {{ it.unit }}</div>
+          </div>
+          <div class="ck-item-right">
+            <input class="ck-input num" type="number" step="any" min="0" v-model="form[it.id]" placeholder="0" />
+            <span class="ck-unit">{{ it.unit }}</span>
+          </div>
+        </div>
+        <div class="ck-note-row">
+          <input class="ck-note-input" v-model="note" placeholder="备注（选填）" />
+        </div>
+        <div class="btn-primary ck-submit" @click="submit">保存今日消耗</div>
+      </div>
+
+      <div class="section">
+        <div class="section-head"><span class="label">RECENT 7 DAYS</span></div>
+        <h2 class="h2 section-title">最近 7 天</h2>
+        <div class="ck-log-list">
+          <div v-for="d in stats" :key="d.date" class="card ck-log-item" :class="{ 'is-today': d.date === todayDate }">
+            <div class="ck-log-head">
+              <span class="ck-log-date num">{{ d.date }}</span>
+              <span class="ck-log-week">周{{ d.weekday }}</span>
+              <span class="ck-log-badge" v-if="d.hasRecord">{{ d.itemCount }} 项 · {{ d.totalQty }}</span>
+              <span class="ck-log-empty" v-else>未记录</span>
+            </div>
+            <div v-if="d.hasRecord" class="ck-log-entries">
+              <span v-for="e in d.entries" :key="e.itemId" class="ck-log-entry">
+                {{ e.name }} <span class="num">-{{ e.quantity }}{{ e.unit }}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `,
+  setup() {
+    const items = ref([]);
+    const form = reactive({});
+    const note = ref('');
+    const todayDate = S.formatDate(Date.now());
+    const todayWeekday = '日一二三四五六'[new Date().getDay()];
+    const stats = ref([]);
+
+    function load() {
+      items.value = S.getItems();
+      // 预填今日已有打卡
+      const ck = S.getCheckinByDate(todayDate);
+      const map = {};
+      items.value.forEach(it => {
+        const exist = ck ? ck.entries.find(e => e.itemId === it.id) : null;
+        map[it.id] = exist ? String(exist.quantity) : '';
+      });
+      Object.keys(form).forEach(k => delete form[k]);
+      Object.assign(form, map);
+      note.value = ck ? ck.note : '';
+      stats.value = S.getCheckinStats(7);
+    }
+
+    function submit() {
+      const entries = items.value
+        .filter(it => form[it.id] && Number(form[it.id]) > 0)
+        .map(it => ({
+          itemId: it.id,
+          name: it.name,
+          unit: it.unit,
+          quantity: Number(form[it.id])
+        }));
+      if (entries.length === 0) {
+        alert('请至少填写一个物品的使用数量');
+        return;
+      }
+      // 校验不超过剩余
+      for (const e of entries) {
+        const it = items.value.find(i => i.id === e.itemId);
+        if (e.quantity > it.remainingQuantity) {
+          alert(it.name + ' 超过剩余数量（剩余 ' + it.remainingQuantity + '）');
+          return;
+        }
+      }
+      S.saveCheckin(todayDate, entries, note.value);
+      alert('已保存今日消耗，共 ' + entries.length + ' 项');
+      window.dispatchEvent(new Event('hct-data-changed'));
+      load();
+    }
+
+    onMounted(load);
+    window.addEventListener('hct-data-changed', load);
+    return { items, form, note, todayDate, todayWeekday, stats, submit };
+  }
+};
+
 // ============ 提醒页 ============
 const ReminderPage = {
   template: `
@@ -516,17 +650,79 @@ const ReminderPage = {
       </div>
     </div>
 
-    <div class="info-block" v-if="reminders.length > 0">
+    <div class="section notify-section">
+      <div class="section-head"><span class="label">SCHEDULED REMINDER</span></div>
+      <h2 class="h2 section-title">定期提醒</h2>
+      <div class="card notify-card">
+        <div class="notify-row">
+          <div class="notify-info">
+            <div class="notify-name">开启浏览器通知</div>
+            <div class="notify-desc">到点提醒记录今日消耗</div>
+          </div>
+          <div class="switch" :class="{ on: cfg.notifyEnabled }" @click="toggleNotify">
+            <div class="switch-knob"></div>
+          </div>
+        </div>
+
+        <template v-if="cfg.notifyEnabled">
+          <div class="notify-row">
+            <div class="notify-info">
+              <div class="notify-name">提醒频率</div>
+            </div>
+            <div class="seg">
+              <div class="seg-item" :class="{ active: cfg.notifyFreq === 'daily' }" @click="setFreq('daily')">每天</div>
+              <div class="seg-item" :class="{ active: cfg.notifyFreq === 'weekly' }" @click="setFreq('weekly')">每周</div>
+            </div>
+          </div>
+          <div class="notify-row">
+            <div class="notify-info">
+              <div class="notify-name">提醒时间</div>
+            </div>
+            <input class="notify-time num" type="time" v-model="cfg.notifyTime" @change="saveTime" />
+          </div>
+          <div class="notify-row" v-if="cfg.notifyFreq === 'weekly'">
+            <div class="notify-info">
+              <div class="notify-name">提醒日</div>
+            </div>
+            <select class="notify-select" v-model="cfg.notifyWeekday" @change="saveWeekday">
+              <option :value="0">周日</option>
+              <option :value="1">周一</option>
+              <option :value="2">周二</option>
+              <option :value="3">周三</option>
+              <option :value="4">周四</option>
+              <option :value="5">周五</option>
+              <option :value="6">周六</option>
+            </select>
+          </div>
+          <div class="notify-status">
+            <span class="notify-dot" :class="{ live: notifyPermission === 'granted' }"></span>
+            {{ notifyStatusText }}
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <div class="info-block" v-if="reminders.length > 0 || cfg.notifyEnabled">
       <div class="info-title">提醒规则</div>
       <div class="info-line">· 剩余量低于 20% 提醒补货</div>
       <div class="info-line">· 预计 7 天内用完提醒购买</div>
       <div class="info-line">· 距过期 7 天提醒，过期标红</div>
+      <div class="info-line" v-if="cfg.notifyEnabled">· 定期提醒仅在页面打开时生效</div>
     </div>
   </div>
   `,
   setup() {
     const reminders = ref([]);
     const urgentCount = ref(0);
+    const cfg = reactive(S.getNotifyConfig());
+    const notifyPermission = ref(typeof Notification !== 'undefined' ? Notification.permission : 'unsupported');
+    const notifyStatusText = computed(() => {
+      if (notifyPermission.value === 'granted') return '通知已开启';
+      if (notifyPermission.value === 'denied') return '通知被拒绝，请在浏览器设置中允许';
+      if (notifyPermission.value === 'unsupported') return '当前浏览器不支持通知';
+      return '需要授权浏览器通知权限';
+    });
+
     function load() {
       const list = S.getReminders().map(r => {
         let typeText = '', typeLabel = '', detail = '';
@@ -545,11 +741,47 @@ const ReminderPage = {
       });
       reminders.value = list;
       urgentCount.value = list.filter(r => r.priority === 1).length;
+      Object.assign(cfg, S.getNotifyConfig());
     }
+
+    async function toggleNotify() {
+      if (cfg.notifyEnabled) {
+        // 关闭
+        S.setNotifyConfig({ notifyEnabled: false });
+        Object.assign(cfg, S.getNotifyConfig());
+        return;
+      }
+      // 开启：先请求权限
+      if (typeof Notification === 'undefined') {
+        alert('当前浏览器不支持通知');
+        return;
+      }
+      if (Notification.permission !== 'granted') {
+        const perm = await Notification.requestPermission();
+        notifyPermission.value = perm;
+        if (perm !== 'granted') {
+          alert('未授权通知权限，无法开启提醒');
+          return;
+        }
+      }
+      S.setNotifyConfig({ notifyEnabled: true });
+      Object.assign(cfg, S.getNotifyConfig());
+    }
+    function setFreq(f) {
+      S.setNotifyConfig({ notifyFreq: f });
+      Object.assign(cfg, S.getNotifyConfig());
+    }
+    function saveTime() {
+      S.setNotifyConfig({ notifyTime: cfg.notifyTime });
+    }
+    function saveWeekday() {
+      S.setNotifyConfig({ notifyWeekday: Number(cfg.notifyWeekday) });
+    }
+
     onMounted(load);
     window.addEventListener('hct-data-changed', load);
     function goDetail(id) { navigate('/detail/' + id); }
-    return { reminders, urgentCount, goDetail };
+    return { reminders, urgentCount, goDetail, cfg, notifyPermission, notifyStatusText, toggleNotify, setFreq, saveTime, saveWeekday };
   }
 };
 
@@ -582,13 +814,14 @@ const App = {
     <use-modal-component></use-modal-component>
   </div>
   `,
-  components: { IndexPage, AddPage, DetailPage, AnalysisPage, ReminderPage, TabBar, UseModalComponent },
+  components: { IndexPage, AddPage, DetailPage, AnalysisPage, CheckinPage, ReminderPage, TabBar, UseModalComponent },
   setup() {
     const currentPage = computed(() => {
       switch (route.name) {
         case 'add': return 'AddPage';
         case 'detail': return 'DetailPage';
         case 'analysis': return 'AnalysisPage';
+        case 'checkin': return 'CheckinPage';
         case 'reminder': return 'ReminderPage';
         default: return 'IndexPage';
       }
@@ -600,4 +833,21 @@ const App = {
 
 // 初始化存储并启动
 S.init();
+
+// 定期提醒定时器：页面打开期间每分钟检查一次
+function checkScheduledNotify() {
+  if (!S.shouldNotifyToday()) return;
+  if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
+  try {
+    new Notification('日用消耗提醒', {
+      body: S.buildNotifyMessage()
+    });
+    S.markNotifiedToday();
+  } catch (e) {
+    // 通知创建失败，忽略
+  }
+}
+checkScheduledNotify();
+setInterval(checkScheduledNotify, 60000);
+
 createApp(App).mount('#app');

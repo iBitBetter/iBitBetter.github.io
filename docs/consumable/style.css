@@ -257,6 +257,106 @@ html, body {
 .modal-actions .cancel { flex: 1; cursor: pointer; }
 .modal-actions .confirm { flex: 2; cursor: pointer; }
 
+/* ============ 首页今日消耗入口 ============ */
+.checkin-entry {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--ikb);
+  padding: 16px; margin-bottom: 20px; cursor: pointer; user-select: none;
+}
+.ck-left { display: flex; flex-direction: column; gap: 4px; }
+.ck-label { font-size: 10px; color: var(--ikb); letter-spacing: 1.5px; font-weight: 700; }
+.ck-title { font-size: 16px; font-weight: 700; color: var(--ink); }
+.ck-sub { font-size: 12px; color: var(--ink-3); }
+.ck-arrow { font-size: 24px; color: var(--ink-3); }
+
+/* ============ 每日消耗打卡页 ============ */
+.ck-form { padding: 0; }
+.ck-form-label { font-size: 13px; color: var(--ink-2); padding: 16px 16px 8px; font-weight: 600; }
+.ck-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px; border-top: 1px solid var(--line);
+}
+.ck-item-left { display: flex; flex-direction: column; gap: 4px; }
+.ck-item-name { font-size: 16px; font-weight: 600; color: var(--ink); }
+.ck-item-meta { font-size: 12px; color: var(--ink-3); }
+.ck-item-right { display: flex; align-items: baseline; gap: 6px; }
+.ck-input {
+  width: 80px; text-align: right; font-size: 20px; font-weight: 700;
+  border: 1px solid var(--line); padding: 8px 10px; outline: none; background: var(--bg);
+  font-family: "SF Mono", monospace;
+}
+.ck-input:focus { border-color: var(--ikb); }
+.ck-unit { font-size: 12px; color: var(--ink-3); min-width: 24px; }
+.ck-note-row { padding: 12px 16px; border-top: 1px solid var(--line); }
+.ck-note-input {
+  width: 100%; border: none; background: transparent; outline: none;
+  font-size: 14px; color: var(--ink); font-family: inherit; padding: 4px 0;
+}
+.ck-note-input::placeholder { color: var(--ink-3); }
+.ck-submit { margin: 16px; }
+
+.ck-log-list { display: flex; flex-direction: column; gap: 8px; }
+.ck-log-item { padding: 14px 16px; }
+.ck-log-item.is-today { border-left: 4px solid var(--ikb); }
+.ck-log-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.ck-log-date { font-size: 14px; font-weight: 700; color: var(--ink); }
+.ck-log-week { font-size: 12px; color: var(--ink-3); }
+.ck-log-badge { margin-left: auto; font-size: 12px; color: var(--ikb); font-weight: 600; font-family: "SF Mono", monospace; }
+.ck-log-empty { margin-left: auto; font-size: 12px; color: var(--ink-3); }
+.ck-log-entries { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+.ck-log-entry { font-size: 12px; color: var(--ink-2); }
+.ck-log-entry .num { color: var(--warn); }
+
+/* ============ 定期提醒设置 ============ */
+.notify-section { margin-top: 24px; }
+.notify-card { padding: 0; }
+.notify-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px; border-top: 1px solid var(--line);
+}
+.notify-row:first-child { border-top: 0; }
+.notify-info { flex: 1; }
+.notify-name { font-size: 15px; font-weight: 600; color: var(--ink); }
+.notify-desc { font-size: 12px; color: var(--ink-3); margin-top: 2px; }
+
+/* 开关 */
+.switch {
+  width: 48px; height: 28px; background: var(--line); border-radius: 14px;
+  position: relative; cursor: pointer; transition: background 0.2s; flex-shrink: 0;
+}
+.switch.on { background: var(--ikb); }
+.switch-knob {
+  width: 24px; height: 24px; background: #fff; border-radius: 50%;
+  position: absolute; top: 2px; left: 2px; transition: left 0.2s;
+}
+.switch.on .switch-knob { left: 22px; }
+
+/* 分段选择 */
+.seg { display: flex; border: 1px solid var(--line); }
+.seg-item {
+  padding: 6px 16px; font-size: 13px; cursor: pointer; color: var(--ink-2);
+  border-right: 1px solid var(--line); user-select: none;
+}
+.seg-item:last-child { border-right: 0; }
+.seg-item.active { background: var(--ikb); color: #fff; }
+
+.notify-time {
+  font-size: 16px; font-weight: 600; border: 1px solid var(--line);
+  padding: 6px 10px; outline: none; font-family: "SF Mono", monospace; background: var(--bg);
+}
+.notify-select {
+  font-size: 14px; border: 1px solid var(--line); padding: 6px 10px;
+  outline: none; background: var(--bg); font-family: inherit;
+}
+.notify-status {
+  padding: 12px 16px; border-top: 1px solid var(--line);
+  font-size: 12px; color: var(--ink-3); display: flex; align-items: center; gap: 6px;
+}
+.notify-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--ink-3);
+}
+.notify-dot.live { background: var(--ok); }
+
 /* ============ 响应式 ============ */
 @media (min-width: 481px) {
   body { background: #f0f0f0; }

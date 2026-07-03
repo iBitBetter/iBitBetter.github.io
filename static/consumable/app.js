@@ -34,6 +34,49 @@ function navigate(path) {
 window.addEventListener('hashchange', parseHash);
 parseHash();
 
+// ============ 全局横幅提醒状态 ============
+const banner = reactive({
+  show: false,
+  content: '',
+  action: ''  // 点击跳转路径
+});
+
+function refreshBanner() {
+  if (S.shouldShowBanner()) {
+    banner.show = true;
+    banner.content = S.buildBannerContent();
+    banner.action = '/checkin';
+  } else {
+    banner.show = false;
+  }
+}
+
+function dismissBanner() {
+  S.dismissBannerToday();
+  banner.show = false;
+}
+
+// 横幅组件
+const BannerComponent = {
+  template: `
+  <transition name="banner-slide">
+    <div v-if="b.show" class="app-banner" @click="go">
+      <div class="banner-body">
+        <span class="banner-icon">!</span>
+        <span class="banner-text">{{ b.content }}</span>
+      </div>
+      <span class="banner-close" @click.stop="close">×</span>
+    </div>
+  </transition>
+  `,
+  setup() {
+    const b = banner;
+    function close() { dismissBanner(); }
+    function go() { if (b.action) navigate(b.action); }
+    return { b, close, go };
+  }
+};
+
 // ============ 共享使用弹窗 ============
 const useModal = reactive({
   show: false,
@@ -656,8 +699,8 @@ const ReminderPage = {
       <div class="card notify-card">
         <div class="notify-row">
           <div class="notify-info">
-            <div class="notify-name">开启浏览器通知</div>
-            <div class="notify-desc">到点提醒记录今日消耗</div>
+            <div class="notify-name">开启应用内提醒</div>
+            <div class="notify-desc">到点在页面顶部显示横幅，所有浏览器通用</div>
           </div>
           <div class="switch" :class="{ on: cfg.notifyEnabled }" @click="toggleNotify">
             <div class="switch-knob"></div>
@@ -695,19 +738,30 @@ const ReminderPage = {
             </select>
           </div>
           <div class="notify-status">
-            <span class="notify-dot" :class="{ live: notifyPermission === 'granted' }"></span>
-            {{ notifyStatusText }}
+            <span class="notify-dot live"></span>
+            已开启 · 到点自动显示横幅，点击可记录消耗
           </div>
         </template>
       </div>
+
+      <div class="card notify-card" style="margin-top:12px;">
+        <div class="notify-row">
+          <div class="notify-info">
+            <div class="notify-name">紧急待办自动提醒</div>
+            <div class="notify-desc">有物品即将用完或过期时，打开页面自动弹横幅</div>
+          </div>
+          <div class="switch on"><div class="switch-knob"></div></div>
+        </div>
+      </div>
     </div>
 
-    <div class="info-block" v-if="reminders.length > 0 || cfg.notifyEnabled">
+    <div class="info-block">
       <div class="info-title">提醒规则</div>
       <div class="info-line">· 剩余量低于 20% 提醒补货</div>
       <div class="info-line">· 预计 7 天内用完提醒购买</div>
       <div class="info-line">· 距过期 7 天提醒，过期标红</div>
-      <div class="info-line" v-if="cfg.notifyEnabled">· 定期提醒仅在页面打开时生效</div>
+      <div class="info-line">· 紧急待办（剩余≤3天/过期）打开即提醒</div>
+      <div class="info-line" v-if="cfg.notifyEnabled">· 定期提醒到点显示横幅，关闭后当天不再弹</div>
     </div>
   </div>
   `,
@@ -715,13 +769,6 @@ const ReminderPage = {
     const reminders = ref([]);
     const urgentCount = ref(0);
     const cfg = reactive(S.getNotifyConfig());
-    const notifyPermission = ref(typeof Notification !== 'undefined' ? Notification.permission : 'unsupported');
-    const notifyStatusText = computed(() => {
-      if (notifyPermission.value === 'granted') return '通知已开启';
-      if (notifyPermission.value === 'denied') return '通知被拒绝，请在浏览器设置中允许';
-      if (notifyPermission.value === 'unsupported') return '当前浏览器不支持通知';
-      return '需要授权浏览器通知权限';
-    });
 
     function load() {
       const list = S.getReminders().map(r => {
@@ -744,28 +791,10 @@ const ReminderPage = {
       Object.assign(cfg, S.getNotifyConfig());
     }
 
-    async function toggleNotify() {
-      if (cfg.notifyEnabled) {
-        // 关闭
-        S.setNotifyConfig({ notifyEnabled: false });
-        Object.assign(cfg, S.getNotifyConfig());
-        return;
-      }
-      // 开启：先请求权限
-      if (typeof Notification === 'undefined') {
-        alert('当前浏览器不支持通知');
-        return;
-      }
-      if (Notification.permission !== 'granted') {
-        const perm = await Notification.requestPermission();
-        notifyPermission.value = perm;
-        if (perm !== 'granted') {
-          alert('未授权通知权限，无法开启提醒');
-          return;
-        }
-      }
-      S.setNotifyConfig({ notifyEnabled: true });
+    function toggleNotify() {
+      S.setNotifyConfig({ notifyEnabled: !cfg.notifyEnabled });
       Object.assign(cfg, S.getNotifyConfig());
+      window.dispatchEvent(new Event('hct-data-changed'));
     }
     function setFreq(f) {
       S.setNotifyConfig({ notifyFreq: f });
@@ -781,7 +810,7 @@ const ReminderPage = {
     onMounted(load);
     window.addEventListener('hct-data-changed', load);
     function goDetail(id) { navigate('/detail/' + id); }
-    return { reminders, urgentCount, goDetail, cfg, notifyPermission, notifyStatusText, toggleNotify, setFreq, saveTime, saveWeekday };
+    return { reminders, urgentCount, goDetail, cfg, toggleNotify, setFreq, saveTime, saveWeekday };
   }
 };
 
@@ -809,12 +838,13 @@ const TabBar = {
 const App = {
   template: `
   <div id="app-inner">
+    <banner-component></banner-component>
     <component :is="currentPage"></component>
     <tab-bar v-if="showTabBar"></tab-bar>
     <use-modal-component></use-modal-component>
   </div>
   `,
-  components: { IndexPage, AddPage, DetailPage, AnalysisPage, CheckinPage, ReminderPage, TabBar, UseModalComponent },
+  components: { IndexPage, AddPage, DetailPage, AnalysisPage, CheckinPage, ReminderPage, TabBar, UseModalComponent, BannerComponent },
   setup() {
     const currentPage = computed(() => {
       switch (route.name) {
@@ -827,6 +857,8 @@ const App = {
       }
     });
     const showTabBar = computed(() => ['index', 'analysis', 'reminder'].includes(route.name));
+    // 路由切换时刷新横幅
+    watch(() => route.name, refreshBanner);
     return { currentPage, showTabBar };
   }
 };
@@ -834,20 +866,16 @@ const App = {
 // 初始化存储并启动
 S.init();
 
-// 定期提醒定时器：页面打开期间每分钟检查一次
+// 定期提醒：每分钟检查，到点显示应用内横幅（所有浏览器通用）
 function checkScheduledNotify() {
-  if (!S.shouldNotifyToday()) return;
-  if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
-  try {
-    new Notification('日用消耗提醒', {
-      body: S.buildNotifyMessage()
-    });
+  if (S.shouldNotifyToday()) {
     S.markNotifiedToday();
-  } catch (e) {
-    // 通知创建失败，忽略
+    refreshBanner();
   }
 }
 checkScheduledNotify();
 setInterval(checkScheduledNotify, 60000);
+// 数据变化时也刷新横幅（如新增了紧急待办物品）
+window.addEventListener('hct-data-changed', refreshBanner);
 
 createApp(App).mount('#app');

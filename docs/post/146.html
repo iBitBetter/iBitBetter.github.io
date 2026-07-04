@@ -71,7 +71,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h2>使用手机浏览器访问 Z-Library</h2>
 <p>打开手机浏览器，在地址栏输入 <strong>zlib.re</strong> 回车，即可打开 Z-Library 界面。</p>
 <blockquote>
-<p><strong>提示：</strong> Z-Library 的官方免翻网址一直在变化<a href="https://web.okjike.com/u/0BCC9202-030F-4EDA-86F7-F6F1BCB815DE/post/6a2a096e3bd5692aec22fbb3" rel="nofollow">常用的几个镜像地址</a></p>
+<p><strong>提示：</strong> Z-Library 的官方免翻网址一直在变化  <strong>有几个镜像地址 可以看评论区</strong></p>
 </blockquote>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.github.io/assets/images/zlibrary-1.webp" alt="zlibrary主界面" width="280" height="400"  style="max-width: 100%; height: auto; max-height: 400px;; aspect-ratio: 280 / 400; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
 <h2>创建一个 Z-Library 账号</h2>
@@ -189,6 +189,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tbody>
 </table></markdown-accessiblity-table>
 <p>大部分你要找的书籍，豆瓣读书都有对应的书籍页面。可以复制豆瓣上的 <strong>ISBN</strong>，到 Z-Library 搜索对应的电子书。</p>
+<p>可以看着这个 <a href="https://github.com/iBitBetter/douban-ebook-plus">豆瓣阅读增强插件</a> <a href="https://ibitbetter.github.io/douban-ebook-plus-landing.html" rel="nofollow">Detail</a></p>
 <h2>SaltyLeo 的书架</h2>
 <p><strong><a href="https://tstrs.me/" rel="nofollow">https://tstrs.me/</a></strong> — 可以搜书、听书。</p>
 <ul>
@@ -265,7 +266,11 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
 
 
 function openComments(){

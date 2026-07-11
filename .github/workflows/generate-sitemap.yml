@@ -103,7 +103,7 @@ jobs:
           # 写 sitemap.xml
           with open(OUTPUT, "w", encoding="utf-8") as f:
               f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-              f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n')
+              f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"?>\n')
               for u in urls:
                   f.write("  <url>\n")
                   f.write(f"    <loc>{u['loc']}</loc>\n")

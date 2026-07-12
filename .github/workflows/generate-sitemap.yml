@@ -29,7 +29,7 @@ jobs:
           python3 << 'EOF'
           import os, re, subprocess, datetime
 
-          SITE_URL = "https://ibitbetter.github.io"
+          SITE_URL = "https://ibitbetter.space"
           OUTPUT = "static/sitemap.xml"  # 修改点1：输出到 docs 目录
 
           def get_lastmod(filepath):

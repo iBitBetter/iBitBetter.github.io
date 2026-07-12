@@ -1,6 +1,6 @@
 世界上最全的汉字字源数据库，不是中国人建的，是一个美国人。Richard Sears，人称"汉字叔叔"。花了25年，把甲骨文、金文、小篆……96,000多个古汉字字形，全部搬到了一个网站上。免费，没广告，没注册。
 
-<img src="https://ibitbetter.github.io/assets/images/hanzishushu.webp" alt="汉字源 Hanziyuan " width="700" height="400"/>
+<img src="https://ibitbetter.space/assets/images/hanzishushu.webp" alt="汉字源 Hanziyuan " width="700" height="400"/>
 
 ## 输入一个字，看它2500年的变迁
 
@@ -8,7 +8,7 @@ hanziyuan.net 做的事极其纯粹：输入一个汉字，看到它在甲骨文
 
 试了几个字。"水"在甲骨文里像流水蜿蜒，金文加了波纹，小篆规整了，隶书才接近今天的样子。"明"左边是窗户（囧），右边是月亮，甲骨文画的就是月光照进窗——跟今天"日+月"的写法完全不同。每个字都是一幅画，一幅经过两千多年修改的画。
 
-<img src="https://ibitbetter.github.io/assets/images/hanzizhong.webp" alt="汉字源 Hanziyuan " width="700" height="400"/>
+<img src="https://ibitbetter.space/assets/images/hanzizhong.webp" alt="汉字源 Hanziyuan " width="700" height="400"/>
 
 ## 做这件事的人，比大多数中国人更执着
 
@@ -41,3 +41,9 @@ hanziyuan.net 做的事极其纯粹：输入一个汉字，看到它在甲骨文
 对汉字演变好奇的、做古文字研究的、教中文的、学中文的外国人、还有觉得"我天天写字但不知道它从哪来"的任何人。
 
 访问地址：https://hanziyuan.net/
+
+
+## 更多趣站
+[乡土游戏馆](https://ibitbetter.space/post/152.html)
+[一封写给旧互联网的情书](https://ibitbetter.space/post/151.html)
+[SearchEmoji-Emoji搜索引擎](https://ibitbetter.space/post/145.html)

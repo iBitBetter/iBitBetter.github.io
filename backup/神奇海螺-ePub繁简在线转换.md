@@ -4,7 +4,7 @@
 
 网页打开，拖进 ePub 文件，选繁转简还是简转繁，点转换，下载。完事了。没有注册登录，没有广告弹窗，没有"开通会员解锁批量转换"。三步走完，比泡面还快。
 
-<img src="https://ibitbetter.github.io/assets/images/ePub-to-zh.webp" alt="ePub繁简在线转换" width="600" height="300" />
+<img src="https://ibitbetter.space/assets/images/ePub-to-zh.webp" alt="ePub繁简在线转换" width="600" height="300" />
 
 转换后的 ePub 格式完整保留——封面、目录、排版、图片，原样不动。不像某些工具把排版炸成碎片，拿到手还得重新整理。
 
@@ -33,5 +33,5 @@
 地址 v.magiconch.com/epub-transform，浏览器打开就能用。
 
 ## 更多趣站
-[一念天堂一念地狱](https://ibitbetter.github.io/post/143.html)
-[你出生那天多少度?这个宝藏网站记得](https://ibitbetter.github.io/post/141.html)
+[一念天堂一念地狱](https://ibitbetter.space/post/143.html)
+[你出生那天多少度?这个宝藏网站记得](https://ibitbetter.space/post/141.html)

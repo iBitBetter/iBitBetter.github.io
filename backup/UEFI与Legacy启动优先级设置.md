@@ -18,7 +18,7 @@
   - 在启动菜单中，带“UEFI”字样的启动项即为UEFI模式，未标注的通常是Legacy模式。
   - 使用4TB以上硬盘必须选择UEFI + GPT，否则无法完整识别容量。
 
-<img src="https://ibitbetter.github.io/assets/images/install-pe-to-u.webp" alt="安装PE到U盘，默认选择方案一:UEFI/Legacy全能三分区方式"  width="600" height="300" />
+<img src="https://ibitbetter.space/assets/images/install-pe-to-u.webp" alt="安装PE到U盘，默认选择方案一:UEFI/Legacy全能三分区方式"  width="600" height="300" />
 
 
 ## 总结：

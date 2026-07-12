@@ -6,7 +6,7 @@
 
 有一个艺术家觉得不能就这么没了。他叫 **Cameron Askin**，从 Wayback Machine 里捞出了数千个 GeoCities 残存的页面，把里面的文字、图片、GIF 拆出来，拼成一个无限滚动的网页拼贴画——**Cameron's World**。
 
-<img src="https://ibitbetter.github.io/assets/images/cameronsworld.webp" alt="无限滚动的网页拼贴画:Cameron's World" width="600" height="400"/>
+<img src="https://ibitbetter.space/assets/images/cameronsworld.webp" alt="无限滚动的网页拼贴画:Cameron's World" width="600" height="400"/>
 
 打开 cameronsworld.net，你会看到一整片"互联网化石层"：来自不同年代的像素小图标挤在一起，旁边是 1997 年的闪烁标题，再往下是某个陌生人 1998 年的宠物猫照片，压在底下的可能是 2001 年的火星文个人简介。它们原本来自不同网站、不同作者、不同年份，现在被拼成了同一页。
 
@@ -26,7 +26,6 @@
 
 
 **更多趣站**
-
-[SearchEmoji-Emoji搜索引擎](https://ibitbetter.github.io/post/145.html)
-[ePub繁简在线转换](https://ibitbetter.github.io/post/144.html)
-[一边劝你戒，一边劝你纵，这个站把古今语录对撞着给你看](https://ibitbetter.github.io/post/143.html)
+[Windows 优化神器—ZyperWin++](https://ibitbetter.space/post/148.html)
+[SearchEmoji-Emoji搜索引擎](https://ibitbetter.space/post/145.html)
+[ePub繁简在线转换](https://ibitbetter.space/post/144.html)

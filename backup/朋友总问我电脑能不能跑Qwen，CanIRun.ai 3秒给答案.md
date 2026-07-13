@@ -4,7 +4,7 @@
 
 今天摸鱼的时候，无意间刷到一个专门治这种“显存焦虑”的网站，叫 **CanIRun.ai**，实在没忍住想分享一下。
 
-<img src="https://ibitbetter.space/assets/images/knowsex.webp" alt="朋友总问我电脑能不能跑Qwen，这个网站3秒给答案" width="800" height="300"/>
+<img src="https://ibitbetter.space/assets/images/canirunai.webp" alt="朋友总问我电脑能不能跑Qwen，这个网站3秒给答案" width="800" height="300"/>
 
 这玩意挺神奇的。你啥也不用装，就用浏览器打开网页，等个大概三五秒吧，它就能把你这台电脑的 CPU、显卡、甚至苹果那种统一内存带宽，全部查个底朝天。
 

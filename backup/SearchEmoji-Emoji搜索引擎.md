@@ -15,9 +15,3 @@
 对了，做这个网站的团队还顺手搞了个二十万量级的矢量图标库叫 Yesicon，有需要的设计师朋友也可以顺便去白嫖一下。
 
 访问地址：https://searchemoji.app/zh-hans
-
-**更多趣站**
-
-[ePub繁简在线转换](https://ibitbetter.space/post/144.html)
-[一边劝你戒，一边劝你纵，这个站把古今语录对撞着给你看](https://ibitbetter.space/post/143.html)
-[Snipaste:截图贴图一把梭,用过就回不去的工具](https://ibitbetter.space/post/142.html)

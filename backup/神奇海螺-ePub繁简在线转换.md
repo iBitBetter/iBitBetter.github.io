@@ -31,7 +31,3 @@
 不是功能最丰富的格式转换工具，但可能是最省心的。做减法做到极致，三步搞定，格式不丢，用完即走。好工具的标准有时候就这么简单：它不给你添麻烦。
 
 地址 v.magiconch.com/epub-transform，浏览器打开就能用。
-
-## 更多趣站
-[一念天堂一念地狱](https://ibitbetter.space/post/143.html)
-[你出生那天多少度?这个宝藏网站记得](https://ibitbetter.space/post/141.html)

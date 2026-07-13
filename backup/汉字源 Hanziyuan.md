@@ -41,10 +41,3 @@ hanziyuan.net 做的事极其纯粹：输入一个汉字，看到它在甲骨文
 对汉字演变好奇的、做古文字研究的、教中文的、学中文的外国人、还有觉得"我天天写字但不知道它从哪来"的任何人。
 
 访问地址：https://hanziyuan.net/
-
-
-## 更多趣站
-
-[乡土游戏馆](https://ibitbetter.space/post/152.html)
-[一封写给旧互联网的情书](https://ibitbetter.space/post/151.html)
-[SearchEmoji-Emoji搜索引擎](https://ibitbetter.space/post/145.html)

@@ -20,7 +20,7 @@
 
 一进去它的控制台，基本上就是一张大体检表。系统版本、CPU 状态，还有内存和硬盘到底被什么玩意儿占了，标得清清楚楚。不用再像以前那样到处点开看。
 
-![](./images/d468cbac-ca6e-4d9f-93c5-a3f7ba1daecf.jpg)
+<img src="https://ibitbetter.space/assets/images/optimizerDuck-1.webp" alt="一进控制台就是大体检表" width="600" height="300"/>
 
 一张表看清：谁在吃我的内存和硬盘
 
@@ -28,7 +28,7 @@
 
 最爽的是去删预装垃圾那一步。它能把你电脑里藏着的原厂应用全给揪出来，连路径都给扒干净了。很多连见都没见过的玩意儿（比如什么 Microsoft.ScreenSketch），上面会直接标个 Safe，意思是你随便卸。
 
-![](./images/14735918-a0ec-434d-9c18-c72505c4d461.jpg)
+<img src="https://ibitbetter.space/assets/images/optimizerDuck-2.webp" alt="一键揪出预装垃圾" width="600" height="300"/>
 
 如果拿不准能不能删的，它会提示你先建个还原点保底。我反手就是一顿勾选、确认。看着开始菜单终于清静了，强迫症表示极度舒适。
 
@@ -39,7 +39,8 @@
 ##  开机慢？关掉藏很深的启动项
 
 不过说实话，要让开机变快光删软件没用，得治根本——也就是那些开机启动项和偷偷摸摸的计划任务。点开它这俩列表简直大开眼界，Edge 的自动更新、声卡服务的后台自启全在里面排队。
-  
+
+<img src="https://ibitbetter.space/assets/images/optimizerDuck-3.webp" alt="开机慢？关掉藏很深的启动项" width="600" height="300"/>  
 
 平时藏得那么深，现在全露馅了。直接在右边点关闭就行，不给它们作妖的机会。
 
@@ -52,7 +53,9 @@
 ##  给爱折腾的人：系统微调
 
 后面还有两块功能，是给喜欢微调系统的人准备的。平时在 Windows 设置里得绕好几层才能找到的开关，比如关掉烦人的遥测数据上传，或者开个游戏模式，它都给你整合在一起了。旁边会明确告诉你这功能只在 Win10 或者 Win11 管用。
-最棒的一点：它支持反悔，改错一键还原
+最棒的一点：它支持反悔，改错一键还原。
+
+<img src="https://ibitbetter.space/assets/images/optimizerDuck-4.webp" alt="给爱折腾的人：系统微调" width="600" height="300"/>  
   
 ## 总结推荐
 

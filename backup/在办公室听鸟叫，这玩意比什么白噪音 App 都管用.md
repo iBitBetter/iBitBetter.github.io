@@ -20,4 +20,4 @@
 
 写代码的、赶论文的、或者单纯在工位上想静静的，去试试吧。
 
-[bird-song.org(https://bird-song.org)
+[bird-song.org](https://bird-song.org)

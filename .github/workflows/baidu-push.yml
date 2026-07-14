@@ -32,5 +32,5 @@ jobs:
           # token 来自仓库 Secrets，不会出现在日志明文（GitHub 自动屏蔽）
           BAIDU_TOKEN: ${{ secrets.BAIDU_TOKEN }}
           BAIDU_SITE: https://ibitbetter.space
-          BAIDU_SITEMAP: https://ibitbetter.space/sitemap.xml
+          BAIDU_SITEMAP: ./sitemap.xml
         run: python baidu_push.py

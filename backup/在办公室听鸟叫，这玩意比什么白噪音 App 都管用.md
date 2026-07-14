@@ -8,7 +8,7 @@
 
 网页很简单（bird-song.org），打开啥也不用点，一只美洲知更鸟就开始叫了。声音极其干净，不吵，就是那种大晴天的早上、阳光洒在叶子上，鸟儿很闲适的叫声。它就一直在后台若有若无地响着，完全不会打断你的思路。
 
-<img src="https://ibitbetter.github.io/assets/images/bird-song.webp" alt="在办公室听鸟叫，这玩意比什么白噪音 App 都管用" width="700" height="300"/>
+<img src="https://ibitbetter.space/assets/images/bird-song.webp" alt="在办公室听鸟叫，这玩意比什么白噪音 App 都管用" width="700" height="300"/>
 
 后来仔细研究了一下，这网站还挺硬核。里面所有声音都是高质量的实地录音，不是那种合成的电子音。你还可以自己当DJ，点好几种鸟一起叫，手动给自己捏个大森林出来。
 

@@ -22,14 +22,14 @@
 
 ## 📰 最新文章
 
-1. [Radio Garden 转动地球仪回老家，就能听见熟悉的乡音了](https://ibitbetter.space/post/168.html) `奇趣网站` — *2026-07-15*
+1. [免费网页电台 Radio Garden ](https://ibitbetter.space/post/168.html) `奇趣网站` — *2026-07-15*
 2. [在办公室听鸟叫，这玩意比什么白噪音 App 都管用](https://ibitbetter.space/post/167.html) `奇趣网站` — *2026-07-14*
 3. [Windows优化工具optimizerDuck](https://ibitbetter.space/post/166.html) `软件` `Windows` — *2026-07-13*
-4. [日耗记：当一个合格的家庭用品管理员](https://ibitbetter.space/post/165.html) `软件` `技术` — *2026-07-13*
+4. [耗品记：当一个合格的家庭用品管理员](https://ibitbetter.space/post/165.html) `软件` `技术` — *2026-07-13*
 5. [朋友总问我电脑能不能跑Qwen，CanIRun.ai 3秒给答案](https://ibitbetter.space/post/164.html) `奇趣网站` `技术` — *2026-07-13*
 
 ---
 
-🕐 最后更新：2026-07-15 22:59:10 (UTC+8)
+🕐 最后更新：2026-07-16 01:03:14 (UTC+8)
 
 Powered by [Gmeek](https://github.com/Meekdai/Gmeek) | README by [iBitBetter](https://github.com/iBitBetter)

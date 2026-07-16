@@ -8,7 +8,7 @@
 
 作者部署了一个在线 demo，进去直接上传文档或者Excel工作表就能改。我试了下，Excel 多 sheet、公式都正常，导出完全正常。
 
-<img src="https://ibitbetter.space/assets/images/onlyoffice-web-comp.webp" alt="别人电脑上没有 Office？把网页甩过去就行" width="800" height="300"/>
+<img src="https://ibitbetter.space/assets/images/onlyoffice-web-comp.webp" alt="别人电脑上没有 Office？把网页甩过去就行" width="750" height="300"/>
 
 网吧、别人的电脑、卡成狗的轻薄本。临时发过来的xlsx，开个网页、传文件、改完下载、走人，全程都不用打开Office。
 

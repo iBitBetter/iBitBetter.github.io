@@ -1,0 +1,142 @@
+/* =====================================================================
+   iBitBetter 自定义样式 (Gmeek customCSS)
+   作者: Frontend Developer
+   说明: 覆盖 Gmeek 默认 Primer 样式，提升阅读体验与品牌感。
+        部分规则使用 !important 以对抗 Gmeek 模板内联 <style>。
+        配色变量可在 :root 中调整。
+   ===================================================================== */
+
+:root{
+  --brand:#0d9488;          /* 主品牌色：青绿（科技+自然，区别于 GitHub 蓝） */
+  --brand-strong:#0f766e;
+  --accent:#f97316;         /* 强调/CTA：活力橙 */
+  --radius:14px;
+}
+
+/* ---------- 1. 基础排版（对抗 Gmeek 内联 <style>） ---------- */
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC","Noto Sans CJK SC",sans-serif !important;
+  font-size:17px !important;
+  line-height:1.75 !important;
+  max-width:820px !important;
+  padding:32px 24px !important;
+  color:var(--color-fg-default);
+}
+
+/* 暗色模式：更柔和的背景 + 提亮的品牌色（非纯黑、非色盲绿） */
+[data-color-mode="dark"]{
+  --brand:#2dd4bf;
+  --brand-strong:#5eead4;
+  --accent:#fb923c;
+  --color-canvas-default:#0d1117;
+  --color-canvas-subtle:#161b22;
+}
+
+/* ---------- 2. 顶部品牌区 ---------- */
+#header{padding-bottom:18px;gap:12px;}
+.title-left h1.blogTitle{
+  font-family:inherit;
+  font-size:30px;
+  font-weight:800;
+  letter-spacing:-.01em;
+  background:linear-gradient(120deg,var(--brand),var(--accent));
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+/* 渐变文字兜底（不支持 background-clip 的浏览器） */
+@supports not (-webkit-background-clip:text){
+  .title-left h1.blogTitle{background:none;-webkit-text-fill-color:initial;color:var(--brand-strong);}
+}
+.avatar{border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,.12);}
+.avatar:hover{transform:scale(1.06) rotate(0deg);} /* 去掉花哨的 360° 旋转 */
+.title-right .btn{border-radius:10px;transition:background .2s,transform .2s;}
+.title-right .btn:hover{background:var(--color-canvas-subtle);transform:translateY(-1px);}
+
+/* ---------- 3. 首页简介 ---------- */
+#content>div:first-child{
+  font-size:16px;line-height:1.8;color:var(--color-fg-muted);
+  margin-bottom:28px !important;
+}
+
+/* ---------- 4. 文章列表卡片化 ---------- */
+.SideNav{border:none !important;min-width:0 !important;}
+.SideNav-item{
+  border:1px solid var(--color-border-muted) !important;
+  border-radius:var(--radius);
+  margin-bottom:14px;
+  padding:16px 18px !important;
+  background:var(--color-canvas-default);
+  transition:border-color .2s,box-shadow .2s,transform .2s;
+}
+.SideNav-item:hover{
+  border-color:var(--brand) !important;
+  box-shadow:0 6px 20px rgba(13,148,136,.14);
+  transform:translateY(-2px);
+}
+.SideNav-item .listTitle{
+  font-size:17px;font-weight:600;color:var(--color-fg-default);
+  transition:color .2s;
+}
+.SideNav-item:hover .listTitle{color:var(--brand-strong);}
+.SideNav-icon{color:var(--brand) !important;}
+/* 标签圆角 + 更小字号 */
+.SideNav-item .Label{border-radius:999px;font-size:12px;padding:2px 9px;font-weight:600;}
+
+/* ---------- 5. 文章页标题与正文 ---------- */
+.postTitle{
+  font-size:30px;font-weight:800;line-height:1.3;letter-spacing:-.01em;
+  margin:4px 0 12px !important;
+}
+.markdown-body{font-size:17px;line-height:1.85;}
+.markdown-body h1,.markdown-body h2,.markdown-body h3{
+  font-weight:700;line-height:1.35;margin-top:36px;
+}
+.markdown-body h2{
+  font-size:23px;padding-bottom:8px;
+  border-bottom:2px solid var(--color-border-muted);
+}
+.markdown-body p{margin:16px 0;}
+.markdown-body img{
+  border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.10);
+  max-width:100%;height:auto;
+}
+.markdown-body blockquote{
+  border-left:4px solid var(--brand);
+  background:var(--color-canvas-subtle);
+  border-radius:0 10px 10px 0;
+  padding:12px 18px;color:var(--color-fg-muted);
+}
+.markdown-body code{
+  background:var(--color-canvas-subtle);
+  border-radius:6px;padding:.15em .4em;font-size:.92em;
+}
+.markdown-body pre{border-radius:12px;padding:16px;}
+.markdown-body a{
+  color:var(--brand-strong);text-decoration:none;
+  border-bottom:1px solid transparent;transition:border-color .2s;
+}
+.markdown-body a:hover{border-bottom-color:var(--brand-strong);}
+
+/* ---------- 6. 相关推荐 ---------- */
+.related-posts{
+  background:var(--color-canvas-subtle);
+  border-radius:var(--radius);
+  border:1px solid var(--color-border-muted);
+}
+.related-title{font-size:18px;font-weight:700;margin-top:0;}
+.related-list a{font-weight:500;}
+
+/* ---------- 7. 无障碍 & 细节 ---------- */
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important;}
+}
+
+/* ---------- 8. 移动端 ---------- */
+@media (max-width:600px){
+  body{padding:16px 14px !important;font-size:16px !important;}
+  .title-left h1.blogTitle{font-size:24px;}
+  .postTitle{font-size:25px !important;}
+  .SideNav-item{padding:14px !important;}
+}

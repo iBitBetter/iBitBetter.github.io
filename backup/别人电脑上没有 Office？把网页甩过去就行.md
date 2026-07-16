@@ -8,6 +8,8 @@
 
 作者部署了一个在线 demo，进去直接上传文档或者Excel工作表就能改。我试了下，Excel 多 sheet、公式都正常，导出完全正常。
 
+<img src="https://ibitbetter.space/assets/images/onlyoffice-web-comp.webp" alt="看完这个网站天空之城，我想买无人机了" width="800" height="300"/>
+
 网吧、别人的电脑、卡成狗的轻薄本。临时发过来的xlsx，开个网页、传文件、改完下载、走人，全程都不用打开Office。
 
 得说清楚，这仓库本质是个「模板」，不是 npm 一行 install 就能用的包，而是把组件和静态资源两个文件夹复制进自己项目。作者最近几天还在更新，提交一百六十多次。

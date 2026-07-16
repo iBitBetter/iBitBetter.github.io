@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   issues:
     types: [opened, edited]
+  push:
+    paths:
+      - 'static/**'      # ← 上传/改动图片就自动重建并发布
   schedule:
     - cron: "0 16 * * *"
 env:

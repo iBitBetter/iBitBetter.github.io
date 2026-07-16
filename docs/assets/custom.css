@@ -30,6 +30,7 @@ body{
   background:var(--bg) !important;
   color:var(--text) !important;
   -webkit-font-smoothing:antialiased;
+  overflow-wrap:break-word !important;   /* 兜底：长英文/链接不撑破容器 */
 }
 #content{max-width:840px !important;margin:0 auto !important;}
 
@@ -75,6 +76,7 @@ a.SideNav-item:hover{
 }
 a.SideNav-item .listTitle{
   font-size:15px !important;font-weight:600 !important;line-height:1.45 !important;color:var(--text) !important;
+  min-width:0 !important;overflow-wrap:anywhere !important;word-break:break-word !important;
 }
 a.SideNav-item:hover .listTitle{color:var(--accent) !important}
 .SideNav-icon.octicon{color:var(--accent) !important;opacity:.55}
@@ -102,6 +104,7 @@ a.SideNav-item:hover .listTitle{color:var(--accent) !important}
 h1.postTitle{
   font-size:27px !important;font-weight:800 !important;line-height:1.4 !important;
   color:var(--text) !important;margin-bottom:14px !important;
+  overflow-wrap:anywhere !important;word-break:break-word !important;
 }
 .markdown-body h1,
 .markdown-body h2{
@@ -179,6 +182,48 @@ h1.postTitle{
 [data-color-mode="dark"] .markdown-body th{background:var(--accent-soft) !important}
 [data-color-mode="dark"] .markdown-body tr:nth-child(even) td{background:#221D18}
 [data-color-mode="dark"] .title-right .btn:hover{background:var(--accent-soft) !important}
+
+
+/* ---------- 移动端适配（≤640px） ---------- */
+@media (max-width:640px){
+  html,body{overflow-x:hidden !important}      /* 兜底：任何残留溢出也不出现横向滚动条 */
+  body{
+    font-size:16px !important;line-height:1.75 !important;
+    padding:20px 16px 44px !important;
+  }
+  #content{max-width:100% !important;min-width:0 !important}
+  /* 顶部：品牌/文章标题与按钮改为纵向，长标题独占整行 */
+  #header{flex-direction:column !important;align-items:flex-start !important;row-gap:12px !important}
+  .title-left h1.blogTitle{font-size:21px !important}
+  .title-right{margin:0 !important;justify-content:flex-start !important}
+  .avatar{width:40px !important;height:40px !important}
+  /* 文章标题：独占整行 + 断词，长英文 token (如 CanIRun.ai) 不再撑破视口 */
+  h1.postTitle{
+    font-size:22px !important;
+    flex:1 1 100% !important;min-width:0 !important;
+    overflow-wrap:anywhere !important;word-break:break-word !important;
+  }
+  /* 首页卡片：标题在上、标签在下；内层「图标+标题」允许收缩、标题可断词 */
+  a.SideNav-item{
+    flex-direction:column !important;align-items:flex-start !important;
+    gap:8px !important;padding:13px 14px !important;
+    min-width:0 !important;max-width:100% !important;
+  }
+  a.SideNav-item > div:first-child{min-width:0 !important;flex:1 1 auto !important}
+  .SideNav-icon.octicon{flex:none !important}
+  a.SideNav-item .listTitle{
+    font-size:14.5px !important;min-width:0 !important;
+    overflow-wrap:anywhere !important;word-break:break-word !important;
+  }
+  .listLabels{flex-wrap:wrap !important}
+  /* 文章阅读 */
+  .markdown-body{font-size:15.5px !important}
+  .markdown-body h1,.markdown-body h2{font-size:19px !important;margin:24px 0 12px !important}
+  .markdown-body pre{padding:13px 14px !important;max-width:100% !important}
+  .markdown-body img{border-radius:10px !important;max-width:100% !important}
+  .markdown-body blockquote{padding:10px 14px !important}
+  .markdown-body table{display:block;overflow-x:auto !important}  /* 宽表格可横向滚动而非撑破页面 */
+}
 
 /* ---------- 无障碍：焦点与动效偏好 ---------- */
 a:focus-visible,.btn:focus-visible,button:focus-visible{

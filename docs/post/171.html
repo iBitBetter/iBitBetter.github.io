@@ -21,9 +21,9 @@
     </script>
     
     
-<meta name="description" content="最近，在日常开发中发现了两个问题: 1. 应用程序调用存储过程很慢，但是在查询分析器中把SQL语句拿出来执行存储过程就很快">
+<meta name="description" content="本文分析了**存储过程执行慢于原生SQL**的两个原因及解决方案：1. **执行计划被缓存**：建议使用 `sp_recompile` 标记或更新统计信息来强制重新编译。2. **参数嗅探问题**：建议在查询语句末尾添加 `OPTION (OPTIMIZE FOR UNKNOWN)` 来解决。">
 <meta property="og:title" content="为什么使用存储过程非常慢,但是执行SQL很快？">
-<meta property="og:description" content="最近，在日常开发中发现了两个问题: 1. 应用程序调用存储过程很慢，但是在查询分析器中把SQL语句拿出来执行存储过程就很快">
+<meta property="og:description" content="本文分析了**存储过程执行慢于原生SQL**的两个原因及解决方案：1. **执行计划被缓存**：建议使用 `sp_recompile` 标记或更新统计信息来强制重新编译。2. **参数嗅探问题**：建议在查询语句末尾添加 `OPTION (OPTIMIZE FOR UNKNOWN)` 来解决。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ibitbetter.space/post/171.html">
 <meta property="og:image" content="https://ibitbetter.space/og-image.jpg">

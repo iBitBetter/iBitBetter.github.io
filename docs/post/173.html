@@ -21,21 +21,21 @@
     </script>
     
     
-<meta name="description" content="本文推荐开源免费的 Windows 优化工具 optimizerDuck。它原生支持中文且无广告，能一键清理预装应用、管理隐藏启动项、精准清理C盘及微调系统，并支持防呆与一键还原，轻松拯救电脑卡顿。">
-<meta property="og:title" content="Windows优化工具optimizerDuck">
-<meta property="og:description" content="本文推荐开源免费的 Windows 优化工具 optimizerDuck。它原生支持中文且无广告，能一键清理预装应用、管理隐藏启动项、精准清理C盘及微调系统，并支持防呆与一键还原，轻松拯救电脑卡顿。">
+<meta name="description" content="前几天我C盘又双叒红了，删了半天只腾出几个G，一看AppData还杵着十几个G不敢动">
+<meta property="og:title" content="C盘红了先别慌，这个开源工具把你不敢删的垃圾全标出来了">
+<meta property="og:description" content="前几天我C盘又双叒红了，删了半天只腾出几个G，一看AppData还杵着十几个G不敢动">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://ibitbetter.space/post/166.html">
+<meta property="og:url" content="https://ibitbetter.space/post/173.html">
 <meta property="og:image" content="https://ibitbetter.space/og-image.jpg">
-<title>Windows优化工具optimizerDuck</title>
-<link rel="canonical" href="https://ibitbetter.space/post/166.html">
+<title>C盘红了先别慌，这个开源工具把你不敢删的垃圾全标出来了</title>
+<link rel="canonical" href="https://ibitbetter.space/post/173.html">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Windows\u4f18\u5316\u5de5\u5177optimizerDuck",
-  "datePublished": "2026-07-13",
-  "dateModified": "2026-07-13",
+  "headline": "C\u76d8\u7ea2\u4e86\u5148\u522b\u614c\uff0c\u8fd9\u4e2a\u5f00\u6e90\u5de5\u5177\u628a\u4f60\u4e0d\u6562\u5220\u7684\u5783\u573e\u5168\u6807\u51fa\u6765\u4e86",
+  "datePublished": "2026-07-19",
+  "dateModified": "2026-07-19",
   "author": {
     "@id": "https://ibitbetter.space/about.html#author",
     "@type": "Person",
@@ -52,10 +52,10 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://ibitbetter.space/post/166.html"
+    "@id": "https://ibitbetter.space/post/173.html"
   },
   "image": "https://ibitbetter.space/og-image.jpg",
-  "url": "https://ibitbetter.space/post/166.html"
+  "url": "https://ibitbetter.space/post/173.html"
 }
 </script>
 
@@ -98,7 +98,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">Windows优化工具optimizerDuck</h1>
+<h1 class="postTitle">C盘红了先别慌，这个开源工具把你不敢删的垃圾全标出来了</h1>
 <div class="title-right">
     <a href="https://ibitbetter.space" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -116,43 +116,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>新电脑预装垃圾软件开机卡顿？本文介绍开源免费 Windows 优化工具 optimizerDuck，一键清理预装应用、管理开机启动项、清理 C 盘临时文件。原生中文界面，GitHub 5000+ star。</p>
-<p>前几天刚换了台新本子，本来挺兴奋的。结果开机进桌面准备装软件的时候，直接给我看乐了。</p>
-<p>开始菜单点开一看，好家伙，Xbox、Spotify 这些就算了，连 Candy Crush 这种消消乐都给安排上了，外加一堆名字拼都拼不出来的 OEM 全家桶。McAfee 还在那儿弹窗让我试用。顺手按个 Ctrl+Shift+Esc 瞄了一眼任务管理器，鼠标都还没动呢，后台密密麻麻挂着100 多个进程。8G 的内存啥也没干就先吞了4G。</p>
-<p>这可是新电脑啊，用着居然比我那台要报废的老破小还卡。都不知道该骂微软还是骂厂商，反正最后吃瘪的都是我们。</p>
-<p>忍不了一点。想找个工具清一下吧，发现以前常用的 CCleaner 现在自己也快变成流氓软件了，弹窗烦得要死；Geek 是挺干净，但它只能卸软件，管不了系统底层的破事。去动注册表？算了，万一改崩了我可不想重装系统。</p>
-<p>瞎折腾半天，最后在 GitHub 上扒拉出来一个叫 optimizerDuck 的小工具。</p>
-<h2>偶遇 optimizerDuck</h2>
-<p>它是 开源 的，不仅 免费 还没广告，关键是人家带中文。界面是那种看着很舒服的深色复古风，里面没整什么花里胡哨的，就老老实实分了几个功能区。</p>
-<ul>
-<li>开源免费，没有广告打扰</li>
-<li>原生中文界面</li>
-<li>深色复古风 UI</li>
-<li>功能区清晰，不花哨</li>
-</ul>
-<h2>一进控制台就是大体检表</h2>
-<p>一进去它的控制台，基本上就是一张大体检表。系统版本、CPU 状态，还有内存和硬盘到底被什么玩意儿占了，标得清清楚楚。不用再像以前那样到处点开看。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/optimizerDuck-1.webp" alt="一进控制台就是大体检表" width="600" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 600 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<p>一张表看清：谁在吃我的内存和硬盘</p>
-<h2>最爽的：一键揪出预装垃圾</h2>
-<p>最爽的是去删预装垃圾那一步。它能把你电脑里藏着的原厂应用全给揪出来，连路径都给扒干净了。很多连见都没见过的玩意儿（比如什么 Microsoft.ScreenSketch），上面会直接标个 Safe，意思是你随便卸。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/optimizerDuck-2.webp" alt="一键揪出预装垃圾" width="600" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 600 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<p>如果拿不准能不能删的，它会提示你先建个还原点保底。我反手就是一顿勾选、确认。看着开始菜单终于清静了，强迫症表示极度舒适。</p>
-<p>✦ 贴心提示</p>
-<p>拿不准能不能删的，它会提示你先建还原点保底，放心勾，不慌。</p>
-<h2>开机慢？关掉藏很深的启动项</h2>
-<p>不过说实话，要让开机变快光删软件没用，得治根本——也就是那些开机启动项和偷偷摸摸的计划任务。点开它这俩列表简直大开眼界，Edge 的自动更新、声卡服务的后台自启全在里面排队。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/optimizerDuck-3.webp" alt="开机慢？关掉藏很深的启动项" width="600" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 600 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>  
-<p>平时藏得那么深，现在全露馅了。直接在右边点关闭就行，不给它们作妖的机会。</p>
-<h2>C 盘清理，精确到 KB</h2>
-<p>另外它的 C 盘清理也做得挺细。扫了一下，光是缩略图缓存和那些不知名的系统临时文件就占了大半个 G。</p>
-<p>它是精确到 KB和具体路径给你看的，而且那种 0 字节的空文件会直接变成灰色，根本点不了，防呆设计做得不错。</p>
-<h2>给爱折腾的人：系统微调</h2>
-<p>后面还有两块功能，是给喜欢微调系统的人准备的。平时在 Windows 设置里得绕好几层才能找到的开关，比如关掉烦人的遥测数据上传，或者开个游戏模式，它都给你整合在一起了。旁边会明确告诉你这功能只在 Win10 或者 Win11 管用。<br>
-最棒的一点：它支持反悔，改错一键还原。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/optimizerDuck-4.webp" alt="给爱折腾的人：系统微调" width="600" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 600 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>  
-<h2>总结推荐</h2>
-<p>整个项目说实话真的很良心，没有乱七八糟的捆绑，完全是用 爱发电。新电脑被预装劝退，或受够 C 盘爆满、开机龟速？这工具真的强烈推荐。你也可以试试这款<a href="/post/148.html">Windows 优化神器 ZyperWin++</a> 哦。</p></div>
+<div class="markdown-body" id="postBody"><p>前几天我C盘又双叒红了，删了半天只腾出几个G，一看AppData还杵着十几个G不敢动。那感觉就像家里堆满了垃圾，但每袋都贴着「可能是重要文件」的标签，你压根不敢扔。</p>
+<p>后来顺藤摸瓜找到个叫 WinMole 的开源工具，Windows 上的，灵感来自 Mac 的 Mole。最骚的是它同时给了一个命令行 TUI 版和一个图形 GUI 版，你按键盘喜欢哪种用哪种，双击 run.bat 就能跑。<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/winMole-index.webp" alt="winmole tui mode" width="800" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 800 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p>我上来先点 Clean。它扫了一圈，把我平时根本不敢碰的东西列得明明白白：系统临时文件 4.70 MB、回收站 134.28 MB、缩略图缓存 6.01 MB、微信日志 12.44 MB、Chrome 缓存 408.50 MB……总共 25 项、566.52 MB。分类就是三大类：系统垃圾、App 缓存、浏览器缓存。每一项列得清楚，你才敢按 Enter 开清。更狠的是它支持 <code class="notranslate">--dry-run</code> 先预览，还自带白名单保护核心路径，手抖也不会误删。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/winMole-clean.webp" alt="winmole tui mode clean" width="800" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 800 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p>试了下 Memory，也就是内存释放。我电脑 8GB 内存，之前占用 72.2%，它 trim 了 136 个进程的工作集，8 个受保护的跳过，结果直接掉到 45.6%，多出 2.08 GB 可用。那一刻我风扇都安静了。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/winMole-memory.webp" alt="winmole tui mode memory" width="800" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 800 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p>Uninstall 也顶用。我系统里装了 138 个应用，它按大小排好序，Visual Studio 2010 那堆老古董 3.36 GB 顶在最上面，微信 812 MB、Git 336 MB 一目了然。你空格选中，回车就开卸，比 Windows 自带的卸载入口痛快太多。Analyze 更像磁盘 CT，哪个文件夹占了多少一清二楚，我 AppData 直接占了 79.2%，10.89 GB，终于知道 C 盘为啥红了。Status 就是个实时仪表板，CPU、内存、磁盘、进程、网络全在上面，甚至还有个 ASCII 小狗图标，有点极客浪漫。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/winMole-uninstall.webp" alt="winmole tui mode uninstall" width="800" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 800 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p>如果你完全不想敲命令，切到 GUI 版也行，界面是红色大标题配中文分类，点「一键清理」就完事，1.01 GB 垃圾直接标出来，适合长辈或者不爱看命令行的人。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/winMole-gui.webp" alt="winmole gui 一键清理" width="800" height="800"  style="max-width: 100%; height: auto; max-height: 800px;; aspect-ratio: 800 / 800; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p>它开源免费，GPL-3.0 协议，规则写在 cleanup_rules.yaml 里，你自己可以改。社区规则默认关闭，想深度清理得手动开，这点我觉得很克制——不默认乱删，比那些恨不得把你注册表清空的工具稳得多。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="#"><img loading="lazy" src="https://ibitbetter.space/assets/images/winMole-status.webp" alt="winmole tui mode status" width="800" height="300"  style="max-width: 100%; height: auto; max-height: 300px;; aspect-ratio: 800 / 300; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p>适合谁？C 盘常年飘红、又不敢乱删东西的 Windows 用户。去 GitHub 搜 <a href="https://github.com/iBitBetter/winmole/releases/tag/v1.1.0">iBitBetter/winmole</a>，如果你使用workbuddy，可以直接告诉workbuddy，让它直接上github搜索iBitBetter/winmole，帮你安装 winmole就可以了。</p></div>
 
 
 <section class="related-posts">
@@ -160,17 +137,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
   <ul class="related-list">
     
     <li>
-      <a href="https://ibitbetter.space/post/173.html">C盘红了先别慌，这个开源工具把你不敢删的垃圾全标出来了</a>
-      <span class="related-date">2026-07-19</span>
+      <a href="https://ibitbetter.space/post/171.html">为什么使用存储过程非常慢,但是执行SQL很快？</a>
+      <span class="related-date">2026-07-17</span>
     </li>
     
     <li>
-      <a href="https://ibitbetter.space/post/169.html">别人电脑上没有 Office？把网页甩过去就行</a>
-      <span class="related-date">2026-07-16</span>
+      <a href="https://ibitbetter.space/post/166.html">Windows优化工具optimizerDuck</a>
+      <span class="related-date">2026-07-13</span>
     </li>
     
     <li>
-      <a href="https://ibitbetter.space/post/165.html">耗品记：当一个合格的家庭用品管理员</a>
+      <a href="https://ibitbetter.space/post/164.html">朋友总问我电脑能不能跑Qwen，CanIRun.ai 3秒给答案</a>
       <span class="related-date">2026-07-13</span>
     </li>
     

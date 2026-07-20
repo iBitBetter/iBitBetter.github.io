@@ -6,6 +6,9 @@
 
 后来摸着个叫 [WorkTool](https://www.worktool.app/zh) 的站，好家伙，算是把这两桩心病一块儿治了。
 
+<img src="https://ibitbetter.space/assets/images/worktool.webp" alt="格式化 JSON、解 Base64、拯救PDF，一个网页全包了还不碰你数据
+" width="800" height="300"/>
+
 它底下分了几摊：开发者工具、文档处理、图片处理、数据转换、职场效率、AI 助手，拢共九十好几个。我平时使的那几样，它全有。
 
 先说写代码那头。JSON 格式化校验、Base64 编解码、URL 编解码，三个都在。关键是这类活儿天生就是浏览器里当场算的，基本就在你本地浏览器里算完，走不到别人服务器上——你贴一坨带 token 的 JSON 进去，它就在你本地给你排好版，不像那些"格式化完顺便存一份"的野鸡站，让人心里发毛。

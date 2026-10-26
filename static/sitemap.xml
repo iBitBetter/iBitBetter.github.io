@@ -7,14 +7,8 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.space/about.html</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.space/curious-websites.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <loc>https://ibitbetter.space/device-info-checker.html</loc>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -25,8 +19,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.space/device-info-checker.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://ibitbetter.space/curious-websites.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.space/about.html</loc>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,19 +37,25 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.space/post/183.html</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.space/post/186.html</loc>
+    <loc>https://ibitbetter.space/post/149.html</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.space/post/165.html</loc>
+    <loc>https://ibitbetter.space/post/171.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.space/post/121.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ibitbetter.space/post/186.html</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -61,13 +67,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.space/post/146.html</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ibitbetter.space/post/149.html</loc>
+    <loc>https://ibitbetter.space/post/165.html</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -85,13 +85,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.space/post/121.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <loc>https://ibitbetter.space/post/183.html</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ibitbetter.space/post/171.html</loc>
+    <loc>https://ibitbetter.space/post/146.html</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -657,7 +657,21 @@ ${cards}
       本页由 <a href="${safeIssue}" target="_blank" rel="noopener noreferrer">GitHub Issue #${cfg.issueNumber}</a> 的评论自动生成 · 更新于 ${safeTime}
       <div class="visit">
         本站已被访问 <span class="num" id="busuanzi_value_site_pv">…</span> 次<span class="sep">·</span><span class="num" id="busuanzi_value_site_uv">…</span> 位访客
-        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <script>
+(function () {
+  var uid = localStorage.getItem('__counter_uid');
+  if (!uid) { uid = Date.now().toString(36) + Math.random().toString(36).slice(2, 10); localStorage.setItem('__counter_uid', uid); }
+  fetch('/__counter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ uid: uid }) })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var pv = document.getElementById('busuanzi_value_site_pv');
+      var uv = document.getElementById('busuanzi_value_site_uv');
+      if (pv) pv.textContent = d.site_pv;
+      if (uv) uv.textContent = d.site_uv;
+    })
+    .catch(function () { });
+})();
+</script>
       </div>
     </footer>
   </div>

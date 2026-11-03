@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var ppv = document.getElementById('busuanzi_value_page_pv');
       if (spv) spv.textContent = d.site_pv;
       if (suv) suv.textContent = d.site_uv;
-      if (ppv) ppv.textContent = d.page_pv;
+      if (ppv && typeof d.page_pv === "number") ppv.textContent = d.page_pv;
     })
     .catch(function () { /* 计数失败静默，不影响页面 */ });
     console.log("\n %c GmeekBSZ Plugins https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#bc4c00;color:#fff");

@@ -20,8 +20,25 @@ function createBSZ() {
 
 document.addEventListener("DOMContentLoaded", function() {
     createBSZ();
-    var element = document.createElement('script');
-    element.src = 'https://vercount.one/js';
-    document.head.appendChild(element);
+    // 自建计数器：调用 Worker 边缘端点 /__counter（替代第三方统计）
+    // 复用与 curious 页相同的 localStorage uid，保证全站 UV 去重统一；
+    // path=location.pathname 用于按页统计「本文浏览量」(page_pv)。
+    var uid = localStorage.getItem('__counter_uid');
+    if (!uid) { uid = Date.now().toString(36) + Math.random().toString(36).slice(2, 10); localStorage.setItem('__counter_uid', uid); }
+    fetch('/__counter', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ uid: uid, path: location.pathname })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var spv = document.getElementById('busuanzi_value_site_pv');
+      var suv = document.getElementById('busuanzi_value_site_uv');
+      var ppv = document.getElementById('busuanzi_value_page_pv');
+      if (spv) spv.textContent = d.site_pv;
+      if (suv) suv.textContent = d.site_uv;
+      if (ppv) ppv.textContent = d.page_pv;
+    })
+    .catch(function () { /* 计数失败静默，不影响页面 */ });
     console.log("\n %c GmeekBSZ Plugins https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#bc4c00;color:#fff");
 });

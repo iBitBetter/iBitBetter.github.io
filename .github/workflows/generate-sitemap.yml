@@ -3,9 +3,18 @@ name: Generate Sitemap
 on:
   push:
     branches: [main]
+    paths:
+      # 仅当页面内容变更才需重建 sitemap：docs 下的 html 增删改
+      - 'docs/**'
+      - 'static/**'
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch:
+
+# 并发控制：连续 push 只跑最新一次（sitemap 是幂等生成，旧的取消无副作用）
+concurrency:
+  group: sitemap-${{ github.ref }}
+  cancel-in-progress: true
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:

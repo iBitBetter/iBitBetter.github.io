@@ -14,9 +14,22 @@ on:
     types: [opened, edited]
   push:
     branches: [main]
+    paths:
+      # 仅当相关源文件变更才重建：生成器脚本 / 配置 / 数据源 / 产物目录
+      - 'scripts/generate-qiqiu.mjs'
+      - 'config.json'
+      - 'static/curious-websites.html'
+      - 'static/**'
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
+
+# 并发控制：同一分支/事件重复触发时，取消旧的未完成运行，只保留最新一次。
+# 注意：这是「生成型」workflow（生成 static 文件后 push），不是发版校验，
+#       连续 push 时旧生成结果会被新的覆盖，取消旧的反而避免重复提交。
+concurrency:
+  group: build-qiqiu-${{ github.event_name == 'issue_comment' && github.event.issue.number || github.ref }}
+  cancel-in-progress: true
 
 # 只处理「收藏家 Issue」；其它 issue 的评论/编辑直接跳过，避免无效运行。
 # 注意：env 上下文不能在 job 级 if 中使用，只能在 step 级使用，

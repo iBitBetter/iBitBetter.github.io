@@ -1,50 +1,71 @@
 name: IndexNow
 
 # 独立 workflow，不修改原 Gmeek.yml
-# 监听同样的 issues 事件，sleep 3 分钟等 Gmeek 部署完成后提交 URL
+# 触发方式：
+#   1) Gmeek 部署完成 → 立即提交新文章 URL（workflow_run，替代原来 sleep 180 的假等待）
+#   2) 定时兜底（Gmeek 若未触发/失败，仍每天提交首页+tag）
+#   3) 手动触发
 on:
-  issues:
-    types: [opened, edited]
+  workflow_run:
+    workflows: ["build Gmeek"]
+    types: [completed]
   schedule:
-    - cron: "10 16 * * *"  # 比 Gmeek 的 0 16 晚 10 分钟
+    - cron: "30 16 * * *"  # 每日兜底提交首页+tag页（不再依赖 Gmeek 的固定时间）
   workflow_dispatch:
+
+# 并发控制：连续部署完成触发时，只提交最新一次（IndexNow 提交幂等，旧的取消无害）
+concurrency:
+  group: indexnow-submit
+  cancel-in-progress: true
 
 jobs:
   indexnow:
     name: Submit URLs to IndexNow
     runs-on: ubuntu-24.04
-    if: ${{ github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     permissions:
       contents: read
+      actions: read
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0   # 需要历史，用于 diff 出本次新增的文章
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: 3.8
-
-      - name: Wait for Gmeek deployment
-        run: |
-          echo "Waiting 180s for Gmeek build & deploy to complete..."
-          sleep 180
+          python-version: '3.12'
 
       - name: Submit URLs to IndexNow
         env:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
           EVENT_NAME: ${{ github.event_name }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
           echo "====== IndexNow URL Submission ======"
           echo "Trigger event: $EVENT_NAME"
 
-          if [ "$EVENT_NAME" = "issues" ] && [ -n "$ISSUE_NUMBER" ]; then
-            echo ">> Submitting post URL for issue #$ISSUE_NUMBER + homepage"
-            python indexnow_submit.py --issue "$ISSUE_NUMBER" \
-              --key 71b5d089ae59435baeb387c61542e1e1 \
-              --host ibitbetter.space
+          if [ "$EVENT_NAME" = "workflow_run" ] && [ -n "$HEAD_SHA" ]; then
+            # 从 Gmeek 本次 commit 的改动里，提取新增文章文件名 post/<N>.html 中的 N 作为 issue 号。
+            # 这样既不用 sleep 等部署，又能精确提交刚发布的新文章。
+            NEW_POST=$(git diff --name-only "$HEAD_SHA^" "$HEAD_SHA" 2>/dev/null \
+              | grep -oE 'post/[0-9]+\.html' | head -1 | grep -oE '[0-9]+')
+            if [ -n "$NEW_POST" ]; then
+              echo ">> 检测到新文章 issue #$NEW_POST，提交该文章 + 首页"
+              python indexnow_submit.py --issue "$NEW_POST" \
+                --key 71b5d089ae59435baeb387c61542e1e1 \
+                --host ibitbetter.space
+            else
+              echo ">> 未检测到新文章（可能为配置更新），提交首页 + tag 页"
+              python indexnow_submit.py \
+                --urls https://ibitbetter.space/ https://ibitbetter.space/tag.html \
+                --key 71b5d089ae59435baeb387c61542e1e1 \
+                --host ibitbetter.space
+            fi
           else
-            echo ">> Submitting homepage + tag page"
+            echo ">> 定时/手动触发，提交首页 + tag 页"
             python indexnow_submit.py \
               --urls https://ibitbetter.space/ https://ibitbetter.space/tag.html \
               --key 71b5d089ae59435baeb387c61542e1e1 \

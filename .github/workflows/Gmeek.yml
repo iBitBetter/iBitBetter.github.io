@@ -11,6 +11,13 @@ on:
     - cron: "0 16 * * *"
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+# 并发控制：同一 issue 连续编辑时，取消旧的未完成 build，只保留最新一次。
+# deploy job 已有独立的 pages 并发组（不取消，保证部署串行安全）。
+concurrency:
+  group: gmeek-build-${{ github.event_name == 'issues' && github.event.issue.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Generate blog
@@ -30,7 +37,6 @@ jobs:
           echo "====== check config.josn file ======"
           cat config.json
           echo "====== check config.josn end  ======"
-          sudo apt-get install jq
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -39,14 +45,23 @@ jobs:
 
       - name: Clone source code
         run: |
+          # ubuntu-24.04 runner 已预装 jq，无需 apt-get install
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
-          git clone https://github.com/iBitBetter/Gmeek.git /opt/Gmeek;
-          cd /opt/Gmeek/
-          git checkout main
+          git clone --depth 1 https://github.com/iBitBetter/Gmeek.git /opt/Gmeek
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          # Gmeek 依赖在克隆目录，无法用 hashFiles 指向 /opt；
+          # requirements 极少变动，用固定 key + restore 前缀即可命中缓存。
+          key: ${{ runner.os }}-pip-gmeek-v1
+          restore-keys: |
+            ${{ runner.os }}-pip-gmeek-
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          # 去掉 --upgrade pip（runner 自带版本已够，省一次联网升级）
           pip install -r /opt/Gmeek/requirements.txt
 
       - name: Generate new html

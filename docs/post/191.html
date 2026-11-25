@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark_colorblind" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://ibitbetter.space/assets/primer.min.css' rel='stylesheet'/>
+    <link rel='preconnect' href='https://www.googletagmanager.com'><link rel='preconnect' href='https://utteranc.es'><link href='https://ibitbetter.space/assets/custom.css' rel='stylesheet'/><script async src='https://www.googletagmanager.com/gtag/js?id=G-5QE3S0EJHW'></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5QE3S0EJHW');</script><script defer src='https://ibitbetter.space/assets/GmeekVercount.v2.js'></script><meta name='twitter:card' content='summary_large_image'><meta name='twitter:title' content='奇趣网站评测 · 效率工具推荐 · 技术教程 | iBitBetter'><meta name='twitter:description' content='发现最实用的 Windows 效率工具、技术教程与互联网趣站。从软件推荐到电子书资源，帮你每天节省 2 小时。'><meta name='twitter:image' content='https://ibitbetter.space/assets/ibitbetter.webp'><meta name='keywords' content='效率工具,Windows软件,电子书,技术博客,软件推荐,奇趣网站'><style>.title-right a[href*='terms.html'],.title-right a[href*='privacy.html']{display:none!important}@media (max-width:600px){.title-right .circle{padding:5px 7px;margin:0}.title-right .btn{padding:6px 8px}}#header{align-items:center}</style><script>document.addEventListener('DOMContentLoaded',function(){var f=document.getElementById('footer');if(f){var d=document.createElement('div');d.style.cssText='margin-top:8px;font-size:small;text-align:center;';d.innerHTML='<a href="mailto:xbitbetter@gmail.com">Email</a> · <a href="https://ibitbetter.space/privacy.html">隐私政策</a> · <a href="https://ibitbetter.space/terms.html">服务条款</a>';f.appendChild(d);}});</script><script>document.addEventListener('DOMContentLoaded', function() { var titleRight = document.querySelector('.title-right'); if (!titleRight || document.getElementById('btnCurious')) return; var a = document.createElement('a'); a.id = 'btnCurious'; a.href = '/curious-websites.html'; a.className = 'btn btn-invisible circle'; a.title = 'Curious'; a.setAttribute('aria-label', 'Curious'); a.innerHTML = `<svg class='octicon' width='16' height='16'><path fill-rule='evenodd' d='M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25ZM14.5 6h-13v7.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Zm-6-3.5v2h6V2.75a.25.25 0 0 0-.25-.25ZM5 2.5v2h2v-2Zm-3.25 0a.25.25 0 0 0-.25.25V4.5h2v-2Z'></path></svg>`; var about = titleRight.querySelector('a[href*="/about"]'); if (about && about.nextSibling) { titleRight.insertBefore(a, about.nextSibling); } else { titleRight.appendChild(a); } });</script><script>document.addEventListener('DOMContentLoaded',function(){var t=document.querySelector('.title-right a[onclick*="modeSwitch"],.title-right button[onclick*="modeSwitch"]');if(t)t.parentNode.appendChild(t);});</script>
+    <link rel="icon" href="https://ibitbetter.space/assets/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "iBitBetter",
+      "url": "https://ibitbetter.space",
+      "description": "奇趣网站评测 · 效率工具推荐 · 技术教程",
+      "logo": "https://ibitbetter.space/assets/ibitbetter.webp"
+    }
+    </script>
+    
+    
+<meta name="description" content="微PE工具箱（WePE）使用教程 适用对象：需要重装系统、维护电脑、修复引导或抢救数据的普通用户">
+<meta property="og:title" content="微PE工具箱（WePE）使用教程">
+<meta property="og:description" content="微PE工具箱（WePE）使用教程 适用对象：需要重装系统、维护电脑、修复引导或抢救数据的普通用户">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ibitbetter.space/post/191.html">
+<meta property="og:image" content="https://ibitbetter.space/og-image.jpg">
+<title>微PE工具箱（WePE）使用教程</title>
+<link rel="canonical" href="https://ibitbetter.space/post/191.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "\u5faePE\u5de5\u5177\u7bb1\uff08WePE\uff09\u4f7f\u7528\u6559\u7a0b",
+  "datePublished": "2026-11-25",
+  "dateModified": "2026-11-25",
+  "author": {
+    "@id": "https://ibitbetter.space/about.html#author",
+    "@type": "Person",
+    "name": "iBitBetter",
+    "url": "https://ibitbetter.space/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "iBitBetter",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ibitbetter.space/assets/ibitbetter.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ibitbetter.space/post/191.html"
+  },
+  "image": "https://ibitbetter.space/og-image.jpg",
+  "url": "https://ibitbetter.space/post/191.html"
+}
+</script>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.related-posts{margin-top:40px;padding:20px;background:var(--color-canvas-subtle,#f6f8fa);border-radius:8px;border:1px solid var(--color-border-default);}
+.related-title{font-size:20px;margin:0 0 12px;font-weight:bold;}
+.related-list{list-style:none;padding:0;margin:0;}
+.related-list li{margin:8px 0;line-height:1.6;}
+.related-list a{color:var(--color-accent-fg,#0969da);text-decoration:none;}
+.related-list a:hover{text-decoration:underline;}
+.related-date{display:inline-block;margin-left:8px;font-size:12px;color:var(--color-fg-muted,#656d76);}
+  
+.postTitle{margin: auto 0;font-size:30px;font-weight:bold;line-height:1.35;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:22px;line-height:1.4;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">微PE工具箱（WePE）使用教程</h1>
+<div class="title-right">
+    <a href="https://ibitbetter.space" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>微PE工具箱（WePE）使用教程</h1>
+<blockquote>
+<p>适用对象：需要重装系统、维护电脑、修复引导或抢救数据的普通用户。<br>
+说明：本教程以微PE工具箱 2.x 版本为例，不同版本、不同主板上的菜单文字可能略有差异，操作逻辑一致。所有操作请仅在<strong>自有设备</strong>上进行。</p>
+</blockquote>
+<hr>
+<h2>目录</h2>
+<ul>
+<li><a href="#1-%E5%BE%AEpe%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9">1. 微PE简介与版本选择</a>
+<ul>
+<li><a href="#11-%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AEpe">1.1 什么是微PE</a></li>
+<li><a href="#12-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF">1.2 适用场景</a></li>
+<li><a href="#13-%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9">1.3 版本选择</a></li>
+</ul>
+</li>
+<li><a href="#2-%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8u%E7%9B%98">2. 制作启动U盘</a>
+<ul>
+<li><a href="#21-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9Cu%E7%9B%98%E5%AE%B9%E9%87%8F%E4%B8%8E%E6%A0%BC%E5%BC%8F%E8%A6%81%E6%B1%82">2.1 准备工作：U盘容量与格式要求</a></li>
+<li><a href="#22-%E5%AE%98%E6%96%B9%E5%B7%A5%E5%85%B7%E5%88%B6%E4%BD%9C%E6%AD%A5%E9%AA%A4">2.2 官方工具制作步骤</a></li>
+<li><a href="#23-%E5%88%B6%E4%BD%9C%E5%90%8Eu%E7%9B%98%E5%AE%B9%E9%87%8F%E5%8F%98%E5%8C%96%E8%AF%B4%E6%98%8E">2.3 制作后U盘容量变化说明</a></li>
+<li><a href="#24-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">2.4 注意事项</a></li>
+</ul>
+</li>
+<li><a href="#3-%E8%BF%9B%E5%85%A5pe">3. 进入PE</a>
+<ul>
+<li><a href="#31-biosuefi-%E5%90%AF%E5%8A%A8%E9%A1%B9%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%AF%B9%E7%85%A7%E8%A1%A8">3.1 BIOS/UEFI 启动项快捷键对照表</a></li>
+<li><a href="#32-secure-boot-%E4%B8%8E-uefilegacy-%E8%AE%BE%E7%BD%AE">3.2 Secure Boot 与 UEFI/Legacy 设置</a></li>
+<li><a href="#33-winpe-%E5%90%AF%E5%8A%A8%E8%8F%9C%E5%8D%95%E9%80%89%E9%A1%B9%E8%AF%B4%E6%98%8E">3.3 WinPE 启动菜单选项说明</a></li>
+</ul>
+</li>
+<li><a href="#4-pe-%E6%A1%8C%E9%9D%A2%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8">4. PE 桌面常用工具使用</a>
+<ul>
+<li><a href="#41-diskgenius%E5%88%86%E5%8C%BA%E4%B8%8E-gptmbr-%E8%BD%AC%E6%8D%A2">4.1 DiskGenius：分区与 GPT/MBR 转换</a></li>
+<li><a href="#42-%E5%88%86%E5%8C%BA%E5%8A%A9%E6%89%8B">4.2 分区助手</a></li>
+<li><a href="#43-windows-%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9">4.3 Windows 密码修改</a></li>
+<li><a href="#44-%E5%BC%95%E5%AF%BC%E4%BF%AE%E5%A4%8Dbcd">4.4 引导修复（BCD）</a></li>
+<li><a href="#45-wintsetup--dism--ghost-%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F">4.5 WinNTSetup / Dism++ / Ghost 安装系统</a></li>
+<li><a href="#46-%E9%A9%B1%E5%8A%A8%E4%B8%8E%E7%BD%91%E5%8D%A1">4.6 驱动与网卡</a></li>
+<li><a href="#47-%E6%88%AA%E5%9B%BE%E4%B8%8E%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D">4.7 截图与文件拷贝</a></li>
+</ul>
+</li>
+<li><a href="#5-%E5%85%A8%E6%96%B0%E5%AE%89%E8%A3%85-windows-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B">5. 全新安装 Windows 完整流程</a>
+<ul>
+<li><a href="#51-%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88">5.1 流程概览</a></li>
+<li><a href="#52-%E5%88%86%E6%AD%A5%E6%93%8D%E4%BD%9C">5.2 分步操作</a></li>
+<li><a href="#53-uefigpt-%E4%B8%8E-legacymbr-%E7%9A%84%E9%80%89%E6%8B%A9">5.3 UEFI+GPT 与 Legacy+MBR 的选择</a></li>
+</ul>
+</li>
+<li><a href="#6-%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E4%B8%8E%E8%AF%AF%E5%88%A0%E6%81%A2%E5%A4%8D">6. 数据备份与误删恢复</a></li>
+<li><a href="#7-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5">7. 常见问题排查</a></li>
+<li><a href="#8-%E5%90%88%E8%A7%84%E4%B8%8E%E5%AE%89%E5%85%A8%E6%8F%90%E7%A4%BA">8. 合规与安全提示</a></li>
+</ul>
+<hr>
+<h2>1. 微PE简介与版本选择</h2>
+<h3>1.1 什么是微PE</h3>
+<p>微PE工具箱（WePE）是一款基于 Windows PE 内核的<strong>便携式维护系统</strong>。它可以直接写入U盘，从U盘启动后形成一个独立的图形化操作环境，不依赖本机硬盘上的操作系统。其特点是体积小、启动快、界面接近 Windows、内置常用维护工具，且官方版本不捆绑广告与第三方软件。</p>
+<p>微PE本身不是操作系统，不能长期日常使用；它的定位是"临时维护平台"，用于装系统、分区、修复引导、备份数据等场景。</p>
+<h3>1.2 适用场景</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>场景</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全新安装系统</td>
+<td>硬盘为空或系统损坏时，从PE写入 Windows 镜像</td>
+</tr>
+<tr>
+<td>系统无法启动</td>
+<td>蓝屏、引导损坏、卡开机时进入PE排查</td>
+</tr>
+<tr>
+<td>硬盘分区管理</td>
+<td>新建/调整/合并分区，GPT 与 MBR 互转</td>
+</tr>
+<tr>
+<td>引导修复</td>
+<td>重建 BCD、修复 UEFI/BIOS 引导</td>
+</tr>
+<tr>
+<td>密码重置</td>
+<td>忘记本机登录密码时修改（仅限自有设备）</td>
+</tr>
+<tr>
+<td>数据抢救</td>
+<td>系统崩溃后把重要文件拷贝到移动硬盘</td>
+</tr>
+<tr>
+<td>磁盘检测</td>
+<td>查看硬盘健康、坏道、分区表状态</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h3>1.3 版本选择</h3>
+<p>微PE 2.x 提供 64 位与 32 位两种内核，并按功能分为<strong>维护版</strong>与<strong>网络版</strong>（不同版本命名可能为"标准版/增强版"，以官网下载页说明为准）。</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>对比项</th>
+<th>64 位版</th>
+<th>32 位版</th>
+<th>维护版</th>
+<th>网络版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>适用机器</td>
+<td>2010 年后主流机型，支持 UEFI 启动</td>
+<td>老旧 32 位机型、部分老上网本</td>
+<td>绝大多数维护场景</td>
+<td>需要在PE内上网的场景</td>
+</tr>
+<tr>
+<td>内存要求</td>
+<td>建议 ≥2 GB</td>
+<td>建议 ≥1 GB</td>
+<td>较低</td>
+<td>较高</td>
+</tr>
+<tr>
+<td>内置工具</td>
+<td>分区、备份、引导修复等全套</td>
+<td>同左，工具略精简</td>
+<td>分区/备份/修复工具</td>
+<td>维护版工具 + 浏览器、网络组件</td>
+</tr>
+<tr>
+<td>网络支持</td>
+<td>视版本而定</td>
+<td>视版本而定</td>
+<td>无（或需手动加载网卡驱动）</td>
+<td>内置有线/无线网卡驱动与浏览器</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>中等</td>
+<td>较小</td>
+<td>较小，启动快</td>
+<td>较大，启动稍慢</td>
+</tr>
+<tr>
+<td>推荐人群</td>
+<td><strong>首选</strong></td>
+<td>仅老机器使用</td>
+<td>装系统、修电脑为主</td>
+<td>需要联网查资料、下载驱动</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><strong>选择建议：</strong></p>
+<ol>
+<li>能启动 64 位系统的新机器，一律选 <strong>64 位版</strong>；只有确认机器仅支持 32 位时才用 32 位版。</li>
+<li>以装系统、分区、修引导为主，选<strong>维护版</strong>即可，启动更快、兼容性更稳。</li>
+<li>经常遇到"PE 里没网卡驱动、需要现场下载驱动"的情况，选<strong>网络版</strong>。</li>
+<li>只从官网（wepe.com.cn）或官方发布渠道下载，避免第三方"修改版"捆绑软件。</li>
+</ol>
+<hr>
+<h2>2. 制作启动U盘</h2>
+<h3>2.1 准备工作：U盘容量与格式要求</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>项目</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U盘容量</td>
+<td>至少 <strong>8 GB</strong>，推荐 16 GB 及以上（64 位网络版体积更大）</td>
+</tr>
+<tr>
+<td>U盘接口</td>
+<td>USB 2.0/3.0 均可；老机器优先用 USB 2.0 接口，兼容性更好</td>
+</tr>
+<tr>
+<td>U盘状态</td>
+<td>能被系统正常识别，无坏块；制作会<strong>清空全部数据</strong></td>
+</tr>
+<tr>
+<td>文件系统</td>
+<td>由官方工具自动格式化，通常为 exFAT；也可在工具内选 FAT32 或 NTFS</td>
+</tr>
+<tr>
+<td>镜像文件</td>
+<td>官方安装程序（.exe），无需提前解压</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p>格式差异说明：</p>
+<ul>
+<li><strong>exFAT</strong>：支持大于 4 GB 的单文件，兼容 UEFI 与 Legacy，官方默认选项，推荐保持默认。</li>
+<li><strong>FAT32</strong>：UEFI 兼容性最好，但单文件不能超过 4 GB（放大于 4 GB 的系统镜像会失败）。</li>
+<li><strong>NTFS</strong>：支持大文件，部分老主板 UEFI 不识别，非必要不选。</li>
+</ul>
+<h3>2.2 官方工具制作步骤</h3>
+<ol>
+<li>准备一个<strong>没有重要数据</strong>的U盘，插入电脑（建议插在机箱后置 USB 接口）。</li>
+<li>关闭杀毒软件的实时防护（部分安全软件会拦截写入引导扇区），制作完成后重新开启。</li>
+<li>右键官方安装程序，选择"以管理员身份运行"。</li>
+<li>在主界面选择"<strong>安装PE到U盘</strong>"（部分版本显示为U盘图标）。</li>
+<li>在"待写入U盘"下拉框中确认目标盘符与容量，<strong>务必核对，避免误写移动硬盘</strong>。</li>
+<li>选择文件系统（建议默认 exFAT）与卷标，保持"支持UEFI启动"等默认勾选。</li>
+<li>点击"<strong>立即安装进U盘</strong>"，在确认提示中核对U盘信息后确认。</li>
+<li>等待写入完成（通常 1–5 分钟，取决于U盘速度），提示"制作完成"后关闭工具。</li>
+<li>安全弹出U盘，重新插入，确认能看到U盘分区及其中文件。</li>
+</ol>
+<blockquote>
+<p>若工具提供"双分区方案/单分区方案"选项：双分区会额外创建一个隐藏的 EFI 启动分区，兼容性更好；单分区结构简单、可见容量更大。普通用户保持默认即可。</p>
+</blockquote>
+<h3>2.3 制作后U盘容量变化说明</h3>
+<p>制作完成后发现U盘"变小了"，属于正常现象，原因有三：</p>
+<ol>
+<li><strong>标称容量与系统显示差异</strong>：厂商按 1 GB = 1000 MB 标称，系统按 1 GB = 1024 MB 计算，32 GB U盘在系统中通常显示约 29–30 GB。</li>
+<li><strong>PE 文件占用</strong>：PE 系统及内置工具会占用约 0.5–1 GB 空间（网络版更多）。</li>
+<li><strong>隐藏分区</strong>：双分区方案会创建一个隐藏的 EFI 启动分区（数百 MB），在资源管理器中不可见。</li>
+</ol>
+<p>因此，32 GB U盘制作后显示 28–29 GB 可用空间是正常的。若需<strong>恢复U盘全部容量</strong>：</p>
+<ol>
+<li>打开 Windows"磁盘管理"或PE中的 DiskGenius；</li>
+<li>删除U盘上的全部分区（注意核对磁盘编号，避免误删硬盘）；</li>
+<li>重新新建一个分区并格式化。</li>
+</ol>
+<h3>2.4 注意事项</h3>
+<ul>
+<li>制作会<strong>清空U盘全部数据</strong>，操作前先备份。</li>
+<li>不要中途拔出U盘或断电，否则U盘可能变为"未格式化"状态，需重新制作。</li>
+<li>U盘制作完成后仍可作为普通U盘存放文件，但不要删除根目录下的 PE 相关文件与隐藏分区。</li>
+<li>部分品牌主板对U盘启动兼容性差，可尝试更换 USB 2.0 接口或更换U盘。</li>
+<li>建议保留一份PE安装程序，便于U盘损坏后重新制作。</li>
+</ul>
+<hr>
+<h2>3. 进入PE</h2>
+<h3>3.1 BIOS/UEFI 启动项快捷键对照表</h3>
+<p>开机时反复按"启动菜单键"可直接选择从U盘启动；按"BIOS设置键"则进入固件设置界面调整启动顺序。</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>品牌</th>
+<th>启动菜单键（Boot Menu）</th>
+<th>BIOS/UEFI 设置键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>华硕 ASUS</td>
+<td>F8</td>
+<td>Del / F2</td>
+<td>部分笔记本为 Esc</td>
+</tr>
+<tr>
+<td>联想 Lenovo</td>
+<td>F12</td>
+<td>F2 或 Fn+F2</td>
+<td>部分机型用侧边 Novo 小孔，选择"Boot Menu"</td>
+</tr>
+<tr>
+<td>戴尔 Dell</td>
+<td>F12</td>
+<td>F2</td>
+<td>部分机型 F12 菜单内含 BIOS Setup</td>
+</tr>
+<tr>
+<td>惠普 HP</td>
+<td>F9</td>
+<td>Esc → F10</td>
+<td>部分商用机 F10 直接进 BIOS</td>
+</tr>
+<tr>
+<td>微星 MSI</td>
+<td>F11</td>
+<td>Del</td>
+<td>台式机主板常见</td>
+</tr>
+<tr>
+<td>技嘉 Gigabyte</td>
+<td>F12</td>
+<td>Del</td>
+<td>部分主板 F12 为启动菜单</td>
+</tr>
+<tr>
+<td>华擎 ASRock</td>
+<td>F11</td>
+<td>Del / F2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>宏碁 Acer</td>
+<td>F12</td>
+<td>F2</td>
+<td>需在 BIOS 中开启 F12 启动菜单</td>
+</tr>
+<tr>
+<td>神舟 Hasee</td>
+<td>F7 或 F12</td>
+<td>F2</td>
+<td>机型差异较大</td>
+</tr>
+<tr>
+<td>三星 Samsung</td>
+<td>F12 / F10</td>
+<td>F2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>东芝 Toshiba</td>
+<td>F12</td>
+<td>F2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>微软 Surface</td>
+<td>音量减 + 电源键</td>
+<td>音量加 + 电源键</td>
+<td>需在 UEFI 中关闭 Secure Boot</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p>操作要点：</p>
+<ol>
+<li>插入制作好的U盘，重启电脑。</li>
+<li>开机出现品牌 Logo 时<strong>连续轻按</strong>对应按键（不要长按）。</li>
+<li>在启动菜单中选择U盘名称（通常显示为 "UEFI: 品牌名" 或 "USB HDD"）。</li>
+<li>若列表中没有U盘，进入 BIOS 检查U盘是否被识别、是否开启 Legacy/CSM。</li>
+</ol>
+<h3>3.2 Secure Boot 与 UEFI/Legacy 设置</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>设置项</th>
+<th>位置（常见）</th>
+<th>建议值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Secure Boot（安全启动）</td>
+<td>Security / Boot 选项卡</td>
+<td>Disabled（关闭）</td>
+<td>开启时可能拒绝非签名引导，导致U盘无法启动</td>
+</tr>
+<tr>
+<td>UEFI/Legacy Boot</td>
+<td>Boot 选项卡</td>
+<td>与安装方式匹配</td>
+<td>UEFI+GPT 选 UEFI；Legacy+MBR 选 Legacy</td>
+</tr>
+<tr>
+<td>CSM（兼容支持模块）</td>
+<td>Boot 选项卡</td>
+<td>装 Legacy 系统时 Enabled</td>
+<td>装 UEFI 系统时可 Disabled</td>
+</tr>
+<tr>
+<td>Fast Boot（快速启动）</td>
+<td>Boot 选项卡</td>
+<td>Disabled（临时）</td>
+<td>关闭后更容易捕捉按键、识别U盘</td>
+</tr>
+<tr>
+<td>SATA 模式</td>
+<td>Storage / Advanced</td>
+<td>AHCI（除非原系统为 RAID）</td>
+<td>改动可能导致已装系统蓝屏，需谨慎</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p>设置原则：</p>
+<ul>
+<li><strong>新机器（2013 年后）</strong>：保持 UEFI 启动，关闭 Secure Boot，用 GPT 分区安装 64 位系统。</li>
+<li><strong>老机器</strong>：切换为 Legacy（开启 CSM），用 MBR 分区安装。</li>
+<li>修改 Secure Boot 前若设置了 BIOS 密码，需先输入密码；部分品牌需先设置管理员密码才能修改。</li>
+</ul>
+<h3>3.3 WinPE 启动菜单选项说明</h3>
+<p>从U盘启动后会先出现 PE 引导菜单，常见选项如下（不同版本文字略有差异）：</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>菜单项</th>
+<th>作用</th>
+<th>使用建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>启动微PE工具箱（默认）</td>
+<td>以标准分辨率进入PE桌面</td>
+<td>首选</td>
+</tr>
+<tr>
+<td>兼容模式 / 低分辨率模式</td>
+<td>使用基础显卡驱动进入</td>
+<td>花屏、黑屏、无法显示桌面时选择</td>
+</tr>
+<tr>
+<td>从本机硬盘启动</td>
+<td>跳过PE，直接引导本机系统</td>
+<td>临时不想进PE时使用</td>
+</tr>
+<tr>
+<td>重启 / 关机</td>
+<td>重启或关闭电脑</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p>进入桌面后，若分辨率异常，可在桌面右键"显示设置"调整，或重启选择兼容模式。</p>
+<hr>
+<h2>4. PE 桌面常用工具使用</h2>
+<p>PE 桌面通常包含以下工具（开始菜单或桌面图标进入）。不同版本可能多一个或少一个，以实际界面为准。</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>工具</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DiskGenius</td>
+<td>分区管理、分区表转换、数据恢复、磁盘检测</td>
+</tr>
+<tr>
+<td>分区助手</td>
+<td>调整/合并/拆分分区、克隆磁盘</td>
+</tr>
+<tr>
+<td>Windows 密码修改</td>
+<td>修改或清除本机账户密码</td>
+</tr>
+<tr>
+<td>引导修复 / BOOTICE</td>
+<td>修复 BCD、重建 MBR/PBR</td>
+</tr>
+<tr>
+<td>WinNTSetup</td>
+<td>安装 Windows（WIM/ESD/SWM）</td>
+</tr>
+<tr>
+<td>Dism++</td>
+<td>释放映像、注入驱动、系统优化、引导修复</td>
+</tr>
+<tr>
+<td>Ghost</td>
+<td>备份/还原 .gho 镜像</td>
+</tr>
+<tr>
+<td>驱动安装 / 网络管理</td>
+<td>加载网卡、存储等驱动</td>
+</tr>
+<tr>
+<td>截图工具</td>
+<td>保存操作过程截图</td>
+</tr>
+<tr>
+<td>资源管理器 / Everything</td>
+<td>浏览、搜索、拷贝文件</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h3>4.1 DiskGenius：分区与 GPT/MBR 转换</h3>
+<p><strong>新建分区（以 GPT 为例）：</strong></p>
+<ol>
+<li>打开 DiskGenius，在左侧选择目标硬盘（<strong>务必核对容量与型号</strong>）。</li>
+<li>点击"磁盘" → "转换分区表类型为GUID格式"（若已是 GPT 可跳过）。</li>
+<li>点击"保存更改"。</li>
+<li>选中硬盘，点击"分区" → "新建分区"，依次创建：
+<ul>
+<li><strong>ESP 分区</strong>：约 300 MB，文件系统 FAT32（UEFI 启动必需）；</li>
+<li><strong>MSR 分区</strong>：约 16 MB（可选，Windows 安装程序通常会自动创建）；</li>
+<li><strong>系统分区 C</strong>：剩余空间，NTFS。</li>
+</ul>
+</li>
+<li>再次点击"保存更改"，等待格式化完成。</li>
+</ol>
+<p><strong>GPT 与 MBR 互转：</strong></p>
+<ol>
+<li>选中目标磁盘；</li>
+<li>点击"磁盘" → "转换分区表类型为MBR格式"（或"为GUID格式"）；</li>
+<li>确认警告并"保存更改"。</li>
+</ol>
+<blockquote>
+<p>转换分区表类型可能影响原有引导与分区识别，<strong>操作前必须备份数据</strong>；已有系统的磁盘转换后通常需要重新修复引导。</p>
+</blockquote>
+<p><strong>数据恢复：</strong></p>
+<p>选中丢失数据的分区 → "工具" → "已删除或格式化后的文件恢复" → 选择恢复方式 → 扫描 → 勾选文件 → 复制到<strong>另一块磁盘</strong>（不要恢复到原盘）。</p>
+<h3>4.2 分区助手</h3>
+<p>分区助手适合做"无损调整"，操作比 DiskGenius 更直观：</p>
+<ol>
+<li>选中分区，右键选择"调整/移动分区"，拖动边界或输入新容量；</li>
+<li>点击左上角"提交"执行变更；</li>
+<li>合并分区：右键分区 → "合并分区"，选择要合并的相邻分区；</li>
+<li>克隆磁盘：使用"克隆磁盘"向导，把旧盘完整复制到新盘（目标盘容量需不小于源盘已用空间）。</li>
+</ol>
+<blockquote>
+<p>调整系统分区前建议先备份；操作过程中不要断电。</p>
+</blockquote>
+<h3>4.3 Windows 密码修改</h3>
+<p>适用于<strong>自有设备</strong>忘记本机账户密码的情况。工具通常为 NTPWEdit 类程序：</p>
+<ol>
+<li>打开"Windows 密码修改"工具；</li>
+<li>点击"打开"，定位到目标系统的 SAM 文件：<br>
+<code class="notranslate">C:\Windows\System32\config\SAM</code><br>
+（若系统装在 D 盘，则相应改为 <code class="notranslate">D:\Windows\System32\config\SAM</code>）；</li>
+<li>在用户列表中选择要修改的账户；</li>
+<li>点击"更改密码"，留空表示清除密码，或输入新密码；</li>
+<li>点击"保存"，重启电脑。</li>
+</ol>
+<p>注意事项：</p>
+<ul>
+<li>仅对本地账户有效；微软账户在线密码不适用。</li>
+<li>若系统启用了 BitLocker，修改密码后可能仍无法进入，需先恢复密钥解锁。</li>
+<li>本操作仅限自有设备，不得用于他人设备。</li>
+</ul>
+<h3>4.4 引导修复（BCD）</h3>
+<p><strong>方式一：图形化引导修复工具</strong></p>
+<ol>
+<li>打开"引导修复"（部分版本为 NTBOOT 引导修复）；</li>
+<li>工具会自动识别硬盘上的 Windows 系统；</li>
+<li>点击"开始修复"/"自动修复"，等待完成；</li>
+<li>重启验证。</li>
+</ol>
+<p><strong>方式二：Dism++ 引导修复</strong></p>
+<p>打开 Dism++ → 菜单"恢复功能" → "引导修复" → 选择系统盘 → 确定。</p>
+<p><strong>方式三：命令行 bcdboot（最可靠）</strong></p>
+<ol>
+<li>打开命令提示符；</li>
+<li>确认系统盘符（PE 下盘符可能与正常系统不同，用 <code class="notranslate">dir C:\Windows</code> 逐个核对）；</li>
+<li>确认 EFI 分区盘符（可在 DiskGenius 中给 ESP 分区分配盘符，如 S:）；</li>
+<li>执行：</li>
+</ol>
+<div class="highlight highlight-source-batchfile"><pre class="notranslate"><span class="pl-c"><span class="pl-c">::</span> UEFI + GPT 环境</span>
+<span class="pl-k">bcdboot</span> C:\Windows /s S: /f UEFI
+
+<span class="pl-c"><span class="pl-c">::</span> Legacy + MBR 环境</span>
+<span class="pl-k">bcdboot</span> C:\Windows /s C: /f BIOS</pre></div>
+<ol start="5">
+<li>提示"已成功创建启动文件"即完成。</li>
+</ol>
+<h3>4.5 WinNTSetup / Dism++ / Ghost 安装系统</h3>
+<p><strong>WinNTSetup（推荐，支持 WIM/ESD/SWM）：</strong></p>
+<ol>
+<li>打开 WinNTSetup；</li>
+<li>"选择包含Windows安装文件的文件夹"：定位到挂载后的 ISO 中 <code class="notranslate">sources\install.wim</code>（或 install.esd）；</li>
+<li>选择要安装的系统版本（如 Windows 10 专业版）；</li>
+<li>"选择引导驱动器"：
+<ul>
+<li>UEFI+GPT：选择 <strong>ESP 分区</strong>；</li>
+<li>Legacy+MBR：选择系统分区 C；</li>
+</ul>
+</li>
+<li>"安装磁盘的位置"：选择系统分区 C；</li>
+<li>选项中可以勾选"格式化"（全新安装建议勾选）、"添加驱动"（如 VMD 驱动）；</li>
+<li>点击"开始安装" → 确认 → 等待映像应用完成；</li>
+<li>提示完成后重启，按提示拔掉U盘。</li>
+</ol>
+<p><strong>Dism++：</strong></p>
+<ol>
+<li>打开 Dism++，接受许可；</li>
+<li>菜单"文件" → "释放映像"；</li>
+<li>选择 install.wim 与目标分区 C；</li>
+<li>勾选"添加引导"（UEFI 环境需正确识别 ESP）；</li>
+<li>确定并等待完成。</li>
+</ol>
+<p><strong>Ghost（仅用于 .gho 镜像）：</strong></p>
+<ol>
+<li>打开 Ghost，选择 <code class="notranslate">Local</code> → <code class="notranslate">Partition</code> → <code class="notranslate">From Image</code>；</li>
+<li>选择 .gho 文件；</li>
+<li>选择目标硬盘与目标分区；</li>
+<li>确认覆盖后等待完成，重启。</li>
+</ol>
+<blockquote>
+<p>建议优先使用微软原版 ISO + WinNTSetup/Dism++，Ghost 镜像来源复杂，存在捆绑与安全风险。</p>
+</blockquote>
+<h3>4.6 驱动与网卡</h3>
+<ul>
+<li><strong>存储驱动（重要）</strong>：Intel 11 代及以后的平台若开启 VMD，PE 可能看不到 NVMe 硬盘，需加载 Intel VMD/IRST 驱动（详见第 7 章）。</li>
+<li><strong>网卡驱动</strong>：维护版通常不含网卡驱动。可在PE中使用"驱动安装"工具，指定提前下载好的网卡驱动文件夹（.inf）进行安装；或直接使用网络版PE。</li>
+<li><strong>驱动来源</strong>：优先从主板/笔记本厂商官网下载对应型号的驱动，避免使用来源不明的"万能驱动"。</li>
+</ul>
+<h3>4.7 截图与文件拷贝</h3>
+<ul>
+<li><strong>截图</strong>：打开"截图工具"，框选区域后保存到U盘或本地磁盘；部分版本支持快捷键（以工具界面提示为准）。</li>
+<li><strong>文件拷贝</strong>：通过"资源管理器"或"Everything"定位文件，复制到移动硬盘。系统盘中的重要文件建议优先拷贝到<strong>另一块物理磁盘</strong>，不要存回原盘。</li>
+<li><strong>只读挂载</strong>：若担心误改原系统文件，可先以只读方式浏览，确认后再复制。</li>
+</ul>
+<hr>
+<h2>5. 全新安装 Windows 完整流程</h2>
+<h3>5.1 流程概览</h3>
+<pre lang="text" class="notranslate"><code class="notranslate">备份重要数据
+   ↓
+制作PE启动U盘
+   ↓
+下载并校验原版系统ISO
+   ↓
+进入PE，确认硬盘识别正常
+   ↓
+分区（UEFI+GPT 或 Legacy+MBR）
+   ↓
+挂载ISO，用 WinNTSetup/Dism++ 写入系统
+   ↓
+修复/确认引导
+   ↓
+重启并拔出U盘
+   ↓
+首次配置（OOBE）
+</code></pre>
+<h3>5.2 分步操作</h3>
+<ol>
+<li><strong>备份数据</strong>：把桌面、文档、浏览器书签、微信/QQ 记录、驱动安装包等拷贝到移动硬盘或网盘。装系统会清空系统盘。</li>
+<li><strong>制作启动U盘</strong>：按第 2 章步骤完成，确认U盘可启动。</li>
+<li><strong>准备系统镜像</strong>：从微软官网或合法渠道下载原版 ISO，记录版本与位数；可用校验工具核对 SHA-256。</li>
+<li><strong>进入PE</strong>：按第 3 章方法从U盘启动，进入PE桌面。</li>
+<li><strong>确认硬盘</strong>：打开 DiskGenius，确认能看到目标硬盘及容量。若看不到，先解决驱动问题（见第 7 章），不要继续分区。</li>
+<li><strong>备份原分区表（可选）</strong>：DiskGenius → "磁盘" → "备份分区表"，保存到U盘。</li>
+<li><strong>分区</strong>：
+<ul>
+<li>UEFI 方案：GPT + ESP（FAT32，约 300 MB）+ 系统分区（NTFS）；</li>
+<li>Legacy 方案：MBR + 活动主分区（NTFS）。</li>
+</ul>
+</li>
+<li><strong>挂载 ISO</strong>：在资源管理器中右键 ISO 文件 → "装载"（Win10 内核 PE 支持）；若无法装载，可用PE内置虚拟光驱工具，或把 ISO 解压到硬盘非系统分区。</li>
+<li><strong>写入系统</strong>：打开 WinNTSetup，按 4.5 节选择 install.wim、引导驱动器、安装磁盘，开始安装。</li>
+<li><strong>确认引导</strong>：WinNTSetup 通常会自动写入引导；如未勾选，安装完成后用 bcdboot 或引导修复工具补做。</li>
+<li><strong>重启</strong>：安装完成后选择重启，<strong>在重启时拔出U盘</strong>（或进 BIOS 把硬盘设为第一启动项），避免再次进入PE。</li>
+<li><strong>首次配置</strong>：进入 Windows OOBE，选择区域、键盘、网络、账户，完成初始化；进入桌面后安装驱动与常用软件。</li>
+</ol>
+<h3>5.3 UEFI+GPT 与 Legacy+MBR 的选择</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>对比项</th>
+<th>UEFI + GPT</th>
+<th>Legacy + MBR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>适用机器</td>
+<td>2013 年后主流机型</td>
+<td>老旧机型、部分工控设备</td>
+</tr>
+<tr>
+<td>系统位数</td>
+<td>必须 64 位</td>
+<td>32/64 位均可</td>
+</tr>
+<tr>
+<td>磁盘容量</td>
+<td>支持 &gt;2 TB 系统盘</td>
+<td>系统盘受 2 TB 限制</td>
+</tr>
+<tr>
+<td>分区数量</td>
+<td>基本无限制（Windows 限制 128 个）</td>
+<td>最多 4 个主分区</td>
+</tr>
+<tr>
+<td>启动速度</td>
+<td>较快</td>
+<td>较慢</td>
+</tr>
+<tr>
+<td>Secure Boot</td>
+<td>可配合使用</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>引导分区</td>
+<td>需要 ESP（FAT32）</td>
+<td>需要活动主分区</td>
+</tr>
+<tr>
+<td>推荐度</td>
+<td><strong>新机首选</strong></td>
+<td>仅老机使用</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p>选择原则：</p>
+<ol>
+<li><strong>启动方式与分区表必须匹配</strong>：UEFI 启动配 GPT，Legacy 启动配 MBR。混用会导致"装完无法引导"。</li>
+<li>不确定时，进入 BIOS 查看当前是 UEFI 还是 Legacy；新机器保持 UEFI。</li>
+<li>若硬盘已有 GPT 分区且要装 Legacy 系统，需先转换为 MBR（会清空分区，先备份）。</li>
+<li>大于 2 TB 的硬盘做系统盘，必须使用 GPT。</li>
+</ol>
+<hr>
+<h2>6. 数据备份与误删恢复</h2>
+<p><strong>装系统前的备份清单：</strong></p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>数据类型</th>
+<th>位置示例</th>
+<th>备份方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>个人文档</td>
+<td>桌面、文档、下载</td>
+<td>拷贝到移动硬盘/网盘</td>
+</tr>
+<tr>
+<td>浏览器数据</td>
+<td>书签、密码</td>
+<td>浏览器账号同步或导出</td>
+</tr>
+<tr>
+<td>聊天记录</td>
+<td>微信/QQ 文件目录</td>
+<td>客户端自带备份功能</td>
+</tr>
+<tr>
+<td>驱动与激活信息</td>
+<td>厂商官网、系统设置</td>
+<td>提前下载驱动包</td>
+</tr>
+<tr>
+<td>软件配置</td>
+<td>各软件配置目录</td>
+<td>手动导出</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><strong>误删恢复要点：</strong></p>
+<ol>
+<li><strong>立即停止写入</strong>：发现误删后不要再向原盘保存文件、不要安装软件，避免数据被覆盖。</li>
+<li><strong>不要恢复到原盘</strong>：恢复出的文件必须保存到另一块磁盘或U盘。</li>
+<li><strong>使用恢复工具</strong>：PE 中的 Recuva、DiskGenius 均可扫描恢复；删除后越早扫描，成功率越高。</li>
+<li><strong>格式化/分区丢失</strong>：可用 DiskGenius 的"搜索已丢失分区"或"恢复文件"功能尝试找回。</li>
+<li><strong>SSD 注意</strong>：开启 TRIM 的固态硬盘删除后数据可能被快速清理，恢复成功率低于机械硬盘。</li>
+<li><strong>重要数据遵循 3-2-1 原则</strong>：至少 3 份副本、2 种介质、1 份异地。</li>
+</ol>
+<hr>
+<h2>7. 常见问题排查</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>问题</th>
+<th>常见原因</th>
+<th>解决方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PE 中看不到硬盘</td>
+<td>Intel 11 代+ 开启 VMD；缺少存储驱动；硬盘模式为 RAID</td>
+<td>加载 Intel VMD/IRST 驱动；或在 BIOS 中关闭 VMD/改为 AHCI</td>
+</tr>
+<tr>
+<td>U盘无法识别</td>
+<td>接口供电不足、U盘损坏、制作失败、BIOS 未开启 USB 启动</td>
+<td>换 USB 2.0 接口/换U盘；重新制作；检查 BIOS 启动项</td>
+</tr>
+<tr>
+<td>启动项丢失</td>
+<td>引导文件损坏、分区表异常、UEFI/GPT 不匹配</td>
+<td>用 bcdboot 或引导修复工具重建；核对启动模式与分区表</td>
+</tr>
+<tr>
+<td>安装后蓝屏</td>
+<td>缺少存储/显卡驱动、SATA 模式变更、镜像损坏、内存故障</td>
+<td>注入对应驱动；BIOS 改回原 SATA 模式；重新校验镜像；检测内存</td>
+</tr>
+<tr>
+<td>PE 下无网络</td>
+<td>维护版无网卡驱动、驱动不匹配</td>
+<td>使用网络版PE；手动安装官网网卡驱动；优先用有线网络</td>
+</tr>
+<tr>
+<td>装完系统无引导</td>
+<td>未写入引导、ESP 未正确选择、启动顺序错误</td>
+<td>用 bcdboot 重建；确认 ESP 为 FAT32 且有引导文件；BIOS 设硬盘为第一启动</td>
+</tr>
+<tr>
+<td>启动菜单没有U盘</td>
+<td>Fast Boot 开启、Secure Boot 拦截、U盘非启动盘</td>
+<td>关闭 Fast Boot 与 Secure Boot；重新制作启动盘</td>
+</tr>
+<tr>
+<td>分区时提示磁盘只读</td>
+<td>磁盘写保护、硬盘故障、RAID 锁</td>
+<td>检查硬盘健康；关闭写保护；在 BIOS 调整磁盘模式</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h3>7.1 PE 中看不到硬盘（Intel VMD/IRST）</h3>
+<p>这是新平台最常见的问题。Intel 11 代及以后的处理器默认开启 VMD（Volume Management Device），普通 PE 缺少对应驱动时无法识别 NVMe 硬盘。</p>
+<p>处理方式二选一：</p>
+<ol>
+<li><strong>BIOS 关闭 VMD</strong>：进入 BIOS → Advanced/Configuration → VMD Setup Menu → 将 VMD Controller 设为 Disabled，或把 SATA/NVMe 模式改为 AHCI；保存后重新进入PE。
+<ul>
+<li>注意：若原系统是在 VMD/RAID 模式下安装的，直接改 AHCI 可能导致原系统蓝屏，需先在系统中调整或重装。</li>
+</ul>
+</li>
+<li><strong>在PE中加载 VMD 驱动</strong>：提前从主板/笔记本厂商官网下载 Intel RST/VMD 驱动（包含 <code class="notranslate">iaStorVD.inf</code> 等文件），在PE中用"驱动安装"工具或 Dism++ 注入后重新扫描磁盘。</li>
+</ol>
+<h3>7.2 装完系统无引导</h3>
+<p>按以下顺序排查：</p>
+<ol>
+<li>确认 BIOS 启动模式（UEFI/Legacy）与分区表（GPT/MBR）一致；</li>
+<li>UEFI 环境确认 ESP 分区存在且为 FAT32，内有 <code class="notranslate">EFI\Microsoft\Boot\bootmgfw.efi</code>；</li>
+<li>进入PE执行 <code class="notranslate">bcdboot C:\Windows /s S: /f UEFI</code>（S 为 ESP 盘符）；</li>
+<li>检查 BIOS 启动顺序，把 "Windows Boot Manager" 或硬盘设为第一项；</li>
+<li>若仍失败，检查硬盘是否为 GPT 且存在 MSR/ESP 分区，必要时重新分区安装。</li>
+</ol>
+<h3>7.3 蓝屏与驱动冲突</h3>
+<ul>
+<li>记录蓝屏代码（如 <code class="notranslate">INACCESSIBLE_BOOT_DEVICE</code> 多为存储驱动/模式问题）；</li>
+<li>确认 BIOS 的 SATA 模式与安装时一致（AHCI/RAID 不要随意切换）；</li>
+<li>使用原版镜像并校验完整性；</li>
+<li>拔掉多余外设与内存条逐一排查硬件。</li>
+</ul>
+<hr>
+<h2>8. 合规与安全提示</h2>
+<ol>
+<li><strong>仅用于自有设备</strong>：本教程涉及的密码修改、分区、重装等操作，仅可在自己拥有或已获得明确授权的设备上进行，严禁用于他人设备。</li>
+<li><strong>系统镜像来源合法</strong>：请使用微软官方或已获授权的镜像，不要使用来源不明的"精简版/破解版"系统，此类镜像可能捆绑恶意程序。</li>
+<li><strong>重要数据先备份</strong>：分区、转换分区表、重装系统均可能导致数据丢失，操作前必须完成备份。</li>
+<li><strong>谨慎对待高风险操作</strong>：删除分区、格式化、转换分区表、清除密码等操作不可逆，执行前核对磁盘编号与容量。</li>
+<li><strong>驱动与工具来源可信</strong>：优先使用厂商官网驱动与官方PE，避免第三方捆绑工具。</li>
+<li><strong>遵守软件许可</strong>：Windows 及各类软件需使用合法授权，不得绕过激活机制。</li>
+<li><strong>BitLocker 设备</strong>：操作前先备份恢复密钥，否则重装或修改引导后可能无法解密数据。</li>
+</ol>
+<hr>
+<blockquote>
+<p>本文档为操作参考，具体界面与菜单文字以你所使用的微PE版本及主板 BIOS 为准。遇到不确定的选项，先备份、再操作。<br>
+<em>（内容由AI生成，仅供参考）</em></p>
+</blockquote></div>
+
+
+<section class="related-posts">
+  <h2 class="related-title">相关推荐</h2>
+  <ul class="related-list">
+    
+    <li>
+      <a href="https://ibitbetter.space/post/189.html">电商业务系统常用API备忘</a>
+      <span class="related-date">2026-08-21</span>
+    </li>
+    
+    <li>
+      <a href="https://ibitbetter.space/post/187.html">我的小店Workbuddy工作台 · 项目文档</a>
+      <span class="related-date">2026-08-20</span>
+    </li>
+    
+    <li>
+      <a href="https://ibitbetter.space/post/183.html">家庭日用品追踪小程序 ·技术文档</a>
+      <span class="related-date">2026-08-07</span>
+    </li>
+    
+    <li>
+      <a href="https://ibitbetter.space/post/171.html">为什么使用存储过程非常慢,但是执行SQL很快？</a>
+      <span class="related-date">2026-07-17</span>
+    </li>
+    
+    <li>
+      <a href="https://ibitbetter.space/post/165.html">耗品记：当一个合格的家庭用品管理员</a>
+      <span class="related-date">2026-07-13</span>
+    </li>
+    
+  </ul>
+</section>
+
+
+<div style="font-size:small;margin-top:8px;float:right;"> 微信搜一搜 © 奇趣网站</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://ibitbetter.space">奇趣网站收藏家 · 效率工具推荐 · 技术教程 | iBitBetter</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("11/11/2025"!=""){
+    var startSite=new Date("11/11/2025");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","iBitBetter/iBitBetter.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+<script>window.addEventListener('DOMContentLoaded',function(){var i=document.querySelector('#postBody img');if(i)i.removeAttribute('loading');});</script><script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('a[onclick*="modeSwitch"]').forEach(function(a){var b=document.createElement('button');b.className=a.className;b.setAttribute('onclick',a.getAttribute('onclick'));b.setAttribute('type','button');b.setAttribute('aria-label','切换主题');b.innerHTML=a.innerHTML;a.parentNode.replaceChild(b,a);});});</script>
+
+</html>
